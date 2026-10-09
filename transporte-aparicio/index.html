@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -11,13 +11,19 @@
 <meta property="og:site_name" content="Transporte Aparicio">
 <meta property="og:title" content="Transporte Aparicio · Transporte para chicos con CUD">
 <meta property="og:description" content="Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, en todo el país.">
-<meta property="og:image" content="og-image.jpg">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://www.transportesaparicio.com.ar/">
+<meta property="og:url" content="https://www.transportesaparicio.com.ar/">
+<meta property="og:image" content="https://www.transportesaparicio.com.ar/og-image.jpg">
+<meta property="og:image:alt" content="Logo de Transporte Aparicio sobre la foto de una familia">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.transportesaparicio.com.ar/og-image.jpg">
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Transporte Aparicio</title>
-<meta name="description" content="Transporte para chicos con CUD, cubierto al 100% por la obra social. Más de 10 años acompañando familias en todo el país.">
+<script>try{var d=document.documentElement,p=JSON.parse(localStorage.getItem("ta-a11y")||"{}")||{};if(p.fs)d.setAttribute("data-fs",p.fs);["hc","read","still","links"].forEach(function(k){if(p[k])d.classList.add("a11y-"+k)});if(p.read){var l=document.createElement("link");l.id="fontRead";l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap";document.head.appendChild(l)}}catch(e){}</script>
+<title>Transporte para chicos con CUD | Transporte Aparicio</title>
+<meta name="description" content="Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, y nos ocupamos de los trámites. En todo el país.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -722,9 +728,165 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
   .scroll-cue b::after{animation:none}
   .manifesto .w{opacity:1}
 }
+
+/* ---------- saltar al contenido ---------- */
+.skip{position:fixed;left:16px;top:-90px;z-index:200;padding:.8em 1.2em;border-radius:12px;background:var(--gold);color:var(--v950);font-family:var(--f-display);font-weight:800;text-decoration:none;transition:top .25s}
+.skip:focus{top:12px}
+
+/* ---------- panel de accesibilidad ---------- */
+.a11y-btn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;padding:0;background:var(--glass);border:1px solid var(--glass-line);color:var(--white);transition:background .3s,border-color .3s,color .3s}
+.a11y-btn:hover,.a11y-btn[aria-expanded="true"]{background:var(--white);color:var(--v900)}
+.a11y-btn.on{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,181,42,.35)}
+.a11y-btn svg{width:26px;height:26px}
+.a11y-panel{position:fixed;right:max(var(--gutter),calc((100vw - 1220px)/2 + var(--gutter)));top:84px;z-index:70;width:min(370px,calc(100vw - 32px));max-height:calc(100svh - 110px);overflow-y:auto;overscroll-behavior:contain;padding:18px;border-radius:22px;background:var(--white);color:var(--ink);box-shadow:0 30px 80px -20px rgba(25,10,43,.55),0 0 0 1px rgba(54,24,88,.08);display:grid;gap:10px;animation:tpIn .35s var(--ease)}
+.a11y-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.a11y-head b{font-family:var(--f-display);font-weight:900;font-size:1.15rem;color:var(--v900)}
+.a11y-x{width:38px;height:38px;border-radius:50%;border:0;background:var(--v50);color:var(--v800);font-size:1.5rem;line-height:1;display:grid;place-items:center;padding:0}
+.a11y-row{display:grid;gap:8px;padding:12px;border-radius:16px;background:var(--v50)}
+.a11y-row > span{font-weight:700;color:var(--v900);font-size:.95rem}
+.a11y-size{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.a11y-size button{border:2px solid var(--v100);background:var(--white);border-radius:12px;padding:.5em 0;font-family:var(--f-display);font-weight:800;color:var(--v800);line-height:1.2}
+.a11y-size button:nth-child(1){font-size:.85rem}.a11y-size button:nth-child(2){font-size:1rem}.a11y-size button:nth-child(3){font-size:1.15rem}.a11y-size button:nth-child(4){font-size:1.3rem}
+.a11y-size button[aria-pressed="true"]{background:var(--v800);border-color:var(--v800);color:var(--white)}
+.a11y-tg{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;padding:12px 14px;border-radius:16px;border:2px solid var(--v100);background:var(--white)}
+.a11y-tg b{display:block;color:var(--v900);font-size:.98rem;line-height:1.3}
+.a11y-tg small{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.35;margin-top:2px}
+.a11y-tg i{flex:none;position:relative;width:46px;height:26px;border-radius:99px;background:var(--v100);transition:background .25s}
+.a11y-tg i::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:var(--white);box-shadow:0 2px 6px rgba(25,10,43,.3);transition:transform .25s var(--ease)}
+.a11y-tg[aria-pressed="true"]{border-color:var(--gold)}
+.a11y-tg[aria-pressed="true"] i{background:var(--v700)}
+.a11y-tg[aria-pressed="true"] i::after{transform:translateX(20px)}
+.a11y-foot{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;padding-top:4px}
+.a11y-reset{border:0;background:none;padding:.4em 0;font-weight:700;color:var(--v700);text-decoration:underline;text-underline-offset:3px}
+.a11y-foot a{font-size:.88rem;color:var(--v700)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+@media (min-width:901px) and (max-width:1279px){.nav-links .nl-pro{display:none}}
+@media (max-width:640px){.a11y-btn{width:40px;height:40px}.a11y-btn svg{width:24px;height:24px}.a11y-panel{left:16px;right:16px;width:auto}}
+
+/* ---------- profesionales ---------- */
+.pro{background:var(--white);padding-block:clamp(80px,9vw,130px);overflow:hidden}
+.pro-head{display:grid;gap:18px;margin-bottom:clamp(30px,5vw,56px)}
+.pro h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:18ch}
+.pro-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(18px,3vw,36px);align-items:stretch}
+.pro-ask{font-family:var(--f-display);font-weight:800;color:var(--v700);margin-bottom:14px}
+.pro-roles{display:grid;gap:10px}
+.pro-roles button{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 18px;border-radius:18px;border:2px solid var(--v100);background:var(--v50);font-family:var(--f-display);font-weight:800;font-size:1.02rem;line-height:1.25;color:var(--v800);transition:background .3s,border-color .3s,color .3s,transform .3s var(--ease)}
+.pro-roles button:hover{border-color:var(--gold);transform:translateX(4px)}
+.pro-roles .pi{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--white);color:var(--v600);transition:background .3s,color .3s}
+.pro-roles .pi svg{width:24px;height:24px}
+.pro-roles button[aria-selected="true"]{background:linear-gradient(135deg,var(--v700),var(--v900));border-color:var(--v800);color:var(--white)}
+.pro-roles button[aria-selected="true"] .pi{background:var(--gold);color:var(--v950)}
+.pro-card{position:relative;border-radius:var(--r-lg);padding:clamp(24px,3.5vw,44px);background:radial-gradient(120% 100% at 100% 0%,var(--v700) 0%,var(--v900) 55%,var(--v950) 100%);color:var(--white);display:grid;gap:22px;align-content:start;overflow:hidden;box-shadow:0 40px 80px -40px rgba(54,24,88,.7)}
+.pro-card::after{content:"";position:absolute;right:-80px;bottom:-80px;width:240px;height:240px;border-radius:50%;border:2px solid rgba(245,181,42,.3);pointer-events:none}
+.pro-card h3{font-size:var(--step-2);font-weight:900;font-style:italic}
+.pro-list{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.pro-list li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start;padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.pro-list li > i{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(245,181,42,.16);color:var(--gold)}
+.pro-list li > i svg{width:20px;height:20px}
+.pro-list small{display:block;font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.pro-list p{color:rgba(255,255,255,.88)}
+.pro-card.swap h3,.pro-card.swap .pro-list li{animation:cardIn .6s var(--ease) both}
+.pro-card.swap .pro-list li:nth-child(2){animation-delay:.07s}.pro-card.swap .pro-list li:nth-child(3){animation-delay:.14s}
+.pro-steps{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,32px);position:relative}
+.pro-steps::before{content:"";position:absolute;left:25px;right:25px;top:24px;height:3px;background:repeating-linear-gradient(90deg,var(--gold) 0 12px,transparent 12px 24px)}
+.pro-steps li{position:relative;display:grid;gap:10px;align-content:start}
+.pro-steps b{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--v800);color:var(--gold);font-family:var(--f-display);font-weight:900;font-size:1.2rem;box-shadow:0 0 0 6px var(--white)}
+.pro-steps h3{font-size:var(--step-1);font-weight:800;color:var(--v900)}
+.pro-steps p{color:var(--ink-soft)}
+.pro-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(30px,4vw,48px)}
+@media (max-width:860px){
+  .pro-grid{grid-template-columns:1fr}
+  .pro-roles{grid-template-columns:1fr 1fr}
+  .pro-roles button{flex-direction:column;align-items:flex-start;gap:10px;padding:14px;font-size:.92rem}
+  .pro-steps{grid-template-columns:1fr;gap:24px}
+  .pro-steps::before{left:24px;right:auto;top:24px;bottom:24px;width:3px;height:auto;background:repeating-linear-gradient(180deg,var(--gold) 0 12px,transparent 12px 24px)}
+  .pro-steps li{grid-template-columns:auto minmax(0,1fr);column-gap:16px;row-gap:6px}
+  .pro-steps li b{grid-row:span 2}
+  .pro-cta{display:grid}
+  .pro-cta .btn{justify-content:center;text-align:center}
+}
+@media (max-width:640px){.pro{padding-block:64px}}
+
+/* ---------- respaldo ---------- */
+.respaldo{background:var(--v50);padding-block:clamp(70px,9vw,120px)}
+.resp-head{display:grid;gap:16px;margin-bottom:clamp(28px,4vw,48px)}
+.respaldo h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:18ch}
+.resp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.resp{position:relative;background:var(--white);border-radius:var(--r-md);padding:clamp(22px,2.4vw,30px);display:grid;gap:8px;align-content:start;border:1px solid var(--v100);box-shadow:0 20px 50px -34px rgba(54,24,88,.6);overflow:hidden}
+.resp::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),var(--gold-deep))}
+.resp strong{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:clamp(1.9rem,1.1rem + 2.1vw,3.2rem);line-height:1;color:var(--v700);font-variant-numeric:tabular-nums}
+.resp h3{font-size:1.1rem;font-weight:800;color:var(--v900);line-height:1.25}
+.resp p{color:var(--ink-soft);font-size:.96rem}
+.empresa{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;padding:20px 24px;border-radius:var(--r-md);background:var(--v900);color:var(--white)}
+.empresa small{display:block;font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.empresa p{color:rgba(255,255,255,.85);max-width:70ch}
+.empresa b{color:var(--white)}
+.emp-links{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.emp-links a{color:var(--white);font-weight:700;font-size:.92rem;text-underline-offset:3px}
+@media (max-width:960px){.resp-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.resp{padding:18px 16px 18px 18px}.resp strong{font-size:1.9rem}.resp h3{font-size:1rem}.resp p{font-size:.88rem}.empresa{padding:18px}}
+
+.foot-legal a{color:rgba(255,255,255,.75)}
+.foot-legal a:hover{color:var(--white)}
+
+/* ---------- accesibilidad: tamaño de texto ---------- */
+html[data-fs="1"]{font-size:112.5%}
+html[data-fs="2"]{font-size:125%}
+html[data-fs="3"]{font-size:140%}
+
+/* con texto agrandado: la barra de arriba no crece y las secciones van en el botón "Menú" */
+html[data-fs] .brand b{font-size:17px}
+html[data-fs] .brand small{font-size:10px}
+html[data-fs] .nav .btn,html[data-fs] .menu-btn{font-size:15px}
+html[data-fs] .nav-links{position:fixed;inset:0 0 auto 0;top:96px;flex-direction:column;align-items:stretch;padding:16px var(--gutter) 24px;background:rgba(25,10,43,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transform:translateY(-130%);transition:transform .45s var(--ease);max-height:calc(100svh - 100px);overflow-y:auto}
+html[data-fs] .nav-links.open{transform:none}
+html[data-fs] .nav-links a{padding:.8em 1em;font-size:1.1rem}
+html[data-fs] .nav-links .nl-pro{display:block}
+html[data-fs] .menu-btn{display:inline-flex}
+@media (max-width:1100px){html[data-fs] .nav .btn-cta{display:none}}
+
+/* ---------- accesibilidad: alto contraste ---------- */
+.a11y-hc{--ink:#000;--ink-soft:#14091F;--gold-deep:#7A4A00;--v300:#6E4A9E;--glass:rgba(10,4,20,.92);--glass-line:rgba(255,255,255,.85)}
+.a11y-hc :is(.hero .lead,.on-dark .lead,.stat>span,.glass-card p,.dcard .dtxt p,.historia-body .txt,.timeline p,.valor p,.contacto .lead,.field label,.preview small,.foot-brand p,.foot-nav a,.foot-tel,.foot-bottom p,footer small,.foot-legal a,.oc-status,.stage-card p,.face.back p,.sitem.on .who,.nav-links a,.dir-legend,.scroll-cue,.pro-list p,.empresa p,.chip){color:#fff!important}
+.a11y-hc .manifesto .w{opacity:1!important}
+.a11y-hc .hero::before{background:linear-gradient(90deg,rgba(10,4,20,.92),rgba(10,4,20,.74))}
+.a11y-hc .derecho::before{background:rgba(10,4,20,.9)}
+.a11y-hc .dcard::before{background:linear-gradient(180deg,rgba(10,4,20,.1) 20%,rgba(10,4,20,.95))}
+.a11y-hc .reveal-pin .circle::after{background:rgba(10,4,20,.72)}
+.a11y-hc .stage::after{background:linear-gradient(180deg,rgba(10,4,20,.2),rgba(10,4,20,.85))}
+.a11y-hc :is(.stage-card,.dcard .dtxt,.glass-card,.chip){background:rgba(10,4,20,.94);border-color:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.a11y-hc .btn-ghost{background:#0A0414;border:2px solid #fff}
+.a11y-hc .btn-line{border-color:var(--v800);color:var(--v900)}
+.a11y-hc :is(.field input,.field select){background:#0A0414;border:2px solid #fff}
+.a11y-hc .field input::placeholder{color:#ddd3ea}
+.a11y-hc .nav,.a11y-hc .nav.scrolled{background:#0A0414}
+.a11y-hc :is(.check,.sitem:not(.on),.qopts button,.de,.faqp,.quiz,.face.front,.resp,.pro-roles button:not([aria-selected="true"]),.os-search,.ringbox){border:2px solid var(--v800)}
+.a11y-hc .face.front small{color:#8B1A15}
+.a11y-hc :is(.hero,.stats,.manifesto,.derecho,.destinos,.historia,.contacto,.pro-card,.empresa) .eyebrow{color:var(--gold)}
+.a11y-hc :focus-visible{outline:4px solid var(--gold-hi);outline-offset:3px;box-shadow:0 0 0 8px #000}
+
+/* ---------- accesibilidad: letra más legible ---------- */
+.a11y-read{--f-display:"Atkinson Hyperlegible",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;--f-body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif}
+.a11y-read body{line-height:1.72;letter-spacing:.012em;word-spacing:.06em}
+.a11y-read *{font-style:normal!important}
+.a11y-read :is(h1,h2,h3,h4,.eyebrow,.stat strong,.resp strong,.valor b,.brand b,.manifesto p){letter-spacing:0!important}
+
+/* ---------- accesibilidad: resaltar enlaces y botones ---------- */
+.a11y-links a:not(.btn):not(.brand):not(.soc):not(.fab){text-decoration:underline!important;text-decoration-thickness:2px!important;text-underline-offset:4px}
+.a11y-links :is(a,button,summary,input,select,[role=button]):not(.os):not(.mstop):not(.stop):not(.de){outline:2px solid var(--gold);outline-offset:2px}
+
+/* ---------- accesibilidad: sin animaciones ---------- */
+.a11y-still *,.a11y-still *::before,.a11y-still *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.a11y-still .manifesto .w{opacity:1}
+.a11y-still .reveal-pin .circle{clip-path:none}
+.a11y-still .reveal-pin .ringo{display:none}
+.a11y-still .timeline .tl-fill{transform:none}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.transportesaparicio.com.ar/#empresa","name":"Transporte Aparicio","url":"https://www.transportesaparicio.com.ar/","logo":"https://www.transportesaparicio.com.ar/icon-512.png","image":"https://www.transportesaparicio.com.ar/og-image.jpg","description":"Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, y nos ocupamos de los trámites. En todo el país.","telephone":"+5491128533720","areaServed":{"@type":"Country","name":"Argentina"},"contactPoint":{"@type":"ContactPoint","telephone":"+5491128533720","contactType":"customer service","availableLanguage":"es","areaServed":"AR"}},{"@type":"WebSite","@id":"https://www.transportesaparicio.com.ar/#sitio","url":"https://www.transportesaparicio.com.ar/","name":"Transporte Aparicio","inLanguage":"es-AR","publisher":{"@id":"https://www.transportesaparicio.com.ar/#empresa"}},{"@type":"Service","name":"Transporte para chicos con CUD","serviceType":"Transporte especial para personas con discapacidad","description":"Traslados a la escuela, terapias, centros de día y rehabilitación, cubiertos al 100% por la obra social o prepaga según la Ley 24.901.","provider":{"@id":"https://www.transportesaparicio.com.ar/#empresa"},"areaServed":{"@type":"Country","name":"Argentina"},"audience":{"@type":"PeopleAudience","audienceType":"Familias de chicos con Certificado Único de Discapacidad"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tengo que pagar algo?","acceptedAnswer":{"@type":"Answer","text":"No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social."}},{"@type":"Question","name":"¿Cuánto tarda la autorización?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad."}},{"@type":"Question","name":"¿Qué pasa si el CUD no dice «Transporte»?","acceptedAnswer":{"@type":"Answer","text":"Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde, para que puedas pedir la cobertura."}},{"@type":"Question","name":"¿Puede viajar un acompañante?","acceptedAnswer":{"@type":"Answer","text":"Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia."}},{"@type":"Question","name":"¿Y si usa silla de ruedas?","acceptedAnswer":{"@type":"Answer","text":"La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante."}},{"@type":"Question","name":"¿Trabajan en mi provincia?","acceptedAnswer":{"@type":"Answer","text":"Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos."}},{"@type":"Question","name":"¿Lo puedo llevar yo y que me paguen el viaje?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si tu hijo viaja más tranquilo con vos o con alguien de la familia, ustedes hacen el viaje y nosotros les pagamos cada traslado. El trámite con la obra social lo hacemos nosotros igual."}},{"@type":"Question","name":"¿Qué pasa si un día no viaja?","acceptedAnswer":{"@type":"Answer","text":"Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social."}},{"@type":"Question","name":"¿Por cuánto tiempo autorizan el transporte?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya."}},{"@type":"Question","name":"Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia?","acceptedAnswer":{"@type":"Answer","text":"Escribinos o pasale nuestro número a la familia. En la sección para profesionales te contamos qué papeles te vamos a pedir."}}]}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
 <!-- barra de progreso -->
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -738,10 +900,12 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
     <nav class="nav-links" id="navLinks" aria-label="Secciones">
       <a href="#inicio" data-go="inicio">Inicio</a>
       <a href="#como" data-go="como">Cómo trabajamos</a>
+      <a href="#profesionales" data-go="profesionales" class="nl-pro">Profesionales</a>
       <a href="#historia" data-go="historia">Nuestra historia</a>
       <a href="#contacto" data-go="contacto">Contacto</a>
     </nav>
-    <div style="display:flex;gap:10px;align-items:center">
+    <div class="nav-cta">
+      <button class="a11y-btn" id="a11yBtn" type="button" aria-expanded="false" aria-controls="a11yPanel" aria-label="Opciones de accesibilidad" title="Accesibilidad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10.2"/><circle cx="12" cy="6.7" r="1.5" fill="currentColor" stroke="none"/><path d="M6.6 9.6l5.4 1.2 5.4-1.2M12 10.8v3.4l-2.7 4.6M12 14.2l2.7 4.6"/></svg></button>
       <a class="btn btn-gold btn-cta magnet" href="#contacto" data-go="contacto">Hablá con nosotros</a>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menú</button>
     </div>
@@ -754,6 +918,19 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
     </div>
   </div>
 </header>
+
+<!-- PANEL DE ACCESIBILIDAD -->
+<div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yT" data-lenis-prevent hidden>
+  <div class="a11y-head"><b id="a11yT">Accesibilidad</b><button class="a11y-x" id="a11yX" type="button" aria-label="Cerrar opciones de accesibilidad">&times;</button></div>
+  <div class="a11y-row"><span id="a11yFs">Tamaño del texto</span>
+    <div class="a11y-size" role="group" aria-labelledby="a11yFs"><button type="button" data-fs="0" aria-pressed="true" aria-label="Texto normal">A</button><button type="button" data-fs="1" aria-pressed="false" aria-label="Texto grande">A+</button><button type="button" data-fs="2" aria-pressed="false" aria-label="Texto más grande">A++</button><button type="button" data-fs="3" aria-pressed="false" aria-label="Texto muy grande">A+++</button></div>
+  </div>
+  <button class="a11y-tg" type="button" data-opt="hc" aria-pressed="false"><span><b>Alto contraste</b><small>Colores más fuertes y textos más nítidos.</small></span><i aria-hidden="true"></i></button>
+  <button class="a11y-tg" type="button" data-opt="read" aria-pressed="false"><span><b>Letra más legible</b><small>Una tipografía pensada para leer con más facilidad.</small></span><i aria-hidden="true"></i></button>
+  <button class="a11y-tg" type="button" data-opt="still" aria-pressed="false"><span><b>Detener animaciones</b><small>Frena el video, los carruseles y los movimientos.</small></span><i aria-hidden="true"></i></button>
+  <button class="a11y-tg" type="button" data-opt="links" aria-pressed="false"><span><b>Resaltar enlaces y botones</b><small>Marca todo lo que se puede tocar.</small></span><i aria-hidden="true"></i></button>
+  <div class="a11y-foot"><button class="a11y-reset" id="a11yReset" type="button">Restablecer todo</button><a href="accesibilidad.html">Declaración de accesibilidad</a></div>
+</div>
 
 <!-- RUTA LATERAL CON LA COMBI -->
 <aside class="route" id="route" aria-label="Recorrido de la página">
@@ -770,12 +947,12 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
   </svg>
 </aside>
 
-<main>
+<main id="main" tabindex="-1">
 <!-- =============== INICIO =============== -->
 <section class="hero" id="inicio">
   <div class="hero-media" id="heroMedia">
     <video id="heroVideo" autoplay muted loop playsinline preload="auto"></video>
-    <script>(function(){var v=document.getElementById("heroVideo"),m=window.innerWidth<700;v.poster=m?"img/hero-poster-m.webp":"img/hero-poster.webp";v.src=m?"img/hero-m.mp4":"img/hero.mp4";})();</script>
+    <script>(function(){var v=document.getElementById("heroVideo"),m=window.innerWidth<700;if(document.documentElement.classList.contains("a11y-still")){v.removeAttribute("autoplay");v.autoplay=false;v.preload="none";}v.poster=m?"img/hero-poster-m.webp":"img/hero-poster.webp";v.src=m?"img/hero-m.mp4":"img/hero.mp4";})();</script>
   </div>
   <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
   <div class="wrap hero-inner" id="heroInner">
@@ -1059,9 +1236,52 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
       <details><summary>¿Puede viajar un acompañante? <i aria-hidden="true"></i></summary><div class="ans">Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia.</div></details>
       <details><summary>¿Y si usa silla de ruedas? <i aria-hidden="true"></i></summary><div class="ans">La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante.</div></details>
       <details><summary>¿Trabajan en mi provincia? <i aria-hidden="true"></i></summary><div class="ans">Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos.</div></details>
+      <details><summary>¿Lo puedo llevar yo y que me paguen el viaje? <i aria-hidden="true"></i></summary><div class="ans">Sí. Si tu hijo viaja más tranquilo con vos o con alguien de la familia, ustedes hacen el viaje y nosotros les pagamos cada traslado. El trámite con la obra social lo hacemos nosotros igual.</div></details>
+      <details><summary>¿Qué pasa si un día no viaja? <i aria-hidden="true"></i></summary><div class="ans">Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social.</div></details>
+      <details><summary>¿Por cuánto tiempo autorizan el transporte? <i aria-hidden="true"></i></summary><div class="ans">Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya.</div></details>
+      <details><summary>Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia? <i aria-hidden="true"></i></summary><div class="ans">Escribinos o pasale nuestro número a la familia. En la <a href="#profesionales" data-go="profesionales">sección para profesionales</a> te contamos qué papeles te vamos a pedir.</div></details>
     </div>
   </div>
 </section>
+<!-- =============== PROFESIONALES =============== -->
+<section class="pro" id="profesionales" aria-labelledby="pro-t">
+  <div class="wrap">
+    <div class="pro-head">
+      <span class="eyebrow">Para profesionales y centros</span>
+      <h2 id="pro-t">¿Acompañás a chicos con CUD? Trabajemos juntos.</h2>
+      <p class="lead">Terapeutas, escuelas, centros de día y equipos de salud: cuando una familia necesita transporte, derivala con nosotros. Nos ocupamos del trámite con la obra social para que el chico llegue a horario y no pierda ninguna sesión.</p>
+    </div>
+    <div class="pro-grid">
+      <div>
+        <p class="pro-ask" id="proAsk">¿Desde dónde acompañás al chico?</p>
+        <div class="pro-roles" id="proRoles" role="tablist" aria-labelledby="proAsk">
+          <button type="button" role="tab" id="pr-0" aria-selected="true" aria-controls="proCard"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10.3c.8 1.1 1.8 1.7 3 1.7s2.2-.6 3-1.7"/></svg></span>Terapeuta</button>
+          <button type="button" role="tab" id="pr-1" aria-selected="false" aria-controls="proCard" tabindex="-1"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.6V16c1.6 1.3 3.5 2 5.5 2s3.9-.7 5.5-2v-4.4M21.5 9.5v5"/></svg></span>Escuela o jardín</button>
+          <button type="button" role="tab" id="pr-2" aria-selected="false" aria-controls="proCard" tabindex="-1"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"/><path d="M12 17.2s-3-1.8-3-3.7a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 1.9-3 3.7-3 3.7z"/></svg></span>Centro de día o CET</button>
+          <button type="button" role="tab" id="pr-3" aria-selected="false" aria-controls="proCard" tabindex="-1"><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></span>Médico o equipo de salud</button>
+        </div>
+      </div>
+      <div class="pro-card" id="proCard" role="tabpanel" aria-labelledby="pr-0" aria-live="polite">
+        <h3 id="proT">Si sos terapeuta</h3>
+        <ul class="pro-list">
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></i><div><small>Lo que te pedimos</small><p id="proNeed">La constancia de tratamiento con los días y horarios de las sesiones.</p></div></li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></i><div><small>Todos los meses</small><p id="proMonth">Firmás la planilla de asistencia con los días que vino a terapia. Nada más.</p></div></li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><small>Lo que ganás</small><p id="proGain">Pacientes que llegan a horario y no pierden sesiones por falta de traslado.</p></div></li>
+        </ul>
+      </div>
+    </div>
+    <ol class="pro-steps">
+      <li class="rv"><b>1</b><h3>Nos escribís vos o la familia</h3><p>Podés escribirnos o pasarle nuestro número a la familia, lo que les quede más cómodo.</p></li>
+      <li class="rv"><b>2</b><h3>Nos ocupamos de los papeles</h3><p>Revisamos el CUD con la familia y armamos el presupuesto con el formato de su obra social.</p></li>
+      <li class="rv"><b>3</b><h3>El chico empieza a viajar</h3><p>Coordinamos los horarios con vos. Cada mes, solo te pedimos la firma de la planilla de asistencia.</p></li>
+    </ol>
+    <div class="pro-cta">
+      <a class="btn btn-gold magnet" id="proWa" href="#contacto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>Quiero derivar una familia</a>
+      <button class="btn btn-line" id="proShare" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v13M7 8l5-5 5 5"/></svg><span id="proShareTx">Compartir la página con una familia</span></button>
+    </div>
+  </div>
+</section>
+
 <!-- =============== NUESTRA HISTORIA =============== -->
 <section class="historia" id="historia" aria-labelledby="hist-t">
   <div class="reveal-pin" id="revealPin">
@@ -1103,6 +1323,26 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
         <blockquote>Cada chico que sube a un viaje es una familia que confía en nosotros. Esa confianza es lo que más cuidamos.</blockquote>
         <cite>Dirección de Transporte Aparicio</cite>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== RESPALDO =============== -->
+<section class="respaldo" id="respaldo" aria-labelledby="resp-t">
+  <div class="wrap">
+    <div class="resp-head">
+      <span class="eyebrow">Por qué confiar en nosotros</span>
+      <h2 id="resp-t">Hechos, no promesas.</h2>
+    </div>
+    <div class="resp-grid">
+      <article class="resp rv"><strong>+190</strong><h3>chicos viajan con nosotros</h3><p>Todos los meses, a escuelas, terapias y centros de día.</p></article>
+      <article class="resp rv"><strong>$0</strong><h3>para la familia</h3><p>Facturamos directo a la obra social, con factura electrónica. No pagás ni adelantás nada.</p></article>
+      <article class="resp rv"><strong>24.901</strong><h3>Trabajamos según la ley</h3><p>Facturamos con el nomenclador oficial de prestaciones por discapacidad, que se actualiza todos los meses.</p></article>
+      <article class="resp rv"><strong>1</strong><h3>número, una persona</h3><p>Te responde alguien de nuestro equipo, no un robot. Siempre el mismo número.</p></article>
+    </div>
+    <div class="empresa rv" id="empresa">
+      <div><small>Datos de la empresa</small><p id="empTxt">Emitimos factura electrónica a obras sociales y prepagas de todo el país.</p></div>
+      <div class="emp-links"><a href="privacidad.html">Política de privacidad</a><a href="accesibilidad.html">Accesibilidad</a></div>
     </div>
   </div>
 </section>
@@ -1164,6 +1404,7 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
       <b>Secciones</b>
       <a href="#inicio" data-go="inicio">Inicio</a>
       <a href="#como" data-go="como">Cómo trabajamos</a>
+      <a href="#profesionales" data-go="profesionales">Para profesionales</a>
       <a href="#historia" data-go="historia">Nuestra historia</a>
       <a href="#contacto" data-go="contacto">Contacto</a>
     </nav>
@@ -1180,6 +1421,7 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
   </div>
   <div class="wrap foot-bottom">
     <p>© 2026 Transporte Aparicio · Todo el país</p>
+    <p class="foot-legal"><a href="privacidad.html">Política de privacidad</a> · <a href="accesibilidad.html">Accesibilidad</a></p>
     <small>Las fotos de esta página son ilustrativas y provienen de bancos de imágenes. La cobertura depende de la autorización de cada obra social, según la Ley 24.901.</small>
   </div>
 </footer>
@@ -1199,6 +1441,8 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
 const REDES = { instagram: "", facebook: "", linkedin: "" };
 // Un solo número para todo. Formato internacional sin espacios ni "+", ej. 5491112345678.
 const CONTACTO = { nombre: "Transporte Aparicio", rol: "Atención a familias", tel: "5491128533720" };
+// Datos de la empresa que se muestran en "Por qué confiar" (dejá "" lo que no se quiera mostrar).
+const EMPRESA = { razon: "Aparicio Cinthia Viviana", cuit: "27-25895217-6" };
 const OBRAS_GRUPOS = [
   ["OSECAC","OSPRERA","OSPECON","OSUTHGRA","OSPE","OSPEDYC","OSPIA","OSPIM","OSPIT","OSPIC","OSPLAD","OSPM","OSPOCE","OSPACA","OSPATCA","OSPAT","OSPACP","OSEPJANA","OSOETSYLRA (Tintoreros)","OS Pasteleros","OSCHOCA","OSMATA","OSUOM","OSFATLYF","OSJERA","OSDIPP","OSTEP","OSCEP","OSPIP","OSTEL","OSSEG","OSPERYH","OSDOP","OSFE","OSPSA (Sanidad)","Unión Personal","Accord Salud","Bancarios","Andar","Construir Salud","DASUTeN","DOSUBA"],
   ["OSDE","Swiss Medical","Galeno","Medifé","Omint","Sancor Salud","Medicus","Jerárquicos Salud","Federada Salud","Luis Pasteur","Premedic","Cover Salud","Elevar","OSDEPYM","Avalian","Prevención Salud","Plan de Salud Hospital Italiano","Hospital Alemán","Hospital Británico","FEMEBA Salud"],
@@ -1211,7 +1455,8 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 (function(){
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const still = document.documentElement.classList.contains("a11y-still");
+  const reduce = still || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasG = !!(window.gsap && window.ScrollTrigger);
   const desktop = () => window.matchMedia("(min-width: 861px)").matches;
 
@@ -1255,7 +1500,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 
   // el video de portada solo corre cuando se ve
   const hv = document.getElementById("heroVideo");
-  if ("IntersectionObserver" in window && hv) new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const pr = hv.play(); pr && pr.catch(() => {}); } else hv.pause(); }), { threshold: .05 }).observe(hv);
+  if ("IntersectionObserver" in window && hv) new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !still) { const pr = hv.play(); pr && pr.catch(() => {}); } else hv.pause(); }), { threshold: .05 }).observe(hv);
   let mqVisible = true;
   if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(e => mqVisible = e.isIntersecting), { rootMargin: "200px 0px" }).observe(document.querySelector(".obras"));
 
@@ -1266,7 +1511,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   function mqLoop(t){
     const dt = Math.min(.05, (t - mqLast) / 1000); mqLast = t;
     window.__mqBoost = 1 + ((window.__mqBoost || 1) - 1) * .94;
-    if (mqVisible && !osMarq.hidden && !document.hidden){
+    if (!still && mqVisible && !osMarq.hidden && !document.hidden){
       if (!MQ[0].w) measureMq();
       const v = (innerWidth < 700 ? 64 : 78) * window.__mqBoost;
       MQ.forEach(o => {
@@ -1355,6 +1600,9 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   });
   osUpdate(); requestAnimationFrame(mqLoop);
 
+  /* ---- datos de la empresa ---- */
+  if (EMPRESA.razon) $("#empTxt").innerHTML = `Transporte Aparicio es el nombre comercial de <b>${esc(EMPRESA.razon)}</b>${EMPRESA.cuit ? ` · CUIT <b>${esc(EMPRESA.cuit)}</b>` : ""}. Emitimos factura electrónica a obras sociales y prepagas de todo el país.`;
+
   /* ---- formulario → mensaje de WhatsApp ---- */
   const bubble = $("#bubble");
   function buildMsg(){
@@ -1415,6 +1663,36 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   /* ---- mitos (flip) ---- */
   $$(".flip").forEach(f => f.addEventListener("click", () => f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") !== "true")));
 
+  /* ---- profesionales ---- */
+  const ROLES = [
+    { t: "Si sos terapeuta", from: "como terapeuta", need: "La constancia de tratamiento con los días y horarios de las sesiones.", month: "Firmás la planilla de asistencia con los días que vino a terapia. Nada más.", gain: "Pacientes que llegan a horario y no pierden sesiones por falta de traslado." },
+    { t: "Si sos de una escuela o un jardín", from: "desde una escuela", need: "La constancia de alumno regular, con el horario de entrada y de salida.", month: "La escuela firma la planilla de asistencia con los días que viajó.", gain: "Coordinamos la llegada y la salida con el horario de la escuela." },
+    { t: "Si sos de un centro de día o un CET", from: "desde un centro de día", need: "La constancia de concurrencia, con los días y horarios.", month: "El centro firma la planilla de asistencia de cada mes.", gain: "Traslados fijos de ida y vuelta, todos los días, cubiertos por la obra social." },
+    { t: "Si sos médico o parte del equipo de salud", from: "desde un equipo de salud", need: "La orden médica de transporte, con fecha anterior al inicio de los viajes y la justificación de por qué no puede usar el transporte público. Si viaja con asistencia, la escala FIM.", month: "Nada. Del seguimiento mensual con la obra social nos ocupamos nosotros.", gain: "Te decimos qué tiene que decir la orden para que la obra social no la rechace por un detalle." }
+  ];
+  const proBtns = $$("#proRoles [role=tab]"), proCard = $("#proCard"), proWa = $("#proWa");
+  function setRole(i, anim){
+    proBtns.forEach((b, k) => { b.setAttribute("aria-selected", k === i); b.tabIndex = k === i ? 0 : -1; });
+    const r = ROLES[i];
+    $("#proT").textContent = r.t; $("#proNeed").textContent = r.need; $("#proMonth").textContent = r.month; $("#proGain").textContent = r.gain;
+    proCard.setAttribute("aria-labelledby", proBtns[i].id);
+    if (anim) { proCard.classList.remove("swap"); void proCard.offsetWidth; proCard.classList.add("swap"); }
+    if (CONTACTO.tel) { proWa.href = "https://wa.me/" + CONTACTO.tel + "?text=" + encodeURIComponent(`¡Hola! Te escribo ${r.from} y quiero derivar a una familia para el transporte.`); proWa.target = "_blank"; proWa.rel = "noopener"; }
+  }
+  proBtns.forEach((b, i) => {
+    b.addEventListener("click", () => setRole(i, true));
+    b.addEventListener("keydown", e => { const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key]; if (!d) return; e.preventDefault(); const n = (i + d + proBtns.length) % proBtns.length; setRole(n, true); proBtns[n].focus(); });
+  });
+  setRole(0, false);
+  if (!CONTACTO.tel) proWa.addEventListener("click", e => { e.preventDefault(); go("contacto"); });
+  const SITIO = "https://www.transportesaparicio.com.ar/";
+  $("#proShare").addEventListener("click", async () => {
+    const txt = "Esta página explica cómo pedir el transporte para chicos con CUD, cubierto por la obra social:", lab = $("#proShareTx");
+    if (navigator.share) { try { await navigator.share({ title: "Transporte Aparicio", text: txt, url: SITIO }); } catch (err) {} return; }
+    try { await navigator.clipboard.writeText(txt + " " + SITIO); lab.textContent = "¡Link copiado! Pegalo en WhatsApp"; setTimeout(() => lab.textContent = "Compartir la página con una familia", 2200); }
+    catch (err) { window.open("https://wa.me/?text=" + encodeURIComponent(txt + " " + SITIO), "_blank", "noopener"); }
+  });
+
   /* ---- navegación suave ---- */
   let lenis = null;
   function go(id){
@@ -1434,7 +1712,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     const ct = document.getElementById("contacto").getBoundingClientRect().top;
     fab.classList.toggle("show", y > innerHeight * .8 && ct > innerHeight * .6);
     moveVan(y, h);
-    const secs = ["inicio","como","historia","contacto"];
+    const secs = ["inicio","como","profesionales","historia","contacto"];
     let cur = "inicio";
     secs.forEach(s => { const el = document.getElementById(s); if (el && el.getBoundingClientRect().top < innerHeight * .4) cur = s; });
     $$(".nav-links a").forEach(a => a.classList.toggle("active", a.dataset.go === cur));
@@ -1442,7 +1720,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 
   /* ---- ruta lateral con la combi ---- */
   const route = $("#route"), van = $("#van"), stopsBox = $("#stops"), dash = $("#roadDash"), done = $("#roadDone");
-  const STOPS = [["inicio","Inicio"],["como","Cómo trabajamos"],["destinos","A dónde vamos"],["historia","Nuestra historia"],["contacto","Contacto"]];
+  const STOPS = [["inicio","Inicio"],["como","Cómo trabajamos"],["destinos","A dónde vamos"],["profesionales","Profesionales"],["historia","Nuestra historia"],["contacto","Contacto"]];
   let stopEls = [];
   function buildStops(){
     stopsBox.innerHTML = ""; stopEls = [];
@@ -1577,7 +1855,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   /* ---- recorrido paso a paso ---- */
   const PASOS = [{t:"Nos escribís",w:"Lo hacés vos",d:"Nos contás quién viaja, a dónde tiene que ir y qué obra social tiene. Te respondemos personalmente y sin compromiso."},{t:"Revisamos los papeles",w:"Lo hacemos juntos",d:"Chequeamos con vos el CUD, la orden médica y lo que pide tu obra social, para que no te rechacen nada por un detalle."},{t:"Armamos el presupuesto",w:"Lo hacemos nosotros",d:"Calculamos el recorrido real y preparamos el presupuesto y el diagrama de traslados, con el formato que exige cada obra social."},{t:"Lo presentamos",w:"Lo hacemos nosotros",d:"Acompañamos la presentación ante la obra social y hacemos el seguimiento hasta que el transporte queda autorizado."},{t:"Empiezan los viajes",w:"Lo hacemos nosotros",d:"De la puerta de tu casa a la puerta de la escuela o de la terapia, con horarios fijos que se adaptan a la semana de tu hijo."},{t:"Nos ocupamos todos los meses",w:"Lo hacemos nosotros",d:"Planillas de asistencia, facturación y seguimiento con la obra social. Ese trámite mensual lo hacemos nosotros, no vos."}];
   const rstops = $$(".rstop"), sitems = $$(".sitem"), simgs = $$("#stage img"), van2 = $("#roadVan"), card = $("#stageCard");
-  const DUR = 6000; let cur = 0, playing = true, t0 = 0, raf = 0, inView = false;
+  const DUR = 6000; let cur = 0, playing = !still, t0 = 0, raf = 0, inView = false;
   function stopPos(i){ const b = rstops[i].querySelector("b"), r = $("#road").getBoundingClientRect(), br = b.getBoundingClientRect(); return br.left + br.width / 2 - r.left; }
   function placeVan(){
     const roadW = $("#road").clientWidth, x = stopPos(cur);
@@ -1613,6 +1891,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   $("#stage").addEventListener("touchend", e => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 45) setStep(cur + (dx < 0 ? 1 : -1), true); });
   addEventListener("resize", placeVan); addEventListener("load", placeVan);
   setStep(0); raf = requestAnimationFrame(tick);
+  if (still) { $("#jPlay").classList.add("paused"); $("#jPlay").setAttribute("aria-label", "Reproducir"); }
 
   /* ---- destinos: carrusel ---- */
   const track = $("#track"), dcards = $$(".dcard", track), dots = $("#dDots");
@@ -1631,7 +1910,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   track.addEventListener("mouseenter", () => dHover = true); track.addEventListener("mouseleave", () => dHover = false);
   track.addEventListener("touchstart", holdAuto, { passive: true });
   ("IntersectionObserver" in window) && new IntersectionObserver(es => es.forEach(e => dInView = e.isIntersecting), { threshold: .4 }).observe(track);
-  setInterval(() => { if (dInView && !dHover && !document.hidden && performance.now() > dHold) nextCard(); }, 4200);
+  setInterval(() => { if (!still && dInView && !dHover && !document.hidden && performance.now() > dHold) nextCard(); }, 4200);
   // arrastrar con el mouse
   let dragging = false, dx0 = 0, sl0 = 0, moved = false;
   track.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") return; dragging = true; moved = false; dx0 = e.clientX; sl0 = track.scrollLeft; track.classList.add("drag"); track.setPointerCapture(e.pointerId); });
@@ -1639,6 +1918,59 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   const endDrag = () => { if (!dragging) return; dragging = false; track.classList.remove("drag"); goCard(curCard()); holdAuto(); };
   track.addEventListener("pointerup", endDrag); track.addEventListener("pointercancel", endDrag);
   track.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+  /* ---- accesibilidad ---- */
+  const aRoot = document.documentElement, aBtn = $("#a11yBtn"), aPanel = $("#a11yPanel");
+  let pref = {};
+  try { pref = JSON.parse(localStorage.getItem("ta-a11y") || "{}") || {}; } catch (e) {}
+  const savePref = () => { try { localStorage.setItem("ta-a11y", JSON.stringify(pref)); } catch (e) {} };
+  function readFont(){ if ($("#fontRead")) return; const l = document.createElement("link"); l.id = "fontRead"; l.rel = "stylesheet"; l.href = "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap"; document.head.appendChild(l); }
+  function syncA11y(){
+    $$(".a11y-size button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.fs === (+pref.fs || 0))));
+    $$(".a11y-tg").forEach(b => b.setAttribute("aria-pressed", String(!!pref[b.dataset.opt])));
+    aBtn.classList.toggle("on", ["fs", "hc", "read", "still", "links"].some(k => pref[k]));
+  }
+  function relayout(){
+    requestAnimationFrame(() => {
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+      buildStops(); onScroll(); placeVan();
+      moveInd(tabBtns.find(b => b.getAttribute("aria-selected") === "true"));
+      MQ.forEach(o => o.w = 0); measureMq();
+    });
+  }
+  function reloadKeep(){ savePref(); try { sessionStorage.setItem("ta-y", String(scrollY)); } catch (e) {} location.reload(); }
+  function openA11y(o){
+    aPanel.hidden = !o; aBtn.setAttribute("aria-expanded", String(o));
+    if (o) { aPanel.style.top = Math.round($("#nav").getBoundingClientRect().bottom + 8) + "px"; syncA11y(); const f = $(".a11y-size button[aria-pressed=true]", aPanel); f && f.focus(); }
+  }
+  aBtn.addEventListener("click", () => openA11y(aPanel.hidden));
+  $("#a11yX").addEventListener("click", () => { openA11y(false); aBtn.focus(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !aPanel.hidden) { openA11y(false); aBtn.focus(); } });
+  document.addEventListener("click", e => { if (!aPanel.hidden && !aPanel.contains(e.target) && !aBtn.contains(e.target)) openA11y(false); });
+  $$(".a11y-size button").forEach(b => b.addEventListener("click", () => {
+    const v = +b.dataset.fs;
+    if (v) { pref.fs = v; aRoot.setAttribute("data-fs", v); } else { delete pref.fs; aRoot.removeAttribute("data-fs"); }
+    savePref(); syncA11y(); relayout();
+  }));
+  $$(".a11y-tg").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.opt;
+    if (pref[k]) delete pref[k]; else pref[k] = true;
+    if (k === "still") return reloadKeep();
+    aRoot.classList.toggle("a11y-" + k, !!pref[k]);
+    if (k === "read" && pref[k]) { readFont(); document.fonts && document.fonts.ready.then(relayout); }
+    savePref(); syncA11y(); relayout();
+  }));
+  $("#a11yReset").addEventListener("click", () => {
+    const wasStill = !!pref.still; pref = {};
+    if (wasStill) return reloadKeep();
+    ["hc", "read", "links"].forEach(k => aRoot.classList.remove("a11y-" + k)); aRoot.removeAttribute("data-fs");
+    savePref(); syncA11y(); relayout();
+  });
+  syncA11y();
+  addEventListener("load", () => {
+    let y = null; try { y = sessionStorage.getItem("ta-y"); sessionStorage.removeItem("ta-y"); } catch (e) {}
+    if (y !== null) setTimeout(() => { if (lenis) lenis.scrollTo(+y, { immediate: true, force: true }); else scrollTo(0, +y); }, 80);
+  });
 
   /* ================== GSAP ================== */
   if (!hasG){ addEventListener("scroll", onScroll, { passive: true }); onScroll(); return; }
