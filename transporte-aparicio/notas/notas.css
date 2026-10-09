@@ -248,5 +248,9 @@ html[data-fs="3"]{font-size:140%}
 .a11y-links a:not(.btn):not(.brand):not(.card):not(.fab){text-decoration:underline!important;text-decoration-thickness:2px!important;text-underline-offset:4px}
 .a11y-links :is(a,button,summary):not(.ck-item){outline:2px solid var(--gold);outline-offset:2px}
 
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* apariciones al bajar (se quitan las clases al terminar, así el hover sigue ágil) */
+.pre{opacity:0;transform:translateY(26px)}
+.pre.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .8s var(--ease)}
+.a11y-still *,.a11y-still *::before,.a11y-still *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.a11y-still .pre{opacity:1;transform:none}
 @media print{.top,.readbar,.fab,.toc,.art-cta,.related,.a11y-panel{display:none!important}.art-grid{display:block}body{background:#fff}}

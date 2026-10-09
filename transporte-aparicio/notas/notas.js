@@ -28,6 +28,20 @@
   if (heads.length) { addEventListener("scroll", markToc, { passive: true }); markToc(); }
   links.forEach(a => a.addEventListener("click", () => { if (toc && matchMedia("(max-width: 1000px)").matches) toc.open = false; }));
 
+  /* ---- apariciones al bajar (salvo que la persona haya pedido detener las animaciones) ---- */
+  if (!root.classList.contains("a11y-still") && "IntersectionObserver" in window) {
+    const els = $$(".resumen, .art-body > h2, ol.steps > li, ul.ticks > li, .callout, blockquote.ley, .ck-item, .art-faq details, .card");
+    els.forEach(el => el.classList.add("pre"));
+    const io = new IntersectionObserver(es => {
+      es.filter(e => e.isIntersecting).forEach((e, i) => {
+        const el = e.target; io.unobserve(el);
+        el.style.transitionDelay = Math.min(i, 5) * 70 + "ms"; el.classList.add("in");
+        setTimeout(() => { el.classList.remove("pre", "in"); el.style.transitionDelay = ""; }, 1200);
+      });
+    }, { threshold: .08, rootMargin: "0px 0px -6% 0px" });
+    els.forEach(el => io.observe(el));
+  }
+
   /* ---- checklist de papeles (se guarda en el dispositivo) ---- */
   $$(".ck").forEach(ck => {
     const key = "ta-ck-" + (ck.dataset.ck || "x"), items = $$(".ck-item", ck), txt = $(".ck-txt", ck), fill = $(".ck-bar i", ck);
