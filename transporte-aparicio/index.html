@@ -724,10 +724,13 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
 /* ---------- reveal suave ---------- */
 .rv{will-change:transform,opacity}
 
-@media (prefers-reduced-motion:reduce){
-  .scroll-cue b::after{animation:none}
-  .manifesto .w{opacity:1}
-}
+/* ---------- aviso único para quien tiene las animaciones apagadas en su sistema ---------- */
+.motion-ask{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:46;max-width:min(380px,calc(100vw - 100px));padding:16px 18px;border-radius:18px;background:var(--white);color:var(--ink);box-shadow:0 24px 60px -20px rgba(25,10,43,.55),0 0 0 1px rgba(54,24,88,.1);display:grid;gap:10px;font-size:.93rem;line-height:1.45;animation:tpIn .5s var(--ease)}
+.motion-ask b{font-family:var(--f-display);font-weight:800;color:var(--v900)}
+.motion-ask p{color:var(--ink-soft)}
+.motion-ask .acts{display:flex;gap:8px;flex-wrap:wrap}
+.motion-ask .btn{padding:.6em 1em;font-size:.82rem}
+.motion-ask .btn-line{border-color:var(--v100)}
 
 /* ---------- saltar al contenido ---------- */
 .skip{position:fixed;left:16px;top:-90px;z-index:200;padding:.8em 1.2em;border-radius:12px;background:var(--gold);color:var(--v950);font-family:var(--f-display);font-weight:800;text-decoration:none;transition:top .25s}
@@ -1391,10 +1394,10 @@ html[data-fs] .menu-btn{display:inline-flex}
       <h2 id="resp-t">Hechos, no promesas.</h2>
     </div>
     <div class="resp-grid">
-      <article class="resp rv"><strong>+190</strong><h3>chicos viajan con nosotros</h3><p>Todos los meses, a escuelas, terapias y centros de día.</p></article>
-      <article class="resp rv"><strong>$0</strong><h3>para la familia</h3><p>Facturamos directo a la obra social, con factura electrónica. No pagás ni adelantás nada.</p></article>
-      <article class="resp rv"><strong>24.901</strong><h3>Trabajamos según la ley</h3><p>Facturamos con el nomenclador oficial de prestaciones por discapacidad, que se actualiza todos los meses.</p></article>
-      <article class="resp rv"><strong>1</strong><h3>número, una persona</h3><p>Te responde alguien de nuestro equipo, no un robot. Siempre el mismo número.</p></article>
+      <article class="resp rv tilt"><strong>+190</strong><h3>chicos viajan con nosotros</h3><p>Todos los meses, a escuelas, terapias y centros de día.</p></article>
+      <article class="resp rv tilt"><strong>$0</strong><h3>para la familia</h3><p>Facturamos directo a la obra social, con factura electrónica. No pagás ni adelantás nada.</p></article>
+      <article class="resp rv tilt"><strong>24.901</strong><h3>Trabajamos según la ley</h3><p>Facturamos con el nomenclador oficial de prestaciones por discapacidad, que se actualiza todos los meses.</p></article>
+      <article class="resp rv tilt"><strong>1</strong><h3>número, una persona</h3><p>Te responde alguien de nuestro equipo, no un robot. Siempre el mismo número.</p></article>
     </div>
     <div class="empresa rv" id="empresa">
       <div><small>Datos de la empresa</small><p id="empTxt">Emitimos factura electrónica a obras sociales y prepagas de todo el país.</p></div>
@@ -1531,7 +1534,8 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
   const still = document.documentElement.classList.contains("a11y-still");
-  const reduce = still || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduce = still;  // las animaciones se ven siempre; "Detener animaciones" (panel de accesibilidad) las frena
+  const osReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasG = !!(window.gsap && window.ScrollTrigger);
   const desktop = () => window.matchMedia("(min-width: 861px)").matches;
 
@@ -1631,7 +1635,16 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   $("#cAll").textContent = DIRECTORIO.length; [0, 1, 2].forEach(g => $("#c" + g).textContent = DIRECTORIO.filter(e => e.g === g).length);
 
   const sel = $("#f-os");
-  sel.innerHTML = `<option value="">Elegí tu obra social</option>` + DIRECTORIO.map(e => `<option value="${esc(e.s || e.n)}">${esc(label(e))}</option>`).join("") + `<option value="Otra">Otra</option>`;
+  sel.innerHTML = `<option value="">Elegí tu obra social</option><option value="Otra">Otra</option>`;
+  let selBuilt = false;
+  function buildSel(){
+    if (selBuilt) return; selBuilt = true;
+    const keep = sel.value;
+    sel.innerHTML = `<option value="">Elegí tu obra social</option>` + DIRECTORIO.map(e => `<option value="${esc(e.s || e.n)}">${esc(label(e))}</option>`).join("") + `<option value="Otra">Otra</option>`;
+    if (keep && ![...sel.options].some(o => o.value === keep)) sel.add(new Option(keep, keep));
+    sel.value = keep;
+  }
+  ["pointerdown", "focus", "keydown"].forEach(ev => sel.addEventListener(ev, buildSel));
 
   const norm = t => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
   DIRECTORIO.forEach(e => e.k = norm([e.s, e.n, ...(e.a || [])].join(" ")));
@@ -1910,7 +1923,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 
   /* ---- entradas al aparecer ---- */
   if (!reduce && "IntersectionObserver" in window){
-    const groups = [["#onecard"], [".dcard"], [".road-stops .rstop"], [".sitem"]];
+    const groups = [["#onecard"], [".dcard"], [".road-stops .rstop"], [".sitem"], [".gh-card"], [".info-card"]];
     const els = [];
     groups.forEach(([sel]) => $$(sel).forEach((el, i) => { el.classList.add("pre"); el.style.transitionDelay = (i * 70) + "ms"; els.push(el); }));
     const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io2.unobserve(e.target); setTimeout(() => e.target.style.transitionDelay = "", 1400); } }), { threshold: .12 });
@@ -2059,6 +2072,17 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     savePref(); syncA11y(); relayout();
   });
   syncA11y();
+  let asked = false; try { asked = !!localStorage.getItem("ta-motion-asked"); } catch (e) {}
+  if (osReduce && !asked && !Object.keys(pref).length) setTimeout(() => {
+    const t = document.createElement("div"); t.className = "motion-ask"; t.setAttribute("role", "status");
+    t.innerHTML = `<b>Esta página tiene animaciones</b><p>Tu dispositivo tiene el movimiento reducido. Si preferís ver la página sin animaciones, podés frenarlas.</p><div class="acts"><button class="btn btn-line" type="button" data-k="no">Dejarlas</button><button class="btn btn-gold" type="button" data-k="si">Detener animaciones</button></div>`;
+    document.body.appendChild(t);
+    t.addEventListener("click", e => {
+      const b = e.target.closest("button[data-k]"); if (!b) return;
+      try { localStorage.setItem("ta-motion-asked", "1"); } catch (err) {}
+      if (b.dataset.k === "si") { pref.still = true; reloadKeep(); } else t.remove();
+    });
+  }, 2500);
   addEventListener("load", () => {
     let y = null; try { y = sessionStorage.getItem("ta-y"); sessionStorage.removeItem("ta-y"); } catch (e) {}
     if (y !== null) setTimeout(() => { if (lenis) lenis.scrollTo(+y, { immediate: true, force: true }); else scrollTo(0, +y); }, 80);
