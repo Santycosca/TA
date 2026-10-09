@@ -92,11 +92,11 @@ p{margin:0}
 .brand b{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:1.05rem;letter-spacing:.02em;line-height:1}
 .brand small{display:block;font-family:var(--f-display);font-weight:600;font-size:.62rem;letter-spacing:.32em;color:var(--gold)}
 .nav-links{display:flex;gap:4px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.86);text-decoration:none;font-weight:500;padding:.55em .95em;border-radius:999px;font-size:.95rem;transition:background .3s,color .3s}
+.nav-links a{white-space:nowrap;color:rgba(255,255,255,.86);text-decoration:none;font-weight:500;padding:.55em .95em;border-radius:999px;font-size:.95rem;transition:background .3s,color .3s}
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:var(--white)}
-.nav .btn{padding:.75em 1.2em;font-size:.85rem}
+.nav .btn{padding:.75em 1.2em;font-size:.85rem;white-space:nowrap}
 .menu-btn{display:none;background:var(--glass);border:1px solid var(--glass-line);color:var(--white);border-radius:999px;padding:.6em 1em;font-weight:700}
-@media (max-width:900px){
+@media (max-width:1100px){
   .nav-links{position:fixed;inset:0 0 auto 0;top:96px;flex-direction:column;align-items:stretch;padding:16px var(--gutter) 24px;background:rgba(25,10,43,.96);backdrop-filter:blur(18px);transform:translateY(-130%);transition:transform .45s var(--ease)}
   .nav-links.open{transform:none}
   .nav-links a{padding:1em;font-size:1.1rem}
@@ -760,7 +760,7 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
 .a11y-reset{border:0;background:none;padding:.4em 0;font-weight:700;color:var(--v700);text-decoration:underline;text-underline-offset:3px}
 .a11y-foot a{font-size:.88rem;color:var(--v700)}
 .nav-cta{display:flex;gap:10px;align-items:center}
-@media (min-width:901px) and (max-width:1279px){.nav-links .nl-pro{display:none}}
+@media (min-width:1101px) and (max-width:1279px){.nav-links .nl-pro{display:none}}
 @media (max-width:640px){.a11y-btn{width:40px;height:40px}.a11y-btn svg{width:24px;height:24px}.a11y-panel{left:16px;right:16px;width:auto}}
 
 /* ---------- profesionales ---------- */
@@ -829,6 +829,53 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
 .foot-legal a{color:rgba(255,255,255,.75)}
 .foot-legal a:hover{color:var(--white)}
 
+/* ---------- horarios y oficinas ---------- */
+.info-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.info-card{position:relative;padding:clamp(22px,3vw,32px);border-radius:var(--r-lg);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:grid;gap:16px;align-content:start}
+.info-card h3{display:flex;align-items:center;gap:12px;font-size:var(--step-1);font-weight:800}
+.info-card h3 i{flex:none;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:rgba(245,181,42,.16);color:var(--gold)}
+.info-card h3 i svg{width:22px;height:22px}
+.info-card p{color:rgba(255,255,255,.82)}
+.hours{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hours li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:rgba(25,10,43,.45);border:1px solid rgba(255,255,255,.08);transition:border-color .3s,background .3s}
+.hours li b{font-weight:700}
+.hours li span{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hours li.today{border-color:rgba(245,181,42,.6);background:rgba(245,181,42,.1)}
+.hours li.today b::after{content:"Hoy";margin-left:8px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.2em .6em;border-radius:99px;background:var(--gold);color:var(--v950);vertical-align:2px}
+.live{display:flex;align-items:flex-start;gap:10px;padding:12px 16px;border-radius:14px;background:rgba(59,209,111,.12);border:1px solid rgba(59,209,111,.35);font-weight:600;line-height:1.45}
+.live i{flex:none;width:10px;height:10px;margin-top:.45em;border-radius:50%;background:#3BD16F;box-shadow:0 0 0 4px rgba(59,209,111,.22)}
+.live.off{background:rgba(245,181,42,.1);border-color:rgba(245,181,42,.4)}
+.live.off i{background:var(--gold);box-shadow:0 0 0 4px rgba(245,181,42,.22)}
+.hours-note{font-size:.95rem}
+.place{display:flex;align-items:center;gap:14px;padding:16px;border-radius:16px;background:rgba(25,10,43,.45);border:1px solid rgba(255,255,255,.08)}
+.place b{display:block;font-family:var(--f-display);font-weight:900;font-size:1.15rem}
+.place small{display:block;color:rgba(255,255,255,.7);font-size:.9rem}
+.place svg{flex:none;width:30px;height:30px;color:var(--gold)}
+.foot-hours{margin-top:12px;color:rgba(255,255,255,.65);font-size:.9rem;line-height:1.55}
+.foot-hours b{color:var(--white);font-weight:700}
+@media (max-width:860px){.info-grid{grid-template-columns:1fr}}
+.a11y-hc :is(.info-card p,.place small,.foot-hours){color:#fff!important}
+
+/* ---------- guías para familias (en "Resolvé tus dudas") ---------- */
+.guias-home{margin-top:clamp(52px,7vw,90px);padding-top:clamp(36px,5vw,56px);border-top:1px solid var(--v100)}
+.gh-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px 30px;margin-bottom:26px}
+.gh-head h3{font-size:var(--step-2);font-weight:900;font-style:italic;color:var(--v800);margin-top:12px;max-width:24ch}
+.gh-head p{color:var(--ink-soft);margin-top:10px;max-width:58ch}
+.gh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gh-card{display:grid;grid-template-rows:auto 1fr;background:var(--white);border:1px solid var(--v100);border-radius:var(--r-md);overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 24px 60px -48px rgba(54,24,88,.7);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
+.gh-card:hover{transform:translateY(-4px);border-color:var(--v300);box-shadow:0 30px 70px -40px rgba(54,24,88,.7)}
+.gh-card figure{margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--v100)}
+.gh-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.gh-card:hover img{transform:scale(1.05)}
+.gh-b{padding:18px 20px 20px;display:grid;gap:8px;align-content:start}
+.gh-b small{font-family:var(--f-display);font-weight:800;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+.gh-b b{font-family:var(--f-display);font-weight:800;font-size:1.08rem;line-height:1.3;color:var(--v900)}
+.gh-b em{font-style:normal;font-size:.86rem;font-weight:700;color:var(--v600)}
+.ans a{color:var(--v700);font-weight:700}
+@media (max-width:900px){.gh-grid{grid-template-columns:1fr}.gh-card{grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto}.gh-card figure{aspect-ratio:auto;height:100%}.gh-b{padding:14px 16px}.gh-b b{font-size:1rem}}
+@media (max-width:640px){.gh-head .btn{width:100%;justify-content:center}}
+.a11y-hc .gh-card{border:2px solid var(--v800)}
+
 /* ---------- accesibilidad: tamaño de texto ---------- */
 html[data-fs="1"]{font-size:112.5%}
 html[data-fs="2"]{font-size:125%}
@@ -882,7 +929,7 @@ html[data-fs] .menu-btn{display:inline-flex}
 .a11y-still .reveal-pin .ringo{display:none}
 .a11y-still .timeline .tl-fill{transform:none}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.transportesaparicio.com.ar/#empresa","name":"Transporte Aparicio","url":"https://www.transportesaparicio.com.ar/","logo":"https://www.transportesaparicio.com.ar/icon-512.png","image":"https://www.transportesaparicio.com.ar/og-image.jpg","description":"Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, y nos ocupamos de los trámites. En todo el país.","telephone":"+5491128533720","areaServed":{"@type":"Country","name":"Argentina"},"contactPoint":{"@type":"ContactPoint","telephone":"+5491128533720","contactType":"customer service","availableLanguage":"es","areaServed":"AR"}},{"@type":"WebSite","@id":"https://www.transportesaparicio.com.ar/#sitio","url":"https://www.transportesaparicio.com.ar/","name":"Transporte Aparicio","inLanguage":"es-AR","publisher":{"@id":"https://www.transportesaparicio.com.ar/#empresa"}},{"@type":"Service","name":"Transporte para chicos con CUD","serviceType":"Transporte especial para personas con discapacidad","description":"Traslados a la escuela, terapias, centros de día y rehabilitación, cubiertos al 100% por la obra social o prepaga según la Ley 24.901.","provider":{"@id":"https://www.transportesaparicio.com.ar/#empresa"},"areaServed":{"@type":"Country","name":"Argentina"},"audience":{"@type":"PeopleAudience","audienceType":"Familias de chicos con Certificado Único de Discapacidad"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tengo que pagar algo?","acceptedAnswer":{"@type":"Answer","text":"No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social."}},{"@type":"Question","name":"¿Cuánto tarda la autorización?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad."}},{"@type":"Question","name":"¿Qué pasa si el CUD no dice «Transporte»?","acceptedAnswer":{"@type":"Answer","text":"Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde, para que puedas pedir la cobertura."}},{"@type":"Question","name":"¿Puede viajar un acompañante?","acceptedAnswer":{"@type":"Answer","text":"Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia."}},{"@type":"Question","name":"¿Y si usa silla de ruedas?","acceptedAnswer":{"@type":"Answer","text":"La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante."}},{"@type":"Question","name":"¿Trabajan en mi provincia?","acceptedAnswer":{"@type":"Answer","text":"Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos."}},{"@type":"Question","name":"¿Lo puedo llevar yo y que me paguen el viaje?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si tu hijo viaja más tranquilo con vos o con alguien de la familia, ustedes hacen el viaje y nosotros les pagamos cada traslado. El trámite con la obra social lo hacemos nosotros igual."}},{"@type":"Question","name":"¿Qué pasa si un día no viaja?","acceptedAnswer":{"@type":"Answer","text":"Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social."}},{"@type":"Question","name":"¿Por cuánto tiempo autorizan el transporte?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya."}},{"@type":"Question","name":"Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia?","acceptedAnswer":{"@type":"Answer","text":"Escribinos o pasale nuestro número a la familia. En la sección para profesionales te contamos qué papeles te vamos a pedir."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.transportesaparicio.com.ar/#empresa","name":"Transporte Aparicio","url":"https://www.transportesaparicio.com.ar/","logo":"https://www.transportesaparicio.com.ar/icon-512.png","image":"https://www.transportesaparicio.com.ar/og-image.jpg","description":"Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, y nos ocupamos de los trámites. En todo el país.","telephone":"+5491128533720","areaServed":{"@type":"Country","name":"Argentina"},"address":{"@type":"PostalAddress","addressLocality":"Pilar","addressRegion":"Buenos Aires","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"contactPoint":{"@type":"ContactPoint","telephone":"+5491128533720","contactType":"customer service","availableLanguage":"es","areaServed":"AR"}},{"@type":"WebSite","@id":"https://www.transportesaparicio.com.ar/#sitio","url":"https://www.transportesaparicio.com.ar/","name":"Transporte Aparicio","inLanguage":"es-AR","publisher":{"@id":"https://www.transportesaparicio.com.ar/#empresa"}},{"@type":"Service","name":"Transporte para chicos con CUD","serviceType":"Transporte especial para personas con discapacidad","description":"Traslados a la escuela, terapias, centros de día y rehabilitación, cubiertos al 100% por la obra social o prepaga según la Ley 24.901.","provider":{"@id":"https://www.transportesaparicio.com.ar/#empresa"},"areaServed":{"@type":"Country","name":"Argentina"},"audience":{"@type":"PeopleAudience","audienceType":"Familias de chicos con Certificado Único de Discapacidad"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tengo que pagar algo?","acceptedAnswer":{"@type":"Answer","text":"No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social."}},{"@type":"Question","name":"¿Cuánto tarda la autorización?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad. Si te lo rechazan, mirá qué hacer."}},{"@type":"Question","name":"¿Qué pasa si el CUD no dice «Transporte»?","acceptedAnswer":{"@type":"Answer","text":"Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde en esta guía."}},{"@type":"Question","name":"¿Puede viajar un acompañante?","acceptedAnswer":{"@type":"Answer","text":"Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia."}},{"@type":"Question","name":"¿Y si usa silla de ruedas?","acceptedAnswer":{"@type":"Answer","text":"La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante."}},{"@type":"Question","name":"¿Trabajan en mi provincia?","acceptedAnswer":{"@type":"Answer","text":"Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos."}},{"@type":"Question","name":"¿Lo puedo llevar yo y que me paguen el viaje?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si tu hijo viaja más tranquilo con vos o con alguien de la familia, ustedes hacen el viaje y nosotros les pagamos cada traslado. El trámite con la obra social lo hacemos nosotros igual."}},{"@type":"Question","name":"¿Qué pasa si un día no viaja?","acceptedAnswer":{"@type":"Answer","text":"Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social."}},{"@type":"Question","name":"¿Por cuánto tiempo autorizan el transporte?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya."}},{"@type":"Question","name":"Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia?","acceptedAnswer":{"@type":"Answer","text":"Escribinos o pasale nuestro número a la familia. En la sección para profesionales te contamos qué papeles te vamos a pedir."}}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -901,6 +948,7 @@ html[data-fs] .menu-btn{display:inline-flex}
       <a href="#inicio" data-go="inicio">Inicio</a>
       <a href="#como" data-go="como">Cómo trabajamos</a>
       <a href="#profesionales" data-go="profesionales" class="nl-pro">Profesionales</a>
+      <a href="/notas" class="nl-guias">Guías</a>
       <a href="#historia" data-go="historia">Nuestra historia</a>
       <a href="#contacto" data-go="contacto">Contacto</a>
     </nav>
@@ -929,7 +977,7 @@ html[data-fs] .menu-btn{display:inline-flex}
   <button class="a11y-tg" type="button" data-opt="read" aria-pressed="false"><span><b>Letra más legible</b><small>Una tipografía pensada para leer con más facilidad.</small></span><i aria-hidden="true"></i></button>
   <button class="a11y-tg" type="button" data-opt="still" aria-pressed="false"><span><b>Detener animaciones</b><small>Frena el video, los carruseles y los movimientos.</small></span><i aria-hidden="true"></i></button>
   <button class="a11y-tg" type="button" data-opt="links" aria-pressed="false"><span><b>Resaltar enlaces y botones</b><small>Marca todo lo que se puede tocar.</small></span><i aria-hidden="true"></i></button>
-  <div class="a11y-foot"><button class="a11y-reset" id="a11yReset" type="button">Restablecer todo</button><a href="accesibilidad.html">Declaración de accesibilidad</a></div>
+  <div class="a11y-foot"><button class="a11y-reset" id="a11yReset" type="button">Restablecer todo</button><a href="/accesibilidad">Declaración de accesibilidad</a></div>
 </div>
 
 <!-- RUTA LATERAL CON LA COMBI -->
@@ -1231,8 +1279,8 @@ html[data-fs] .menu-btn{display:inline-flex}
 
     <div class="tpanel faqp" id="tp-faq" role="tabpanel" aria-labelledby="t-faq" hidden>
       <details><summary>¿Tengo que pagar algo? <i aria-hidden="true"></i></summary><div class="ans">No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social.</div></details>
-      <details><summary>¿Cuánto tarda la autorización? <i aria-hidden="true"></i></summary><div class="ans">Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad.</div></details>
-      <details><summary>¿Qué pasa si el CUD no dice «Transporte»? <i aria-hidden="true"></i></summary><div class="ans">Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde, para que puedas pedir la cobertura.</div></details>
+      <details><summary>¿Cuánto tarda la autorización? <i aria-hidden="true"></i></summary><div class="ans">Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad. Si te lo rechazan, mirá <a href="/notas/obra-social-rechaza-el-transporte">qué hacer</a>.</div></details>
+      <details><summary>¿Qué pasa si el CUD no dice «Transporte»? <i aria-hidden="true"></i></summary><div class="ans">Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde en <a href="/notas/como-agregar-transporte-al-cud">esta guía</a>.</div></details>
       <details><summary>¿Puede viajar un acompañante? <i aria-hidden="true"></i></summary><div class="ans">Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia.</div></details>
       <details><summary>¿Y si usa silla de ruedas? <i aria-hidden="true"></i></summary><div class="ans">La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante.</div></details>
       <details><summary>¿Trabajan en mi provincia? <i aria-hidden="true"></i></summary><div class="ans">Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos.</div></details>
@@ -1240,6 +1288,14 @@ html[data-fs] .menu-btn{display:inline-flex}
       <details><summary>¿Qué pasa si un día no viaja? <i aria-hidden="true"></i></summary><div class="ans">Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social.</div></details>
       <details><summary>¿Por cuánto tiempo autorizan el transporte? <i aria-hidden="true"></i></summary><div class="ans">Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya.</div></details>
       <details><summary>Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia? <i aria-hidden="true"></i></summary><div class="ans">Escribinos o pasale nuestro número a la familia. En la <a href="#profesionales" data-go="profesionales">sección para profesionales</a> te contamos qué papeles te vamos a pedir.</div></details>
+    </div>
+
+    <div class="guias-home" id="guias">
+      <div class="gh-head">
+        <div><span class="eyebrow">Guías para familias</span><h3>¿Querés entender todo el trámite?</h3><p>Guías simples y paso a paso, escritas por quienes hacen este trámite todos los meses.</p></div>
+        <a class="btn btn-line" href="/notas">Ver las 5 guías</a>
+      </div>
+      <div class="gh-grid"><a class="gh-card" href="/notas/transporte-para-chicos-con-cud"><figure><img decoding="async" loading="lazy" src="img/auto-familia-m.webp" alt="" width="900" height="600"></figure><div class="gh-b"><small>Guía básica</small><b>Transporte para chicos con CUD: qué cubre la obra social y cómo pedirlo</b><em>Leer la guía →</em></div></a><a class="gh-card" href="/notas/papeles-para-pedir-el-transporte"><figure><img decoding="async" loading="lazy" src="img/manos-m.webp" alt="" width="900" height="600"></figure><div class="gh-b"><small>Trámites</small><b>Papeles para pedir el transporte: la lista completa</b><em>Leer la guía →</em></div></a><a class="gh-card" href="/notas/obra-social-rechaza-el-transporte"><figure><img decoding="async" loading="lazy" src="img/mama-hija-abrazo-m.webp" alt="" width="900" height="600"></figure><div class="gh-b"><small>Reclamos</small><b>La obra social rechaza o demora el transporte: qué hacer</b><em>Leer la guía →</em></div></a></div>
     </div>
   </div>
 </section>
@@ -1342,7 +1398,7 @@ html[data-fs] .menu-btn{display:inline-flex}
     </div>
     <div class="empresa rv" id="empresa">
       <div><small>Datos de la empresa</small><p id="empTxt">Emitimos factura electrónica a obras sociales y prepagas de todo el país.</p></div>
-      <div class="emp-links"><a href="privacidad.html">Política de privacidad</a><a href="accesibilidad.html">Accesibilidad</a></div>
+      <div class="emp-links"><a href="/privacidad">Política de privacidad</a><a href="/accesibilidad">Accesibilidad</a></div>
     </div>
   </div>
 </section>
@@ -1370,6 +1426,23 @@ html[data-fs] .menu-btn{display:inline-flex}
           <a class="btn btn-gold" id="ocWa" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>Escribinos por WhatsApp</a>
           <button class="btn btn-ghost" id="ocCopy" type="button" hidden>Copiar número</button>
         </div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card" id="horarios">
+        <h3><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>Horarios de atención</h3>
+        <ul class="hours" id="hoursList">
+          <li data-days="1,2,3,4,5"><b>Lunes a viernes</b><span>6 a 22 h</span></li>
+          <li data-days="6,0"><b>Sábados y domingos</b><span>8 a 20 h</span></li>
+        </ul>
+        <p class="live" id="liveStatus" aria-live="polite"><i aria-hidden="true"></i><span>Atendemos todos los días por WhatsApp.</span></p>
+        <p class="hours-note">¿Nos escribís fuera de horario? Dejanos tu mensaje igual: lo recibimos y te respondemos apenas volvamos a atender.</p>
+      </div>
+      <div class="info-card">
+        <h3><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>Dónde estamos</h3>
+        <div class="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></svg><div><b>Pilar, Buenos Aires</b><small>Argentina</small></div></div>
+        <p>Nuestras oficinas están en Pilar, provincia de Buenos Aires. Desde ahí coordinamos los traslados y los trámites con las obras sociales de familias de todo el país.</p>
       </div>
     </div>
 
@@ -1405,6 +1478,7 @@ html[data-fs] .menu-btn{display:inline-flex}
       <a href="#inicio" data-go="inicio">Inicio</a>
       <a href="#como" data-go="como">Cómo trabajamos</a>
       <a href="#profesionales" data-go="profesionales">Para profesionales</a>
+      <a href="/notas">Guías para familias</a>
       <a href="#historia" data-go="historia">Nuestra historia</a>
       <a href="#contacto" data-go="contacto">Contacto</a>
     </nav>
@@ -1417,11 +1491,12 @@ html[data-fs] .menu-btn{display:inline-flex}
         <a class="soc" data-red="whatsapp" aria-label="WhatsApp de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg><span>WhatsApp</span></a>
       </div>
       <p class="foot-tel">WhatsApp: <strong id="footTel"></strong></p>
+      <p class="foot-hours"><b>Lunes a viernes</b> de 6 a 22 h · <b>Sábados y domingos</b> de 8 a 20 h<br>Oficinas en Pilar, Buenos Aires, Argentina</p>
     </div>
   </div>
   <div class="wrap foot-bottom">
     <p>© 2026 Transporte Aparicio · Todo el país</p>
-    <p class="foot-legal"><a href="privacidad.html">Política de privacidad</a> · <a href="accesibilidad.html">Accesibilidad</a></p>
+    <p class="foot-legal"><a href="/privacidad">Política de privacidad</a> · <a href="/accesibilidad">Accesibilidad</a></p>
     <small>Las fotos de esta página son ilustrativas y provienen de bancos de imágenes. La cobertura depende de la autorización de cada obra social, según la Ley 24.901.</small>
   </div>
 </footer>
@@ -1475,6 +1550,29 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
         .catch(() => { const r = document.createRange(); r.selectNodeContents(ocTel); const sl = getSelection(); sl.removeAllRanges(); sl.addRange(r); });
     });
   } else { ocTel.classList.add("pending"); }
+
+  /* ---- horarios: aviso en vivo con la hora de Argentina ---- */
+  const HORARIO = { 1: [6, 22], 2: [6, 22], 3: [6, 22], 4: [6, 22], 5: [6, 22], 6: [8, 20], 0: [8, 20] };
+  function updHours(){
+    let d, h, m;
+    try {
+      const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Argentina/Buenos_Aires", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+      const g = t => (p.find(x => x.type === t) || {}).value;
+      d = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(g("weekday")); h = +g("hour") % 24; m = +g("minute");
+    } catch (e) { return; }
+    if (d < 0 || isNaN(h)) return;
+    $$("#hoursList li").forEach(li => li.classList.toggle("today", li.dataset.days.split(",").includes(String(d))));
+    const [a, b] = HORARIO[d], now = h + m / 60, open = now >= a && now < b;
+    const live = $("#liveStatus");
+    live.classList.toggle("off", !open);
+    let next;
+    if (now < a) next = `hoy a las ${a} h`;
+    else next = `mañana a las ${HORARIO[(d + 1) % 7][0]} h`;
+    live.querySelector("span").textContent = open
+      ? `Estamos atendiendo ahora. Te respondemos hasta las ${b} h.`
+      : `Ahora estamos fuera de horario. Escribinos igual: te respondemos ${next}.`;
+  }
+  updHours(); setInterval(updHours, 60000);
 
   /* ---- redes del pie ---- */
   $("#footTel").textContent = CONTACTO.tel ? fmt(CONTACTO.tel) : "a confirmar";
