@@ -1277,7 +1277,7 @@ html[data-fs] .menu-btn{display:inline-flex}
     </ol>
     <div class="pro-cta">
       <a class="btn btn-gold magnet" id="proWa" href="#contacto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>Quiero derivar una familia</a>
-      <button class="btn btn-line" id="proShare" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v13M7 8l5-5 5 5"/></svg><span id="proShareTx">Compartir la página con una familia</span></button>
+      <a class="btn btn-line" id="proShare" href="https://wa.me/?text=%C2%A1Hola%21%20Te%20paso%20esta%20p%C3%A1gina%20que%20explica%20c%C3%B3mo%20pedir%20el%20transporte%20para%20chicos%20con%20CUD%2C%20cubierto%20por%20la%20obra%20social%3A%20https%3A%2F%2Fwww.transportesaparicio.com.ar%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v13M7 8l5-5 5 5"/></svg>Compartir la página con una familia</a>
     </div>
   </div>
 </section>
@@ -1685,13 +1685,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   });
   setRole(0, false);
   if (!CONTACTO.tel) proWa.addEventListener("click", e => { e.preventDefault(); go("contacto"); });
-  const SITIO = "https://www.transportesaparicio.com.ar/";
-  $("#proShare").addEventListener("click", async () => {
-    const txt = "Esta página explica cómo pedir el transporte para chicos con CUD, cubierto por la obra social:", lab = $("#proShareTx");
-    if (navigator.share) { try { await navigator.share({ title: "Transporte Aparicio", text: txt, url: SITIO }); } catch (err) {} return; }
-    try { await navigator.clipboard.writeText(txt + " " + SITIO); lab.textContent = "¡Link copiado! Pegalo en WhatsApp"; setTimeout(() => lab.textContent = "Compartir la página con una familia", 2200); }
-    catch (err) { window.open("https://wa.me/?text=" + encodeURIComponent(txt + " " + SITIO), "_blank", "noopener"); }
-  });
+  // "Compartir la página con una familia" es un link directo a WhatsApp con el mensaje armado (funciona en celular y en compu)
 
   /* ---- navegación suave ---- */
   let lenis = null;
