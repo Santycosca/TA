@@ -1,0 +1,1714 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#25103F">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Transporte Aparicio">
+<meta property="og:title" content="Transporte Aparicio · Transporte para chicos con CUD">
+<meta property="og:description" content="Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, en todo el país.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Transporte Aparicio</title>
+<meta name="description" content="Transporte para chicos con CUD, cubierto al 100% por la obra social. Más de 10 años acompañando familias en todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" as="image" href="img/hero-poster.webp" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-poster-m.webp" media="(max-width: 699px)" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:ital,wght@0,600;0,800;0,900;1,800;1,900&display=swap">
+<style>
+/* Layout: una sola ruta de arriba abajo. Secciones a sangre en violeta profundo alternadas con lavanda claro;
+   la ruta dorada del logo atraviesa la página y una combi la recorre con el scroll. */
+:root{
+  --v950:#190A2B; --v900:#25103F; --v800:#361858; --v700:#4A2178; --v600:#5C2C8E; --v300:#B79BD6; --v100:#ECE3F6; --v50:#F7F2FC;
+  --gold:#F5B52A; --gold-hi:#FFD36B; --gold-deep:#C98A06;
+  --ink:#1B0F2A; --ink-soft:#4C3F5E; --white:#FFFFFF;
+  --glass:rgba(255,255,255,.09); --glass-line:rgba(255,255,255,.2); --glass-dark:rgba(25,10,43,.42);
+  --f-display:"Montserrat",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
+  --f-body:"DM Sans",ui-sans-serif,system-ui,"Segoe UI",Arial,sans-serif;
+  --step--1:clamp(.84rem,.8rem + .2vw,.95rem);
+  --step-0:clamp(1rem,.96rem + .25vw,1.13rem);
+  --step-1:clamp(1.25rem,1.1rem + .7vw,1.6rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);
+  --step-3:clamp(2.1rem,1.5rem + 3vw,3.9rem);
+  --step-4:clamp(2.2rem,1.4rem + 5vw,6rem);
+  --r-sm:12px; --r-md:22px; --r-lg:36px;
+  --gutter:clamp(16px,4vw,44px);
+  --ease:cubic-bezier(.2,.7,.1,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--v50);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1220px;margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--f-display);font-weight:800;font-size:var(--step--1);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);display:inline-block;max-width:100%}
+.eyebrow::before{content:"";display:inline-block;vertical-align:middle;width:28px;height:3px;margin:-.2em .7em 0 0;border-radius:3px;background:currentColor}
+.on-dark .eyebrow{color:var(--gold)}
+.lead{font-size:var(--step-1);line-height:1.45;color:var(--ink-soft);max-width:60ch}
+.on-dark{color:var(--white)}
+.on-dark .lead{color:rgba(255,255,255,.78)}
+.gold{color:var(--gold)}
+.italic{font-style:italic}
+
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.5em;border-radius:999px;font-family:var(--f-display);font-weight:800;font-size:.95rem;letter-spacing:.01em;text-decoration:none;border:0;transition:background .3s var(--ease),box-shadow .3s var(--ease),color .3s;will-change:transform}
+.btn-gold{background:var(--gold);color:var(--v950);box-shadow:0 10px 30px -8px rgba(245,181,42,.6)}
+.btn-gold:hover{background:var(--gold-hi);box-shadow:0 14px 40px -6px rgba(245,181,42,.8)}
+.btn-ghost{background:var(--glass);color:var(--white);border:1px solid var(--glass-line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+
+/* ---------- barra de progreso + nav ---------- */
+.progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:60;background:transparent;pointer-events:none}
+.progress span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-hi))}
+.nav{position:fixed;left:0;right:0;top:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s var(--ease),box-shadow .4s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;transition:height .4s var(--ease)}
+.nav.scrolled{background:rgba(25,10,43,.72);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav.scrolled .wrap{height:62px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white);min-width:0}
+.brand img{width:46px;height:46px;border-radius:50%;box-shadow:0 0 0 2px rgba(245,181,42,.5)}
+.brand b{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:1.05rem;letter-spacing:.02em;line-height:1}
+.brand small{display:block;font-family:var(--f-display);font-weight:600;font-size:.62rem;letter-spacing:.32em;color:var(--gold)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.86);text-decoration:none;font-weight:500;padding:.55em .95em;border-radius:999px;font-size:.95rem;transition:background .3s,color .3s}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:var(--white)}
+.nav .btn{padding:.75em 1.2em;font-size:.85rem}
+.menu-btn{display:none;background:var(--glass);border:1px solid var(--glass-line);color:var(--white);border-radius:999px;padding:.6em 1em;font-weight:700}
+@media (max-width:900px){
+  .nav-links{position:fixed;inset:0 0 auto 0;top:96px;flex-direction:column;align-items:stretch;padding:16px var(--gutter) 24px;background:rgba(25,10,43,.96);backdrop-filter:blur(18px);transform:translateY(-130%);transition:transform .45s var(--ease)}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:1em;font-size:1.1rem}
+  .menu-btn{display:inline-flex}
+  .nav .btn-cta{display:none}
+}
+
+/* ---------- ruta lateral con la combi ---------- */
+.route{position:fixed;right:22px;top:110px;bottom:40px;width:44px;z-index:40;display:none}
+@media (min-width:1180px){.route{display:block}}
+.road-v{position:absolute;top:0;bottom:0;left:12px;width:20px;border-radius:20px;background:rgba(54,24,88,.14);overflow:hidden}
+.rv-done{position:absolute;left:0;right:0;top:0;height:0;border-radius:20px;background:linear-gradient(180deg,#5C2C8E,#25103F)}
+.rv-dash{position:absolute;left:50%;top:0;bottom:0;width:2.5px;margin-left:-1.25px;background:repeating-linear-gradient(180deg,#F5B52A 0 14px,transparent 14px 28px)}
+.route .stop{position:absolute;right:50%;transform:translate(50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--v50);border:3px solid var(--v600);padding:0;transition:background .3s,border-color .3s,transform .3s}
+.route .stop:hover,.route .stop.done{background:var(--gold);border-color:var(--gold-deep)}
+.route .stop:hover{transform:translate(50%,-50%) scale(1.3)}
+.route .stop span{position:absolute;right:26px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--f-display);font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;background:var(--v900);color:var(--white);padding:.4em .8em;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s}
+.route .stop:hover span,.route .stop:focus-visible span{opacity:1}
+.route .van{position:absolute;left:50%;top:0;width:54px;margin-left:-27px;transform:translateY(-50%);filter:drop-shadow(0 6px 10px rgba(25,10,43,.35));pointer-events:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:max(640px,94svh);display:grid;grid-template-columns:minmax(0,1fr);align-items:end;color:var(--white);background:var(--v950);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;overflow:hidden;transform-origin:50% 40%}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(120% 80% at 15% 100%,rgba(25,10,43,.95) 0%,rgba(37,16,63,.82) 38%,rgba(74,33,120,.35) 70%,rgba(74,33,120,.15) 100%),
+  linear-gradient(180deg,rgba(25,10,43,.55) 0%,rgba(25,10,43,0) 30%),
+  linear-gradient(90deg,rgba(25,10,43,.62) 0%,rgba(25,10,43,.35) 60%,rgba(25,10,43,.2) 100%)}
+.hero .lead{color:rgba(255,255,255,.92);text-shadow:0 2px 18px rgba(25,10,43,.8)}
+.hero-glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(245,181,42,.28),rgba(245,181,42,0) 65%);z-index:-1;left:0;top:0;transform:translate(-50%,-50%);pointer-events:none;opacity:0;transition:opacity .5s}
+.hero:hover .hero-glow{opacity:1}
+.hero-inner{padding-block:150px 64px;display:grid;gap:28px;min-width:0;width:100%}
+.hero h1{font-size:var(--step-4);font-weight:900;font-style:italic;max-width:13ch;letter-spacing:-.035em}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .line>span{display:inline-block}
+.hero .lead{max-width:52ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:.55em;padding:.6em 1em;border-radius:999px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:.9rem;font-weight:500}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(245,181,42,.25)}
+.scroll-cue{position:absolute;z-index:1;right:calc(var(--gutter) + 70px);bottom:28px;display:grid;justify-items:center;gap:6px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:var(--f-display);font-weight:800}
+.scroll-cue b{width:24px;height:38px;border:2px solid rgba(255,255,255,.5);border-radius:14px;position:relative}
+.scroll-cue b::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:var(--gold);animation:cue 1.8s var(--ease) infinite}
+@media (max-height:820px),(max-width:860px){.scroll-cue{display:none}}
+@keyframes cue{0%{transform:translateY(0);opacity:1}80%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+
+/* ---------- cifras ---------- */
+.stats{background:var(--v950);color:var(--white);padding-block:0 clamp(56px,8vw,96px)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1);border-radius:var(--r-md);overflow:hidden}
+.stat{background:var(--v950);padding:clamp(22px,3vw,36px);display:grid;gap:6px;align-content:start}
+.stat strong{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:var(--step-3);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.stat > span{color:rgba(255,255,255,.75);font-size:var(--step--1)}
+@media (max-width:760px){.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- manifiesto ---------- */
+.manifesto{background:linear-gradient(180deg,var(--v950) 0%,var(--v900) 100%);color:var(--white);padding-block:clamp(70px,9vw,130px);position:relative;overflow:hidden}
+.manifesto p{font-family:var(--f-display);font-weight:800;font-size:var(--step-3);line-height:1.18;letter-spacing:-.02em;max-width:22ch}
+.manifesto .w{opacity:.26;transition:opacity .2s}
+.manifesto .w.hl{color:var(--gold)}
+.manifesto .ring{position:absolute;right:-12vw;top:50%;width:min(60vw,720px);aspect-ratio:1;border-radius:50%;border:2px solid rgba(245,181,42,.25);transform:translateY(-50%);pointer-events:none}
+.manifesto .ring::after{content:"";position:absolute;inset:8%;border-radius:50%;border:1px solid rgba(255,255,255,.12)}
+
+/* ---------- qué es ---------- */
+.derecho{position:relative;color:var(--white);padding-block:clamp(80px,9vw,130px);overflow:hidden;isolation:isolate}
+.derecho .bg{position:absolute;inset:-12% 0;z-index:-2}
+.derecho .bg img{width:100%;height:100%;object-fit:cover}
+.derecho::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(37,16,63,.92),rgba(54,24,88,.72) 45%,rgba(25,10,43,.94))}
+.derecho h2{font-size:var(--step-3);font-weight:900;font-style:italic;max-width:18ch}
+.derecho-head{display:grid;gap:18px;margin-bottom:clamp(36px,6vw,64px)}
+.glass-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.glass-card{position:relative;background:var(--glass);border:1px solid var(--glass-line);border-radius:var(--r-md);padding:clamp(22px,2.6vw,34px);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);display:grid;gap:12px;align-content:start;transform-style:preserve-3d;transition:border-color .3s}
+.glass-card:hover{border-color:rgba(245,181,42,.55)}
+.glass-card .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(245,181,42,.16);color:var(--gold)}
+.glass-card .ico svg{width:26px;height:26px}
+.glass-card h3{font-size:var(--step-1);font-weight:800}
+.glass-card p{color:rgba(255,255,255,.8);min-width:0}
+.note{margin-top:22px;display:flex;gap:14px;align-items:flex-start;padding:18px 22px;border-radius:var(--r-md);background:rgba(245,181,42,.12);border:1px solid rgba(245,181,42,.35);max-width:820px}
+.note b{color:var(--gold)}
+@media (max-width:860px){.glass-grid{grid-template-columns:1fr}}
+
+/* ---------- cómo trabajamos (pasos con imagen fija) ---------- */
+.como{background:var(--v50);padding-block:clamp(80px,9vw,130px) clamp(40px,5vw,70px)}
+.como-head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,70px)}
+.como h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:16ch}
+.step{position:relative;display:grid;gap:10px;opacity:.38;transition:opacity .5s var(--ease)}
+.step.on{opacity:1}
+.step::before{content:"";position:absolute;left:-34px;top:.35em;width:21px;height:21px;border-radius:50%;background:var(--v50);border:3px solid var(--v300);transition:background .4s,border-color .4s,transform .4s}
+.step.on::before{background:var(--gold);border-color:var(--gold-deep);transform:scale(1.15)}
+.step small{font-family:var(--f-display);font-weight:800;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--v600)}
+.step h3{font-size:var(--step-2);font-weight:800;color:var(--v900)}
+.step p{color:var(--ink-soft);max-width:44ch}
+
+/* ---------- dos formas ---------- */
+.formas{background:var(--white);padding-block:clamp(80px,9vw,130px);overflow:hidden}
+.formas h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:18ch}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;position:relative;background:var(--v100);border-radius:999px;padding:6px;margin-block:30px 40px;max-width:100%}
+.switch button{position:relative;z-index:1;border:0;background:none;padding:.9em 1.4em;border-radius:999px;font-family:var(--f-display);font-weight:800;font-size:.92rem;color:var(--v700);transition:color .35s}
+.switch button[aria-selected="true"]{color:var(--white)}
+.switch .pill{position:absolute;top:6px;bottom:6px;left:6px;width:calc(50% - 6px);border-radius:999px;background:linear-gradient(135deg,var(--v600),var(--v800));box-shadow:0 10px 24px -8px rgba(74,33,120,.6);transition:transform .55s var(--ease)}
+.switch[data-mode="b"] .pill{transform:translateX(100%)}
+.forma-stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,70px);align-items:center}
+.forma-img{position:relative;aspect-ratio:5/4;border-radius:var(--r-lg);overflow:hidden;background:var(--v100)}
+.forma-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
+.forma-img img[hidden]{display:block!important;opacity:0;transform:scale(1.08)}
+.forma-txt{display:grid;gap:16px}
+.forma-txt h3{font-size:var(--step-2);font-weight:900;font-style:italic;color:var(--v900)}
+.forma-txt ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.forma-txt li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft)}
+.forma-txt li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23190A2B' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
+.forma-panel[hidden]{display:none!important}
+.forma-foot{margin-top:28px;font-weight:700;color:var(--v700)}
+@media (max-width:860px){.forma-stage{grid-template-columns:1fr}.switch button{padding:.8em 1em;font-size:.82rem}}
+
+/* ---------- destinos (galería horizontal) ---------- */
+.destinos{background:var(--v900);color:var(--white);overflow:hidden;position:relative}
+.destinos-old{min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr);align-content:center;gap:clamp(28px,4vw,48px);padding-block:clamp(80px,10vw,110px)}
+.destinos h2{font-size:var(--step-3);font-weight:900;font-style:italic;max-width:16ch}
+.track{display:flex;gap:22px;padding-inline:var(--gutter);width:max-content;will-change:transform}
+.dcard{position:relative;width:min(78vw,430px);aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;flex:none;isolation:isolate}
+.dcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s var(--ease)}
+.dcard:hover img{transform:scale(1.07)}
+.dcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(25,10,43,0) 35%,rgba(25,10,43,.88))}
+.dcard .dtxt{position:absolute;left:16px;right:16px;bottom:16px;padding:20px;border-radius:22px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:grid;gap:6px}
+.dcard .dtxt h3{font-size:var(--step-1);font-weight:800}
+.dcard .dtxt p{color:rgba(255,255,255,.8);font-size:.95rem}
+.dcard .num{position:absolute;top:18px;left:20px;font-family:var(--f-display);font-weight:900;font-style:italic;font-size:.85rem;letter-spacing:.14em;color:var(--gold)}
+.no-pin .track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.no-pin .dcard{scroll-snap-align:start}
+
+/* ---------- requisitos ---------- */
+.requisitos{background:var(--v50);padding-block:clamp(90px,12vw,150px)}
+.req-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.req-side{position:sticky;top:110px;display:grid;gap:18px;align-content:start}
+.req-side h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:14ch}
+.ringbox{display:flex;align-items:center;gap:20px;padding:20px;border-radius:var(--r-md);background:var(--white);box-shadow:0 20px 50px -30px rgba(54,24,88,.45);max-width:430px}
+.ringbox svg{width:96px;height:96px;flex:none;transform:rotate(-90deg)}
+.ringbox circle{fill:none;stroke-width:10}
+.ringbox .bgc{stroke:var(--v100)}
+.ringbox .fgc{stroke:var(--gold);stroke-linecap:round;transition:stroke-dashoffset .6s var(--ease)}
+.ringbox strong{font-family:var(--f-display);font-weight:900;font-size:1.5rem;color:var(--v800);display:block;font-variant-numeric:tabular-nums}
+.ringbox span{color:var(--ink-soft);font-size:.95rem}
+.checks{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.check{width:100%;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;padding:20px 22px;border-radius:var(--r-md);background:var(--white);border:2px solid transparent;box-shadow:0 10px 30px -22px rgba(54,24,88,.5);transition:border-color .3s,transform .3s var(--ease),background .3s}
+.check:hover{transform:translateY(-2px);border-color:var(--v100)}
+.check .box{width:30px;height:30px;border-radius:10px;border:2.5px solid var(--v300);display:grid;place-items:center;transition:background .3s,border-color .3s}
+.check .box svg{width:18px;height:18px;stroke:var(--v950);opacity:0;transform:scale(.4);transition:opacity .3s,transform .35s var(--ease)}
+.check[aria-pressed="true"]{border-color:var(--gold);background:#FFFBF0}
+.check[aria-pressed="true"] .box{background:var(--gold);border-color:var(--gold)}
+.check[aria-pressed="true"] .box svg{opacity:1;transform:scale(1)}
+.check b{display:block;font-family:var(--f-display);font-weight:800;color:var(--v900);font-size:1.05rem;line-height:1.3}
+.check b + span{display:block;color:var(--ink-soft);font-size:.95rem;margin-top:4px}
+.req-tip{display:flex;gap:14px;align-items:center;padding:18px 22px;border-radius:var(--r-md);background:var(--v800);color:var(--white);margin-top:6px}
+.req-tip b{color:var(--gold)}
+@media (max-width:860px){.req-layout{grid-template-columns:1fr}.req-side{position:static}}
+
+/* ---------- obras sociales ---------- */
+.obras{background:var(--white);padding-block:clamp(70px,8vw,110px);overflow:hidden}
+.obras-head{display:grid;gap:16px;justify-items:start;margin-bottom:14px}
+.obras h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:20ch}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee+.marquee{margin-top:16px}
+.mq-label{margin-top:26px;margin-bottom:12px}
+.mq-label span{font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--v600)}
+.marquee.paused .mrow{animation-play-state:paused}
+.os{transition:background .3s,color .3s,transform .3s var(--ease),box-shadow .3s}
+.os.hit{background:var(--gold)!important;color:var(--v950)!important;border-color:var(--gold-deep)!important;transform:scale(1.06);box-shadow:0 10px 26px -10px rgba(201,138,6,.7)}
+.os.hit i{background:var(--v950)}
+.os-search{display:flex;align-items:center;gap:12px;width:min(100%,520px);margin-top:8px;padding:6px 8px 6px 20px;border-radius:999px;background:var(--v50);border:2px solid var(--v100);transition:border-color .3s,box-shadow .3s}
+.os-search:focus-within{border-color:var(--gold);box-shadow:0 0 0 6px rgba(245,181,42,.18)}
+.os-search svg{width:20px;height:20px;color:var(--v600);flex:none}
+.os-search input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:1.02rem;color:var(--ink);padding:.8em 0;outline:none}
+.os-res{display:none;align-items:center;gap:14px;padding:14px 18px;border-radius:18px;background:#FFF8E6;border:1px solid rgba(245,181,42,.5);max-width:520px;animation:tpIn .4s var(--ease)}
+.os-res.show{display:flex}
+.os-res.miss{background:var(--v50);border-color:var(--v100)}
+.os-res .ok,.os-res .no{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:900;background:var(--gold);color:var(--v950)}
+.os-res .no{background:var(--v100);color:var(--v700)}
+.os-res b{display:block;font-family:var(--f-display);color:var(--v900)}
+.os-res div span{display:block;color:var(--ink-soft);font-size:.92rem}
+.mrow{display:flex;gap:16px;padding-right:16px;flex:none;will-change:transform}
+@keyframes mq{to{transform:translateX(-100%)}}
+.os{flex:none;display:inline-flex;align-items:center;gap:12px;padding:18px 28px;cursor:pointer;font-family:var(--f-display);border-radius:999px;background:var(--v50);border:1px solid var(--v100);font-family:var(--f-display);font-weight:800;font-size:clamp(1.05rem,1.6vw,1.4rem);color:var(--v800);white-space:nowrap}
+.os i{width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.marquee.rev .os{background:var(--v800);color:var(--white);border-color:var(--v700)}
+#mq3 .os{background:var(--white);border-color:var(--v300)}
+
+/* ---------- mitos ---------- */
+.mitos{background:var(--v50);padding-block:clamp(90px,12vw,150px)}
+.mitos h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:16ch;margin-block:16px 40px}
+.flip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.flip{display:block;width:100%;perspective:1200px;border:0;background:none;padding:0;text-align:left;min-height:260px}
+.flip-in{display:block;position:relative;width:100%;height:100%;min-height:260px;transform-style:preserve-3d;transition:transform .8s var(--ease)}
+.flip[aria-pressed="true"] .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:var(--r-md);padding:24px;display:grid;align-content:space-between;gap:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.front{background:var(--white);box-shadow:0 18px 40px -28px rgba(54,24,88,.6);border:1px solid var(--v100)}
+.face.back{background:linear-gradient(150deg,var(--v700),var(--v900));color:var(--white);transform:rotateY(180deg)}
+.face q{display:block}
+.face em{margin-top:auto}
+.face small{font-family:var(--f-display);font-weight:800;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
+.face.front small{color:#B4413C}
+.face.back small{color:var(--gold)}
+.face q{font-family:var(--f-display);font-weight:800;font-size:1.25rem;line-height:1.25;color:var(--v900);quotes:"“" "”"}
+.face.back p{font-size:1.02rem;color:rgba(255,255,255,.9)}
+.face em{font-style:normal;font-size:.85rem;color:var(--ink-soft);display:flex;align-items:center;gap:6px}
+@media (max-width:1000px){.flip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.flip-grid{grid-template-columns:1fr}.flip,.flip-in{min-height:190px}}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--white);padding-block:clamp(90px,12vw,150px)}
+.faq-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px)}
+.faq h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:12ch;margin-top:16px}
+.faqp details{border-bottom:1px solid var(--v100)}
+.faqp summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 4px;font-family:var(--f-display);font-weight:800;font-size:var(--step-1);color:var(--v900)}
+.faqp summary::-webkit-details-marker{display:none}
+.faqp summary i{flex:none;width:38px;height:38px;border-radius:50%;background:var(--v50);position:relative;transition:background .3s,transform .4s var(--ease)}
+.faqp summary i::before,.faqp summary i::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2.5px;margin:-1.25px 0 0 -7px;background:var(--v700);border-radius:2px;transition:transform .4s var(--ease)}
+.faqp summary i::after{transform:rotate(90deg)}
+.faqp details[open] summary i{background:var(--gold);transform:rotate(180deg)}
+.faqp details[open] summary i::after{transform:rotate(0)}
+.faqp .ans{padding:0 4px 24px;color:var(--ink-soft);max-width:62ch}
+@media (max-width:860px){.faq-layout{grid-template-columns:1fr}}
+
+/* ---------- historia ---------- */
+.historia{background:var(--v950);color:var(--white);position:relative}
+.reveal-pin{position:relative;height:100svh;min-height:560px;overflow:hidden;display:grid;place-items:center;isolation:isolate}
+.reveal-pin .circle{position:absolute;inset:0;z-index:-1;clip-path:circle(22% at 50% 50%)}
+.reveal-pin .circle img{width:100%;height:100%;object-fit:cover}
+.reveal-pin .circle::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(25,10,43,.35),rgba(25,10,43,.82))}
+.reveal-pin .ringo{position:absolute;left:50%;top:50%;width:46vmin;aspect-ratio:1;border-radius:50%;border:3px solid var(--gold);transform:translate(-50%,-50%);z-index:0;pointer-events:none}
+.reveal-pin h2{position:relative;font-size:var(--step-4);font-weight:900;font-style:italic;text-align:center;max-width:14ch;padding-inline:var(--gutter);text-shadow:0 10px 40px rgba(0,0,0,.4)}
+.reveal-pin h2 em{font-style:italic;color:var(--gold)}
+.historia-body{padding-block:clamp(70px,8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,90px);align-items:start}
+.historia-body .txt{display:grid;gap:20px;font-size:var(--step-1);line-height:1.5;color:rgba(255,255,255,.86)}
+.historia-body .txt strong{color:var(--white)}
+.timeline{list-style:none;margin:0;padding:0 0 0 38px;position:relative;display:grid;gap:44px}
+.timeline::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:3px;background:rgba(255,255,255,.12);border-radius:3px}
+.timeline .tl-fill{position:absolute;left:10px;top:6px;bottom:6px;width:3px;border-radius:3px;background:var(--gold);transform-origin:50% 0;transform:scaleY(0)}
+.timeline li{position:relative;display:grid;gap:6px}
+.timeline li::before{content:"";position:absolute;left:-38px;top:.2em;width:23px;height:23px;border-radius:50%;background:var(--v950);border:3px solid var(--gold)}
+.timeline small{font-family:var(--f-display);font-weight:800;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.timeline h3{font-size:var(--step-1);font-weight:800}
+.timeline p{color:rgba(255,255,255,.75)}
+@media (max-width:860px){.historia-body{grid-template-columns:1fr}}
+
+.valores{padding-block:0 clamp(50px,6vw,80px)}
+.valores-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.valor{padding:28px 24px;border-radius:var(--r-md);background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);display:grid;gap:10px;align-content:start;transform-style:preserve-3d}
+.valor b{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:clamp(1.25rem,1rem + 1vw,1.7rem);overflow-wrap:anywhere;color:var(--gold);line-height:1}
+.valor p{color:rgba(255,255,255,.78);font-size:.98rem}
+@media (max-width:960px){.valores-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.valores-grid{grid-template-columns:1fr}}
+
+.mosaic{position:relative;padding-block:0 clamp(70px,8vw,110px);overflow:hidden}
+.mosaic-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.mosaic figure{margin:0;border-radius:var(--r-md);overflow:hidden;position:relative}
+.mosaic figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:var(--ar,4/5)}
+.m1{grid-column:1/5;--ar:3/4}.m2{grid-column:5/9;margin-top:70px;--ar:3/4}.m3{grid-column:9/13;--ar:3/4}
+.quote{margin:clamp(40px,6vw,80px) auto 0;max-width:900px;text-align:center;display:grid;gap:18px;justify-items:center}
+.quote blockquote{margin:0;font-family:var(--f-display);font-weight:800;font-style:italic;font-size:var(--step-2);line-height:1.25}
+.quote blockquote::before{content:"“";display:block;font-size:4em;line-height:.6;color:var(--gold)}
+.quote cite{font-style:normal;color:var(--gold);font-weight:700;letter-spacing:.06em}
+@media (max-width:760px){.mosaic-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.m1,.m2,.m3{grid-column:auto;margin-top:0}.m2{margin-top:30px}}
+
+/* ---------- CTA intermedio ---------- */
+.cta-band{position:relative;overflow:hidden;isolation:isolate;padding-block:clamp(90px,12vw,160px);color:var(--white)}
+.cta-band .bg{position:absolute;inset:-15% 0;z-index:-2}
+.cta-band .bg img{width:100%;height:100%;object-fit:cover}
+.cta-band::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(25,10,43,.95) 10%,rgba(74,33,120,.7) 60%,rgba(74,33,120,.35))}
+.cta-band .inner{display:grid;gap:22px;justify-items:start;max-width:640px}
+.cta-band h2{font-size:var(--step-3);font-weight:900;font-style:italic}
+
+/* ---------- contacto ---------- */
+.contacto{background:radial-gradient(120% 90% at 100% 0%,var(--v700) 0%,var(--v900) 45%,var(--v950) 100%);color:var(--white);padding-block:clamp(80px,9vw,130px) clamp(70px,8vw,100px);position:relative;overflow:hidden}
+.contacto .lead{color:rgba(255,255,255,.82)}
+.contacto h2{font-size:var(--step-4);font-weight:900;font-style:italic;letter-spacing:-.04em}
+.contacto-head{display:grid;gap:18px;margin-bottom:48px}
+.form-wrap{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);padding:clamp(24px,4vw,44px);border-radius:var(--r-lg);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
+.form-wrap h3{font-size:var(--step-2);font-weight:900;font-style:italic}
+.form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:.88rem;font-weight:700;color:rgba(255,255,255,.85)}
+.field input,.field select,.field textarea{width:100%;padding:.95em 1.1em;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(25,10,43,.5);color:var(--white);font:inherit;font-size:1rem;transition:border-color .3s,background .3s}
+.field select option{background:var(--v900);color:var(--white)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:rgba(25,10,43,.75)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
+.preview{display:grid;gap:12px;align-content:start}
+.bubble{background:#E7FFDB;color:#10261A;border-radius:18px 18px 18px 4px;padding:16px 18px;font-size:.98rem;line-height:1.5;white-space:pre-wrap;box-shadow:0 14px 30px -18px rgba(0,0,0,.5);min-height:120px;overflow-wrap:anywhere}
+.preview small{color:rgba(255,255,255,.6)}
+.form-msg{font-size:.92rem;color:var(--gold-hi);min-height:1.4em}
+@media (max-width:860px){.form-wrap{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--v950);color:rgba(255,255,255,.7);padding-block:56px calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(255,255,255,.08);font-size:.92rem}
+footer .brand img{width:64px;height:64px}
+footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:.8rem}
+.foot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:start;padding-bottom:36px}
+.foot-brand{display:grid;gap:16px}
+.foot-brand p{max-width:38ch;color:rgba(255,255,255,.65)}
+.foot-nav > b,.foot-social > b{display:block;font-family:var(--f-display);font-weight:800;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.foot-nav{display:grid;gap:8px;align-content:start}
+.foot-nav a{text-decoration:none;color:rgba(255,255,255,.75);width:max-content;transition:color .25s,transform .25s var(--ease)}
+.foot-nav a:hover{color:var(--white);transform:translateX(4px)}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.soc{position:relative;width:50px;height:50px;border-radius:16px;display:grid;place-items:center;color:var(--white);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .35s var(--ease),border-color .35s,color .35s,box-shadow .35s}
+.soc svg{width:22px;height:22px;transition:transform .35s var(--ease)}
+.soc::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transform:translateY(100%);transition:opacity .35s,transform .45s var(--ease);background:var(--gold)}
+.soc[data-red="instagram"]::before{background:linear-gradient(45deg,#F9CE34,#EE2A7B,#6228D7)}
+.soc[data-red="facebook"]::before{background:#1877F2}
+.soc[data-red="linkedin"]::before{background:#0A66C2}
+.soc[data-red="whatsapp"]::before{background:#25D366}
+.soc:hover,.soc:focus-visible{transform:translateY(-4px);border-color:transparent;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.soc:hover::before,.soc:focus-visible::before{opacity:1;transform:none}
+.soc:hover svg{transform:scale(1.12)}
+.soc span{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,6px);white-space:nowrap;font-size:.75rem;font-weight:700;padding:.35em .7em;border-radius:8px;background:var(--white);color:var(--v900);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+.soc{overflow:visible}
+.soc::before{border-radius:inherit}
+.soc:hover span,.soc:focus-visible span{opacity:1;transform:translate(-50%,0)}
+.soc.soon{opacity:.85}
+.foot-tel{margin-top:16px;color:rgba(255,255,255,.65)}
+.foot-tel strong{color:var(--white);font-variant-numeric:tabular-nums;user-select:all}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:flex-end;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.foot-bottom p{color:rgba(255,255,255,.6)}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
+@media (max-width:480px){.foot{grid-template-columns:1fr}}
+
+/* ---------- botón flotante ---------- */
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.3em;border-radius:999px;background:var(--gold);color:var(--v950);font-family:var(--f-display);font-weight:900;text-decoration:none;box-shadow:0 16px 40px -10px rgba(245,181,42,.75);transform:translateY(140%);transition:transform .5s var(--ease)}
+.fab.show{transform:none}
+.fab svg{width:22px;height:22px}
+@media (min-width:1180px){.fab{right:84px}}
+
+
+/* ---------- dudas (pestañas) ---------- */
+.dudas{background:var(--v50);padding-block:clamp(80px,9vw,130px)}
+.dudas-head{display:grid;gap:16px;margin-bottom:30px}
+.dudas h2{font-size:var(--step-3);font-weight:900;font-style:italic;color:var(--v800);max-width:20ch}
+.tabs{position:relative;display:flex;gap:4px;padding:6px;border-radius:999px;background:var(--white);box-shadow:0 14px 40px -26px rgba(54,24,88,.55);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin-bottom:34px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{position:relative;z-index:1;flex:none;border:0;background:none;padding:.85em 1.3em;border-radius:999px;font-family:var(--f-display);font-weight:800;font-size:.9rem;color:var(--v700);transition:color .35s;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--white)}
+.tabs-ind{position:absolute;top:0;left:0;width:0;height:0;border-radius:999px;background:linear-gradient(135deg,var(--v600),var(--v800));box-shadow:0 10px 24px -8px rgba(74,33,120,.6);transition:transform .55s var(--ease),width .55s var(--ease),height .55s var(--ease)}
+.tpanel{animation:tpIn .6s var(--ease)}
+@keyframes tpIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.quiz{max-width:860px;background:var(--white);border-radius:var(--r-lg);padding:clamp(24px,4vw,48px);box-shadow:0 30px 70px -40px rgba(54,24,88,.6);display:grid;gap:26px;position:relative;overflow:hidden}
+.quiz::after{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;border:2px solid rgba(245,181,42,.35);pointer-events:none}
+.quiz-bar{height:6px;border-radius:6px;background:var(--v100);overflow:hidden}
+.quiz-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-deep));border-radius:6px;transition:width .6s var(--ease)}
+.qcard{display:grid;gap:18px;animation:tpIn .55s var(--ease)}
+.qcard small{font-family:var(--f-display);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;color:var(--v600)}
+.qcard h3,.qresult h3{font-size:var(--step-2);font-weight:900;color:var(--v900)}
+.qopts{display:flex;flex-wrap:wrap;gap:10px}
+.qopts button{border:2px solid var(--v100);background:var(--v50);padding:.95em 1.4em;border-radius:999px;font-weight:700;color:var(--v800);transition:border-color .25s,background .25s,transform .25s var(--ease)}
+.qopts button:hover{border-color:var(--gold);background:#FFF8E6;transform:translateY(-2px)}
+.qresult{display:grid;gap:16px;justify-items:start;animation:tpIn .6s var(--ease)}
+.qresult p{color:var(--ink-soft);max-width:60ch;font-size:var(--step-1);line-height:1.5}
+.qicon{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:1.8rem;font-weight:900;background:var(--gold);color:var(--v950)}
+.qicon.warn{background:var(--v100);color:var(--v700)}
+.qacts{display:flex;flex-wrap:wrap;gap:10px}
+.btn-line{background:transparent;border:2px solid var(--v100);color:var(--v700)}
+.btn-line:hover{border-color:var(--v300)}
+.req-tip p{color:var(--white)}
+.faqp{max-width:900px;background:var(--white);border-radius:var(--r-lg);padding:8px clamp(18px,3vw,36px);box-shadow:0 30px 70px -40px rgba(54,24,88,.6)}
+.faqp details:last-child{border-bottom:0}
+.glass-card,.person{--mx:50%;--my:50%}
+.glass-card::before,.person::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(245,181,42,.18),transparent 60%);opacity:0;transition:opacity .35s;pointer-events:none}
+.glass-card:hover::before,.person:hover::before{opacity:1}
+.person{position:relative}
+
+
+/* ---------- recorrido paso a paso ---------- */
+.journey{display:grid;gap:clamp(26px,3.5vw,44px)}
+.road{position:relative;padding-top:58px}
+.road-line{position:absolute;left:4%;right:4%;top:84px;height:14px;border-radius:14px;background:var(--v100);overflow:hidden}
+.road-line::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:repeating-linear-gradient(90deg,var(--white) 0 14px,transparent 14px 28px);opacity:.9}
+.road-fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:14px;background:linear-gradient(90deg,var(--v600),var(--v800));transition:width .9s var(--ease)}
+.road-van{position:absolute;top:0;left:4%;width:72px;margin-left:-36px;transition:left .9s var(--ease);filter:drop-shadow(0 10px 14px rgba(25,10,43,.28));z-index:2}
+.road-van.go{animation:bump .9s var(--ease)}
+@keyframes bump{30%{transform:translateY(-6px) rotate(-3deg)}60%{transform:translateY(0) rotate(1deg)}}
+.road-van .wh{transform-box:fill-box;transform-origin:center}
+.road-van.go .wh{animation:spin .9s linear}
+@keyframes spin{to{transform:rotate(360deg)}}
+.road-stops{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding-inline:calc(4% - 8.33% + 8.33%);margin-inline:4%}
+.rstop{position:relative;border:0;background:none;padding:0;display:grid;justify-items:center;gap:10px;text-align:center;color:var(--v800);min-width:0}
+.road-stops{grid-template-columns:repeat(6,minmax(0,1fr));margin-inline:0}
+.rstop b{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--white);border:3px solid var(--v300);font-family:var(--f-display);font-weight:900;font-size:1rem;transition:background .35s,border-color .35s,transform .35s var(--ease),color .35s;box-shadow:0 6px 16px -8px rgba(54,24,88,.4)}
+.rstop span{font-family:var(--f-display);font-weight:800;font-size:.82rem;line-height:1.25;max-width:14ch;opacity:.6;transition:opacity .3s}
+.rstop:hover b{transform:scale(1.12);border-color:var(--gold)}
+.rstop.done b{background:var(--v700);border-color:var(--v700);color:var(--white)}
+.rstop.on b{background:var(--gold);border-color:var(--gold-deep);color:var(--v950);transform:scale(1.18)}
+.rstop.on span,.rstop.done span{opacity:1}
+.jgrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:stretch}
+.stage{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:520px;background:var(--v800);box-shadow:0 40px 80px -36px rgba(54,24,88,.6);isolation:isolate}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity .8s var(--ease),transform 6.5s linear;z-index:-2}
+.stage img.on{opacity:1;transform:scale(1)}
+.stage::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(25,10,43,0) 35%,rgba(25,10,43,.75))}
+.stage-card{position:absolute;left:20px;right:20px;bottom:20px;padding:clamp(18px,2.4vw,28px);border-radius:24px;background:rgba(25,10,43,.5);border:1px solid var(--glass-line);color:var(--white);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);display:grid;gap:10px}
+.sc-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sc-num{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:2.6rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.sc-who{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.45em .9em;border-radius:999px;background:rgba(245,181,42,.18);color:var(--gold-hi);border:1px solid rgba(245,181,42,.4)}
+.stage-card h3{font-size:var(--step-2);font-weight:900;font-style:italic}
+.stage-card p{color:rgba(255,255,255,.88);max-width:52ch}
+.stage-card.swap > *{animation:cardIn .7s var(--ease) both}
+.stage-card.swap > *:nth-child(2){animation-delay:.06s}.stage-card.swap > *:nth-child(3){animation-delay:.12s}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.jside{display:grid;grid-template-rows:1fr auto;gap:16px}
+.slist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.sitem{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center;text-align:left;border:0;background:var(--white);padding:16px 18px;border-radius:18px;position:relative;overflow:hidden;box-shadow:0 10px 26px -22px rgba(54,24,88,.6);transition:background .35s,transform .35s var(--ease)}
+.sitem:hover{transform:translateX(4px)}
+.sitem .sn{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:1.3rem;color:var(--v300);font-variant-numeric:tabular-nums;transition:color .35s}
+.sitem .stx b{display:block;font-family:var(--f-display);font-weight:800;color:var(--v900);font-size:1.02rem;line-height:1.25}
+.sitem .who{display:block;font-size:.82rem;color:var(--ink-soft);margin-top:2px}
+.sitem .sbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:transparent}
+.sitem .sbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-deep))}
+.sitem.on{background:linear-gradient(135deg,var(--v700),var(--v900))}
+.sitem.on .sn{color:var(--gold)}
+.sitem.on .stx b{color:var(--white)}
+.sitem.on .who{color:rgba(255,255,255,.7)}
+.sitem.done .sn{color:var(--v600)}
+.jctrl{display:flex;align-items:center;gap:10px}
+.cbtn{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--v100);background:var(--white);color:var(--v800);transition:background .3s,border-color .3s,transform .3s var(--ease),color .3s}
+.cbtn:hover{border-color:var(--gold);background:var(--gold);color:var(--v950);transform:scale(1.06)}
+.cbtn svg{width:22px;height:22px}
+#jPlay .i-play{display:none}
+#jPlay.paused .i-play{display:block}#jPlay.paused .i-pause{display:none}
+.jcount{margin-left:auto;font-family:var(--f-display);font-weight:800;color:var(--v700);font-variant-numeric:tabular-nums}
+@media (max-width:900px){
+  .jgrid{grid-template-columns:1fr}
+  .stage{min-height:0;aspect-ratio:4/5}
+  .jside{grid-template-rows:auto;gap:12px}
+  .slist{gap:6px}
+  .sitem{padding:12px 14px;gap:12px}
+  .sitem .sn{font-size:1.05rem}
+  .sitem .stx b{font-size:.95rem}
+  .jctrl{order:-1}
+  .rstop span{display:none}
+  .road{padding-top:48px}
+  .road-line{top:68px;height:10px}
+  .road-van{width:56px;margin-left:-28px}
+  .rstop b{width:34px;height:34px;font-size:.9rem}
+}
+
+/* ---------- destinos: carrusel ---------- */
+.destinos-in{display:grid;gap:clamp(26px,3vw,40px);padding-block:clamp(80px,9vw,120px)}
+.dhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.dctrl{display:flex;gap:10px}
+.destinos .cbtn{background:var(--glass);border-color:var(--glass-line);color:var(--white)}
+.destinos .cbtn:hover{background:var(--gold);border-color:var(--gold);color:var(--v950)}
+.destinos .track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-inline:max(var(--gutter),calc((100vw - 1220px)/2 + var(--gutter)));scroll-padding-inline:max(var(--gutter),calc((100vw - 1220px)/2 + var(--gutter)));padding-bottom:6px;scrollbar-width:none;cursor:grab;width:auto}
+.destinos .track::-webkit-scrollbar{display:none}
+.destinos .track.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.destinos .track.drag img{pointer-events:none}
+.destinos .dcard{width:min(80vw,380px);scroll-snap-align:start;user-select:none;transition:transform .5s var(--ease),opacity .5s}
+.destinos .dcard img{-webkit-user-drag:none}
+.dots{display:flex;gap:8px;justify-content:center}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.3);transition:width .4s var(--ease),background .4s}
+.dots button.on{width:34px;background:var(--gold)}
+
+/* ---------- contacto único ---------- */
+.onecard{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding:clamp(24px,3.5vw,40px);border-radius:var(--r-lg);background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(245,181,42,.35);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 30px 80px -40px rgba(0,0,0,.6);overflow:hidden}
+.onecard::before{content:"";position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(245,181,42,.25),transparent 65%);pointer-events:none}
+.oc-left{display:flex;align-items:center;gap:22px;min-width:0}
+.oc-logo{width:92px;height:92px;border-radius:50%;box-shadow:0 0 0 4px rgba(245,181,42,.35),0 0 0 10px rgba(245,181,42,.1);animation:pulse 2.6s ease-in-out infinite;flex:none}
+@keyframes pulse{50%{box-shadow:0 0 0 4px rgba(245,181,42,.55),0 0 0 18px rgba(245,181,42,0)}}
+.oc-name{font-family:var(--f-display);font-weight:900;font-style:italic;font-size:var(--step-2);line-height:1.1}
+.oc-rol{color:var(--gold);font-weight:700;margin-top:4px}
+.oc-status{display:flex;align-items:center;gap:8px;margin-top:10px;color:rgba(255,255,255,.75);font-size:.92rem}
+.oc-status i{width:9px;height:9px;border-radius:50%;background:#3BD16F;box-shadow:0 0 0 4px rgba(59,209,111,.2)}
+.oc-right{display:grid;gap:14px;justify-items:end}
+.oc-tel{font-family:var(--f-display);font-weight:900;font-size:clamp(1.4rem,1rem + 1.6vw,2.2rem);letter-spacing:.01em;font-variant-numeric:tabular-nums;user-select:all}
+.oc-tel.pending{font-size:1rem;font-weight:600;color:rgba(255,255,255,.55);user-select:auto}
+.oc-acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.oc-acts .btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
+@media (max-width:860px){.onecard{grid-template-columns:1fr}.oc-right{justify-items:start}.oc-acts{justify-content:flex-start}.oc-left{flex-wrap:wrap}}
+
+.pre{opacity:0;transform:translateY(36px)}
+.pre.in{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .9s var(--ease),background .35s,box-shadow .35s}
+.rstop.pre b{transform:scale(.4)}
+.rstop.pre.in b{transform:none}
+.rstop.pre.in.on b{transform:scale(1.18)}
+.sitem.pre.in:hover{transform:translateX(4px)}
+.rstop.pre.in:hover b{transform:scale(1.12)}
+
+/* ---------- obras: herramientas y lista ---------- */
+.os-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;width:100%}
+.os-tools .os-search{margin-top:0}
+.os-filter{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--v50);border:1px solid var(--v100);flex-wrap:wrap}
+.os-filter button{border:0;background:none;padding:.7em 1.05em;border-radius:999px;font-family:var(--f-display);font-weight:800;font-size:.85rem;color:var(--v700);transition:background .3s,color .3s;display:inline-flex;gap:.45em;align-items:center}
+.os-filter button em{font-style:normal;font-size:.75rem;padding:.12em .55em;border-radius:999px;background:var(--v100);color:var(--v700)}
+.os-filter button[aria-selected="true"]{background:linear-gradient(135deg,var(--v600),var(--v800));color:var(--white)}
+.os-filter button[aria-selected="true"] em{background:var(--gold);color:var(--v950)}
+.os-res{flex-wrap:wrap}
+.os-res .btn{margin-left:auto;padding:.75em 1.2em;font-size:.85rem}
+.os.picked{outline:3px solid var(--gold);outline-offset:2px}
+.os-grid{display:grid;gap:26px;margin-top:10px}
+.og h3{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--v600);margin-bottom:12px;display:flex;gap:8px;align-items:center}
+.og h3 em{font-style:normal;letter-spacing:0;font-size:.75rem;background:var(--v100);color:var(--v700);padding:.1em .55em;border-radius:999px}
+.og-chips{display:flex;flex-wrap:wrap;gap:10px}
+.og-chips .os{padding:12px 18px;font-size:.98rem;animation:chipIn .5s var(--ease) both;animation-delay:var(--d,0ms)}
+.og-chips .os:hover{background:var(--v800);color:var(--white);border-color:var(--v800)}
+@keyframes chipIn{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+.og-empty{color:var(--ink-soft);font-size:1.05rem}
+.os-more{display:flex;justify-content:center;margin-top:26px}
+.marquee .os:hover{transform:scale(1.05)}
+
+/* ---------- celular ---------- */
+@media (max-width:640px){
+  :root{--step-3:clamp(1.85rem,1.4rem + 2.6vw,2.4rem);--step-4:clamp(2.1rem,1.6rem + 4vw,2.8rem);--step-1:clamp(1.08rem,1rem + .5vw,1.25rem)}
+  body{font-size:1rem}
+  .lead{font-size:1.06rem}
+  .hero{min-height:auto}
+  .hero-inner{padding-block:118px 48px;gap:20px}
+  .hero .lead{font-size:1rem}
+  .hero-ctas{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-ctas .btn{justify-content:center}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter)}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;font-size:.82rem}
+  .stat strong{font-size:2.2rem}
+  .manifesto{padding-block:64px}
+  .manifesto p{font-size:1.65rem;line-height:1.22}
+  .derecho{padding-block:64px}
+  .derecho h2,.como h2,.formas h2,.destinos h2,.obras h2,.dudas h2{font-size:var(--step-3)}
+  .glass-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter);padding-bottom:6px;scrollbar-width:none}
+  .glass-grid::-webkit-scrollbar{display:none}
+  .glass-card{flex:none;width:82%;scroll-snap-align:start;padding:20px}
+  .gg-dots{display:flex}
+  .como,.formas,.dudas,.obras{padding-block:64px}
+  .como-head,.dudas-head{margin-bottom:20px}
+  .journey{gap:18px}
+  .switch{display:grid;width:100%;margin-block:20px 24px}
+  .switch button{padding:.85em .5em;font-size:.84rem;white-space:nowrap}
+  .forma-img{aspect-ratio:16/11}
+  .destinos-in{padding-block:64px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%;border-radius:22px;gap:4px}
+  .tabs button{border-radius:16px;padding:.85em .5em;white-space:normal;font-size:.84rem}
+  .tabs-ind{border-radius:16px}
+  .quiz{padding:22px}
+  .qopts{display:grid}
+  .qopts button{text-align:left}
+  .os-filter{width:100%;display:grid;grid-template-columns:1fr 1fr;border-radius:20px}
+  .os-filter button{justify-content:center;border-radius:15px;padding:.75em .4em;font-size:.82rem}
+  .os-search{width:100%}
+  .marquee .os{padding:13px 20px;font-size:1rem}
+  .mq-label{margin-top:18px}
+  .reveal-pin{height:78svh;min-height:480px}
+  .historia-body{padding-block:56px;gap:36px}
+  .historia-body .txt{font-size:1.05rem}
+  .valores-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .valor{padding:18px 16px}
+  .valor b{font-size:1.15rem}
+  .valor p{font-size:.88rem}
+  .quote blockquote{font-size:1.35rem}
+  .contacto{padding-block:72px 64px}
+  .contacto h2{font-size:2.8rem}
+  .oc-logo{width:72px;height:72px}
+  .oc-acts{display:grid;width:100%}
+  .oc-acts .btn{justify-content:center}
+  .form-wrap{padding:20px;gap:22px}
+  .preview{order:-1}
+  .bubble{min-height:0}
+  .fab{padding:0;width:58px;height:58px;justify-content:center;font-size:0;gap:0;right:16px}
+  .fab svg{width:28px;height:28px}
+}
+.gg-dots{display:none;justify-content:center;gap:8px;margin-top:14px}
+.gg-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.3);transition:width .35s var(--ease),background .35s}
+.gg-dots i.on{width:26px;background:var(--gold)}
+
+/* ---------- directorio completo ---------- */
+.dir{margin-top:8px;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--v100);box-shadow:0 40px 90px -50px rgba(54,24,88,.55);overflow:hidden;animation:tpIn .5s var(--ease)}
+.dir-top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;padding:16px 20px;background:linear-gradient(135deg,var(--v800),var(--v950));color:var(--white)}
+.az{display:flex;flex-wrap:wrap;gap:4px}
+.az button{width:30px;height:30px;border-radius:9px;border:0;background:rgba(255,255,255,.08);color:var(--white);font-family:var(--f-display);font-weight:800;font-size:.8rem;transition:background .25s,color .25s,transform .25s var(--ease)}
+.az button:hover:not(:disabled),.az button.on{background:var(--gold);color:var(--v950);transform:translateY(-2px)}
+.az button:disabled{opacity:.25;cursor:default}
+.dir-legend{display:flex;gap:14px;font-size:.82rem;color:rgba(255,255,255,.8)}
+.dir-legend span{display:inline-flex;align-items:center;gap:6px}
+.tg{display:inline-block;flex:none;width:10px;height:10px;border-radius:50%}
+.tg.g0{background:var(--v600)}.tg.g1{background:var(--gold)}.tg.g2{background:var(--white);border:2.5px solid var(--v600)}
+.dir-legend .tg.g2{border-color:var(--v300);background:transparent}
+.dir-body{max-height:min(620px,70vh);overflow-y:auto;padding:4px 20px 20px;scroll-behavior:smooth;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--v300) transparent}
+.dl h4{position:sticky;top:0;z-index:1;margin:0;padding:14px 0 8px;background:linear-gradient(var(--white) 75%,rgba(255,255,255,0));font-family:var(--f-display);font-weight:900;font-style:italic;font-size:1.6rem;color:var(--v700)}
+.dl ul{list-style:none;margin:0 0 6px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px}
+.de{width:100%;height:100%;display:flex;gap:12px;align-items:flex-start;text-align:left;padding:12px 14px;border-radius:14px;border:1px solid var(--v100);background:var(--v50);transition:background .25s,border-color .25s,transform .25s var(--ease),box-shadow .25s}
+.de .tg{margin-top:6px}
+.de-t{display:grid;gap:2px;min-width:0}
+.de-t b{font-family:var(--f-display);font-weight:800;color:var(--v900);font-size:.95rem;overflow-wrap:anywhere}
+.de-t span{color:var(--ink-soft);font-size:.86rem;line-height:1.35}
+.de:hover{background:var(--white);border-color:var(--v300);transform:translateY(-2px);box-shadow:0 12px 24px -16px rgba(54,24,88,.5)}
+.de.picked{background:#FFF8E6;border-color:var(--gold)}
+.dir-foot{padding:12px 20px;border-top:1px solid var(--v100);font-size:.85rem;color:var(--ink-soft);background:var(--v50)}
+#osToggle em{font-style:normal;margin-left:.4em;padding:.15em .6em;border-radius:999px;background:var(--gold);color:var(--v950);font-size:.8rem}
+@media (max-width:640px){
+  .dir-top{padding:14px}
+  .az{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;padding-bottom:2px}
+  .az::-webkit-scrollbar{display:none}
+  .az button{flex:none;width:32px;height:32px}
+  .dir-body{padding:0 14px 14px;max-height:62vh}
+  .dl ul{grid-template-columns:1fr}
+  .dl h4{font-size:1.35rem}
+}
+
+/* ---------- ruta con la combi (celular y tablet) ---------- */
+.mroad{display:none;padding:0 var(--gutter) 8px;pointer-events:none}
+.mroad-in{position:relative;height:26px}
+.mroad-track{position:absolute;left:0;right:0;bottom:3px;height:8px;border-radius:8px;background:rgba(255,255,255,.14);overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.mroad-done{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:8px;background:linear-gradient(90deg,var(--v600),var(--v300))}
+.mroad-dash{position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:repeating-linear-gradient(90deg,var(--gold) 0 9px,transparent 9px 18px);opacity:.95}
+.mroad-stops{position:absolute;left:0;right:0;bottom:0;height:14px}
+.mstop{position:absolute;bottom:-4px;width:26px;height:22px;margin-left:-13px;border:0;background:none;padding:0;pointer-events:auto;display:grid;place-items:center}
+.mstop::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--v950);border:2px solid var(--v300);transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.mstop.done::before{background:var(--gold);border-color:var(--gold-deep);transform:scale(1.1)}
+.mroad-van{position:absolute;left:0;bottom:4px;width:40px;margin-left:0;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45));will-change:left;transition:left .12s linear}
+.mroad-van svg{display:block;transform-origin:50% 100%}
+.mroad-van.back svg{transform:scaleX(-1)}
+.mroad-van.moving svg{animation:vanBob .35s ease-in-out infinite}
+@keyframes vanBob{50%{transform:translateY(-1.5px)}}
+.mroad-van.back.moving svg{animation:vanBobB .35s ease-in-out infinite}
+@keyframes vanBobB{0%,100%{transform:scaleX(-1)}50%{transform:scaleX(-1) translateY(-1.5px)}}
+.mroad-van .mwh{transform-box:fill-box;transform-origin:center}
+.mroad-van.moving .mwh{animation:spin .5s linear infinite}
+@media (max-width:1179px){
+  .mroad{display:block}
+  .progress{display:none}
+  .nav{background:linear-gradient(180deg,rgba(25,10,43,.55),rgba(25,10,43,0))}
+}
+/* ---------- reveal suave ---------- */
+.rv{will-change:transform,opacity}
+
+@media (prefers-reduced-motion:reduce){
+  .scroll-cue b::after{animation:none}
+  .manifesto .w{opacity:1}
+}
+</style>
+</head>
+<body>
+<!-- barra de progreso -->
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" data-go="inicio" aria-label="Transporte Aparicio, ir al inicio">
+      <img decoding="async" src="img/logo.webp" alt="" width="46" height="46">
+      <span><small>TRANSPORTE</small><b>APARICIO</b></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Secciones">
+      <a href="#inicio" data-go="inicio">Inicio</a>
+      <a href="#como" data-go="como">Cómo trabajamos</a>
+      <a href="#historia" data-go="historia">Nuestra historia</a>
+      <a href="#contacto" data-go="contacto">Contacto</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn btn-gold btn-cta magnet" href="#contacto" data-go="contacto">Hablá con nosotros</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menú</button>
+    </div>
+  </div>
+  <div class="mroad" id="mroad" aria-label="Recorrido de la página">
+    <div class="mroad-in">
+      <div class="mroad-track"><span class="mroad-done" id="mroadDone"></span><span class="mroad-dash" id="mroadDash"></span></div>
+      <div class="mroad-stops" id="mstops"></div>
+      <div class="mroad-van" id="mroadVan"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M6 30V14c0-3 2-6 6-6h28c3 0 5 1 7 3l8 9c2 2 3 4 3 7v3c0 1-1 2-2 2H8c-1 0-2-1-2-2z" fill="#F5B52A" stroke="#190A2B" stroke-width="2.4" stroke-linejoin="round"/><path d="M40 11h2l8 9h-10z" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><rect x="12" y="12" width="12" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><rect x="27" y="12" width="9" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><circle class="mwh" cx="17" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/><circle class="mwh" cx="47" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/></svg></div>
+    </div>
+  </div>
+</header>
+
+<!-- RUTA LATERAL CON LA COMBI -->
+<aside class="route" id="route" aria-label="Recorrido de la página">
+  <div class="road-v" aria-hidden="true"><span class="rv-done" id="roadDone"></span><span class="rv-dash" id="roadDash"></span></div>
+  <div id="stops"></div>
+  <svg class="van" id="van" viewBox="0 0 64 40" aria-hidden="true">
+    <path d="M6 30V14c0-3 2-6 6-6h28c3 0 5 1 7 3l8 9c2 2 3 4 3 7v3c0 1-1 2-2 2H8c-1 0-2-1-2-2z" fill="#F5B52A" stroke="#190A2B" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M40 11h2l8 9h-10z" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/>
+    <rect x="12" y="12" width="12" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/>
+    <rect x="27" y="12" width="9" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/>
+    <circle cx="31.5" cy="25" r="2" fill="#25103F"/><path d="M30 27v3h4l1 2" stroke="#25103F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <circle class="wheel" cx="17" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/>
+    <circle class="wheel" cx="47" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/>
+  </svg>
+</aside>
+
+<main>
+<!-- =============== INICIO =============== -->
+<section class="hero" id="inicio">
+  <div class="hero-media" id="heroMedia">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto"></video>
+    <script>(function(){var v=document.getElementById("heroVideo"),m=window.innerWidth<700;v.poster=m?"img/hero-poster-m.webp":"img/hero-poster.webp";v.src=m?"img/hero-m.mp4":"img/hero.mp4";})();</script>
+  </div>
+  <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+  <div class="wrap hero-inner" id="heroInner">
+    <span class="eyebrow">Transporte para chicos con CUD</span>
+    <h1 id="heroTitle"><span class="line"><span>Llegar también</span></span><span class="line"><span>es parte de la</span></span><span class="line"><span class="gold">terapia.</span></span></h1>
+    <p class="lead">Llevamos a chicos con Certificado Único de Discapacidad a su escuela, sus terapias y su centro de día. Lo cubre al 100% la obra social, en todo el país. Hace más de 10 años que acompañamos a las familias en cada viaje.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold magnet" href="#contacto" data-go="contacto">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>
+        Hablá con nosotros
+      </a>
+      <a class="btn btn-ghost magnet" href="#como" data-go="como">Ver cómo trabajamos</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><i></i>100% cubierto por la obra social</span>
+      <span class="chip"><i></i>Más de 10 años con obras sociales</span>
+      <span class="chip"><i></i>Todo el país</span>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><b></b>Bajá</div>
+</section>
+
+<section class="stats" aria-label="Transporte Aparicio en números">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat rv"><strong><span class="count" data-to="10" data-prefix="+">+10</span></strong><span>años trabajando con obras sociales</span></div>
+      <div class="stat rv"><strong><span class="count" data-to="360" data-prefix="+">+360</span></strong><span>obras sociales y prepagas de todo el país</span></div>
+      <div class="stat rv"><strong><span class="count" data-to="100" data-suffix="%">100%</span></strong><span>cubierto: la familia no paga el viaje</span></div>
+      <div class="stat rv"><strong><span class="count" data-to="24">24</span></strong><span>provincias: trabajamos en todo el país</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" aria-label="Lo que nos mueve">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <p id="manifesto">Para una familia, el viaje nunca es un detalle. Es el primer paso de cada terapia, de cada clase y de cada avance. Por eso lo cuidamos como si fuera nuestro.</p>
+  </div>
+</section>
+
+<section class="derecho" aria-labelledby="derecho-t">
+  <div class="bg parallax" data-speed="0.18"><img decoding="async" src="img/auto-familia.webp" srcset="img/auto-familia-m.webp 900w, img/auto-familia.webp 1800w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="derecho-head">
+      <span class="eyebrow">Lo primero que tenés que saber</span>
+      <h2 id="derecho-t">El transporte es un derecho. Y lo cubre la obra social.</h2>
+    </div>
+    <div class="glass-grid">
+      <article class="glass-card tilt rv">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+        <h3>Está en la ley</h3>
+        <p>La Ley 24.901, en su artículo 13, reconoce el transporte especial para las personas con discapacidad que no pueden usar el transporte público. Si hace falta, con la ayuda de otra persona.</p>
+      </article>
+      <article class="glass-card tilt rv">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h12"/><circle cx="19" cy="18" r="2"/></svg></span>
+        <h3>Cobertura total</h3>
+        <p>La obra social o la prepaga cubre el 100% del viaje, de ida y de vuelta: desde tu casa hasta la escuela, el consultorio o el centro de día.</p>
+      </article>
+      <article class="glass-card tilt rv">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M14 10h4M14 14h4M6 16c.6-1.5 1.8-2.2 3-2.2s2.4.7 3 2.2"/></svg></span>
+        <h3>La clave está en el CUD</h3>
+        <p>El Certificado Único de Discapacidad tiene que decir «Transporte» en la orientación prestacional. Si no lo dice, te explicamos cómo pedir que lo agreguen.</p>
+      </article>
+    </div>
+    <div class="gg-dots" id="ggDots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <div class="note rv">
+      <span aria-hidden="true">💛</span>
+      <p><b>¿Necesita ayuda durante el viaje?</b> Si tu hijo necesita asistencia de otra persona, con una evaluación de independencia funcional (escala FIM) la obra social reconoce el traslado con dependencia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="como" id="como" aria-labelledby="como-t">
+  <div class="wrap">
+    <div class="como-head">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 id="como-t">Vos nos escribís. Nosotros nos ocupamos del resto.</h2>
+      <p class="lead">Seis paradas, desde el primer mensaje hasta el viaje de todos los días. Tocá cada una o dejá que la combi te lleve.</p>
+    </div>
+    <div class="journey" id="journey">
+      <div class="road" id="road">
+        <div class="road-line"><span class="road-fill" id="roadFill"></span></div>
+        <div class="road-van" id="roadVan"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M6 30V14c0-3 2-6 6-6h28c3 0 5 1 7 3l8 9c2 2 3 4 3 7v3c0 1-1 2-2 2H8c-1 0-2-1-2-2z" fill="#F5B52A" stroke="#190A2B" stroke-width="2.2" stroke-linejoin="round"/><path d="M40 11h2l8 9h-10z" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><rect x="12" y="12" width="12" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><rect x="27" y="12" width="9" height="8" rx="2" fill="#ECE3F6" stroke="#190A2B" stroke-width="2"/><circle class="wh" cx="17" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/><circle class="wh" cx="47" cy="32" r="5" fill="#190A2B" stroke="#F5B52A" stroke-width="2"/></svg></div>
+        <div class="road-stops"><button class="rstop on" data-i="0" aria-label="Paso 1: Nos escribís"><b>1</b><span>Nos escribís</span></button><button class="rstop" data-i="1" aria-label="Paso 2: Revisamos los papeles"><b>2</b><span>Revisamos los papeles</span></button><button class="rstop" data-i="2" aria-label="Paso 3: Armamos el presupuesto"><b>3</b><span>Armamos el presupuesto</span></button><button class="rstop" data-i="3" aria-label="Paso 4: Lo presentamos"><b>4</b><span>Lo presentamos</span></button><button class="rstop" data-i="4" aria-label="Paso 5: Empiezan los viajes"><b>5</b><span>Empiezan los viajes</span></button><button class="rstop" data-i="5" aria-label="Paso 6: Nos ocupamos todos los meses"><b>6</b><span>Nos ocupamos todos los meses</span></button></div>
+      </div>
+      <div class="jgrid">
+        <div class="stage" id="stage">
+          <img decoding="async" src="img/papa-hijo-banco.webp" srcset="img/papa-hijo-banco-m.webp 900w, img/papa-hijo-banco.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Un papá conversa con su hijo sentados en un banco" class="on" loading="lazy"><img decoding="async" src="img/manos.webp" srcset="img/manos-m.webp 900w, img/manos.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="La mano de un adulto sostiene la de un chico" loading="lazy"><img decoding="async" src="img/ciudad.webp" srcset="img/ciudad-m.webp 900w, img/ciudad.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Una avenida de una ciudad argentina al atardecer" loading="lazy"><img decoding="async" src="img/familia-beso.webp" srcset="img/familia-beso-m.webp 900w, img/familia-beso.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Una mamá y un papá abrazan a su hija con síndrome de Down" loading="lazy"><img decoding="async" src="img/auto-familia.webp" srcset="img/auto-familia-m.webp 900w, img/auto-familia.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Una familia junto al auto con su bebé" loading="lazy"><img decoding="async" src="img/mama-hija-abrazo.webp" srcset="img/mama-hija-abrazo-m.webp 900w, img/mama-hija-abrazo.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Una mamá abraza a su hija sonriendo" loading="lazy">
+          <div class="stage-card" id="stageCard" aria-live="polite">
+            <div class="sc-top"><span class="sc-num" id="scNum">01</span><span class="sc-who" id="scWho">Lo hacés vos</span></div>
+            <h3 id="scT">Nos escribís</h3>
+            <p id="scD">Nos contás quién viaja, a dónde tiene que ir y qué obra social tiene. Te respondemos personalmente y sin compromiso.</p>
+          </div>
+        </div>
+        <div class="jside">
+          <ol class="slist" id="slist"><li><button class="sitem on" data-i="0"><span class="sn">01</span><span class="stx"><b>Nos escribís</b><span class="who">Lo hacés vos</span></span><span class="sbar"><span></span></span></button></li><li><button class="sitem" data-i="1"><span class="sn">02</span><span class="stx"><b>Revisamos los papeles</b><span class="who">Lo hacemos juntos</span></span><span class="sbar"><span></span></span></button></li><li><button class="sitem" data-i="2"><span class="sn">03</span><span class="stx"><b>Armamos el presupuesto</b><span class="who">Lo hacemos nosotros</span></span><span class="sbar"><span></span></span></button></li><li><button class="sitem" data-i="3"><span class="sn">04</span><span class="stx"><b>Lo presentamos</b><span class="who">Lo hacemos nosotros</span></span><span class="sbar"><span></span></span></button></li><li><button class="sitem" data-i="4"><span class="sn">05</span><span class="stx"><b>Empiezan los viajes</b><span class="who">Lo hacemos nosotros</span></span><span class="sbar"><span></span></span></button></li><li><button class="sitem" data-i="5"><span class="sn">06</span><span class="stx"><b>Nos ocupamos todos los meses</b><span class="who">Lo hacemos nosotros</span></span><span class="sbar"><span></span></span></button></li></ol>
+          <div class="jctrl">
+            <button class="cbtn" id="jPrev" aria-label="Paso anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="cbtn" id="jPlay" aria-label="Pausar"><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l11 7-11 7z"/></svg></button>
+            <button class="cbtn" id="jNext" aria-label="Paso siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+            <span class="jcount" id="jCount">1 / 6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="formas" aria-labelledby="formas-t">
+  <div class="wrap">
+    <span class="eyebrow">Dos formas de viajar</span>
+    <h2 id="formas-t">Cada familia tiene su manera. Nos adaptamos a la tuya.</h2>
+    <div class="switch" id="switch" role="tablist" data-mode="a">
+      <span class="pill" aria-hidden="true"></span>
+      <button role="tab" id="tab-a" aria-selected="true" aria-controls="panel-a">Lo llevamos nosotros</button>
+      <button role="tab" id="tab-b" aria-selected="false" aria-controls="panel-b">Lo llevás vos</button>
+    </div>
+    <div class="forma-stage">
+      <div class="forma-img">
+        <img decoding="async" id="img-a" src="img/asiento-atras.webp" srcset="img/asiento-atras-m.webp 900w, img/asiento-atras.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Dos chicos sonríen sentados en el asiento de atrás de un auto" loading="lazy">
+        <img decoding="async" id="img-b" src="img/papa-hijo.webp" srcset="img/papa-hijo-m.webp 900w, img/papa-hijo.webp 1800w" sizes="(max-width: 900px) 100vw, 55vw" alt="Un papá abraza a su hijo en casa" loading="lazy" hidden>
+      </div>
+      <div class="forma-txt">
+        <div class="forma-panel" id="panel-a" role="tabpanel" aria-labelledby="tab-a">
+          <h3>Organizamos el traslado puerta a puerta</h3>
+          <ul>
+            <li>Coordinamos los viajes de ida y vuelta con los horarios de la escuela y de cada terapia.</li>
+            <li>Si usa silla de ruedas, la silla viaja en el baúl y tu hijo va sentado atrás.</li>
+            <li>El acompañante lo elige la familia, para que tu hijo viaje tranquilo con alguien que conoce.</li>
+          </ul>
+        </div>
+        <div class="forma-panel" id="panel-b" role="tabpanel" aria-labelledby="tab-b" hidden>
+          <h3>Si viaja más tranquilo con vos, lo llevás vos</h3>
+          <ul>
+            <li>Hay chicos que solo viajan tranquilos con su mamá, su papá o alguien de la familia.</li>
+            <li>En ese caso ustedes hacen el viaje y nosotros les pagamos cada traslado.</li>
+            <li>Nosotros nos ocupamos de todo el trámite con la obra social.</li>
+          </ul>
+        </div>
+        <p class="forma-foot">En los dos casos, la obra social cubre el 100%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destinos" id="destinos" aria-labelledby="destinos-t">
+  <div class="destinos-in">
+    <div class="wrap dhead">
+      <div><span class="eyebrow">A dónde vamos</span><h2 id="destinos-t" style="margin-top:14px">A todos los lugares donde tu hijo crece.</h2></div>
+      <div class="dctrl">
+        <button class="cbtn" id="dPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="cbtn" id="dNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Destinos: deslizá o usá las flechas">
+      <article class="dcard"><span class="num">01</span><img decoding="async" src="img/escuela.webp" srcset="img/escuela-m.webp 900w, img/escuela.webp 1800w" sizes="(max-width: 900px) 80vw, 380px" alt="Un aula con chicos sentados escuchando a sus maestras" loading="lazy"><div class="dtxt"><h3>Escuelas</h3><p>Escuela común con integración, escuela especial y jardín.</p></div></article>
+      <article class="dcard"><span class="num">02</span><img decoding="async" src="img/terapia-nena.webp" srcset="img/terapia-nena-m.webp 900w, img/terapia-nena.webp 1800w" sizes="(max-width: 900px) 80vw, 380px" alt="Una terapeuta juega con una nena en una mesa" loading="lazy"><div class="dtxt"><h3>Terapias</h3><p>Fonoaudiología, terapia ocupacional, psicología y psicopedagogía.</p></div></article>
+      <article class="dcard"><span class="num">03</span><img decoding="async" src="img/terapia-down.webp" srcset="img/terapia-down-m.webp 900w, img/terapia-down.webp 1800w" sizes="(max-width: 900px) 80vw, 380px" alt="Una terapeuta trabaja con una nena con síndrome de Down" loading="lazy"><div class="dtxt"><h3>Centros de día y CET</h3><p>Centros educativos terapéuticos y centros de día, todos los días.</p></div></article>
+      <article class="dcard"><span class="num">04</span><img decoding="async" src="img/silla-nena.webp" srcset="img/silla-nena-m.webp 900w, img/silla-nena.webp 1800w" sizes="(max-width: 900px) 80vw, 380px" alt="Una nena en silla de ruedas comparte un rato con una amiga" loading="lazy"><div class="dtxt"><h3>Rehabilitación</h3><p>Kinesiología y tratamientos de rehabilitación, con la silla en el baúl.</p></div></article>
+      <article class="dcard"><span class="num">05</span><img decoding="async" src="img/ruta.webp" srcset="img/ruta-m.webp 900w, img/ruta.webp 1800w" sizes="(max-width: 900px) 80vw, 380px" alt="Una camioneta recorre una ruta entre montañas en Argentina" loading="lazy"><div class="dtxt"><h3>En todo el país</h3><p>No importa la provincia: trabajamos con familias de toda la Argentina.</p></div></article>
+    </div>
+    <div class="wrap"><div class="dots" id="dDots"></div></div>
+  </div>
+</section>
+
+<section class="obras" aria-labelledby="obras-t">
+  <div class="wrap obras-head">
+    <span class="eyebrow">Obras sociales</span>
+    <h2 id="obras-t">Trabajamos con obras sociales y prepagas de todo el país.</h2>
+    <p class="lead">Más de 360 obras sociales y prepagas de todo el país. Buscá la tuya o filtrá por tipo, y tocala para consultarnos.</p>
+    <div class="os-tools">
+      <div class="os-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="osq" type="search" placeholder="Escribí tu obra social, ej.: OSPOCE" autocomplete="off" aria-label="Buscar obra social">
+      </div>
+      <div class="os-filter" id="osFilter" role="tablist" aria-label="Tipo de cobertura">
+        <button role="tab" data-g="all" aria-selected="true">Todas <em id="cAll"></em></button>
+        <button role="tab" data-g="0" aria-selected="false">Nacionales <em id="c0"></em></button>
+        <button role="tab" data-g="1" aria-selected="false">Prepagas <em id="c1"></em></button>
+        <button role="tab" data-g="2" aria-selected="false">Provinciales <em id="c2"></em></button>
+      </div>
+    </div>
+    <div class="os-res" id="osRes" aria-live="polite"></div>
+  </div>
+  <div id="osMarq">
+    <div class="mq-label wrap" aria-hidden="true"><span>Obras sociales nacionales</span></div>
+    <div class="marquee" id="mq1"><div class="mrow"></div><div class="mrow" aria-hidden="true"></div></div>
+    <div class="mq-label wrap" aria-hidden="true"><span>Prepagas</span></div>
+    <div class="marquee rev" id="mq2" data-dir="1"><div class="mrow"></div><div class="mrow" aria-hidden="true"></div></div>
+    <div class="mq-label wrap" aria-hidden="true"><span>Obras sociales provinciales</span></div>
+    <div class="marquee" id="mq3"><div class="mrow"></div><div class="mrow" aria-hidden="true"></div></div>
+  </div>
+  <div class="wrap">
+    <div class="dir" id="osGrid" hidden>
+      <div class="dir-top">
+        <div class="az" id="az" aria-label="Ir a la letra"></div>
+        <div class="dir-legend"><span><i class="tg g0"></i>Nacional</span><span><i class="tg g1"></i>Prepaga</span><span><i class="tg g2"></i>Provincial</span></div>
+      </div>
+      <div class="dir-body" id="dirBody" tabindex="0"></div>
+      <div class="dir-foot" id="dirFoot"></div>
+    </div>
+    <div class="os-more"><button class="btn btn-line" id="osToggle" type="button"></button></div>
+  </div>
+</section>
+
+<section class="dudas" id="dudas" aria-labelledby="dudas-t">
+  <div class="wrap">
+    <div class="dudas-head">
+      <span class="eyebrow">Resolvé tus dudas</span>
+      <h2 id="dudas-t">Todo lo que necesitás saber, en un solo lugar.</h2>
+    </div>
+    <div class="tabs" role="tablist" id="tabs">
+      <button role="tab" aria-selected="true" aria-controls="tp-quiz" id="t-quiz">¿Me corresponde?</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-req" id="t-req">Qué necesito</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-mitos" id="t-mitos">Mitos y verdades</button>
+      <button role="tab" aria-selected="false" aria-controls="tp-faq" id="t-faq">Preguntas</button>
+      <span class="tabs-ind" id="tabsInd" aria-hidden="true"></span>
+    </div>
+
+    <div class="tpanel" id="tp-quiz" role="tabpanel" aria-labelledby="t-quiz">
+      <div class="quiz" id="quiz">
+        <div class="quiz-bar"><span id="quizBar"></span></div>
+        <div class="qcard" data-q="0">
+          <small>Pregunta 1 de 3</small>
+          <h3>¿Tu hijo tiene el Certificado Único de Discapacidad (CUD) vigente?</h3>
+          <div class="qopts"><button data-a="si">Sí, lo tiene</button><button data-a="no">Todavía no</button><button data-a="nose">No estoy seguro</button></div>
+        </div>
+        <div class="qcard" data-q="1" hidden>
+          <small>Pregunta 2 de 3</small>
+          <h3>En la orientación prestacional del CUD, ¿aparece la palabra «Transporte»?</h3>
+          <div class="qopts"><button data-a="si">Sí, aparece</button><button data-a="no">No aparece</button><button data-a="nose">No sé dónde mirar</button></div>
+        </div>
+        <div class="qcard" data-q="2" hidden>
+          <small>Pregunta 3 de 3</small>
+          <h3>¿Tiene obra social o prepaga?</h3>
+          <div class="qopts"><button data-a="si">Sí</button><button data-a="no">No, tiene cobertura pública</button><button data-a="nose">No estoy seguro</button></div>
+        </div>
+        <div class="qresult" id="qresult" hidden>
+          <span class="qicon" id="qicon">✓</span>
+          <h3 id="qtitle"></h3>
+          <p id="qtext"></p>
+          <div class="qacts"><a class="btn btn-gold" href="#contacto" data-go="contacto">Hablá con nosotros</a><button class="btn btn-line" id="qreset">Empezar de nuevo</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tpanel" id="tp-req" role="tabpanel" aria-labelledby="t-req" hidden>
+      <div class="req-layout">
+        <div class="req-side">
+          <p class="lead">Tocá cada papel que ya tenés y mirá cuánto te falta.</p>
+          <div class="ringbox" aria-live="polite">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bgc" cx="50" cy="50" r="42"/><circle class="fgc" id="ringFg" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg>
+            <div><strong id="ringTxt">0 de 6</strong><span id="ringMsg">Empezá marcando lo que ya tenés.</span></div>
+          </div>
+          <div class="req-tip"><p><b>¿Te falta algo?</b> Escribinos igual. Cada obra social tiene sus formularios, y te decimos cuáles son y cómo completarlos.</p></div>
+        </div>
+        <ul class="checks" id="checks">
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>CUD vigente que diga «Transporte»</b><span>En la parte de orientación prestacional del certificado.</span></span></button></li>
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Orden médica de transporte</b><span>Con fecha anterior al inicio de los viajes y la justificación de por qué lo necesita.</span></span></button></li>
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Constancia de alumno regular o de tratamiento</b><span>Con los días y horarios de la escuela o de cada terapia.</span></span></button></li>
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Resumen de historia clínica</b><span>Lo completa el médico tratante.</span></span></button></li>
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Escala FIM, si necesita asistencia</b><span>Solo si va a viajar con dependencia. La firma un médico o un terapista ocupacional.</span></span></button></li>
+        <li><button class="check" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>DNI y credencial de la obra social</b><span>Del chico y del titular de la obra social.</span></span></button></li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="tpanel" id="tp-mitos" role="tabpanel" aria-labelledby="t-mitos" hidden>
+      <div class="flip-grid">
+      <button class="flip" aria-pressed="false"><span class="flip-in"><span class="face front"><small>Mito</small><q>El transporte lo tiene que pagar la familia.</q><em>Tocá para ver la verdad ↻</em></span><span class="face back"><small>Verdad</small><p>La obra social o la prepaga lo cubre al 100%. La familia no paga los viajes.</p></span></span></button>
+      <button class="flip" aria-pressed="false"><span class="flip-in"><span class="face front"><small>Mito</small><q>Solo sirve para ir a la escuela.</q><em>Tocá para ver la verdad ↻</em></span><span class="face back"><small>Verdad</small><p>También cubre los viajes a terapias, centros de día, CET y rehabilitación.</p></span></span></button>
+      <button class="flip" aria-pressed="false"><span class="flip-in"><span class="face front"><small>Mito</small><q>Este servicio es solo para Buenos Aires.</q><em>Tocá para ver la verdad ↻</em></span><span class="face back"><small>Verdad</small><p>Trabajamos con familias de todas las provincias de la Argentina.</p></span></span></button>
+      <button class="flip" aria-pressed="false"><span class="flip-in"><span class="face front"><small>Mito</small><q>Los trámites son imposibles.</q><em>Tocá para ver la verdad ↻</em></span><span class="face back"><small>Verdad</small><p>Son varios papeles, pero los hacemos con vos, paso a paso, todos los meses.</p></span></span></button>
+    </div>
+    </div>
+
+    <div class="tpanel faqp" id="tp-faq" role="tabpanel" aria-labelledby="t-faq" hidden>
+      <details><summary>¿Tengo que pagar algo? <i aria-hidden="true"></i></summary><div class="ans">No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social.</div></details>
+      <details><summary>¿Cuánto tarda la autorización? <i aria-hidden="true"></i></summary><div class="ans">Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad.</div></details>
+      <details><summary>¿Qué pasa si el CUD no dice «Transporte»? <i aria-hidden="true"></i></summary><div class="ans">Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde, para que puedas pedir la cobertura.</div></details>
+      <details><summary>¿Puede viajar un acompañante? <i aria-hidden="true"></i></summary><div class="ans">Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia.</div></details>
+      <details><summary>¿Y si usa silla de ruedas? <i aria-hidden="true"></i></summary><div class="ans">La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante.</div></details>
+      <details><summary>¿Trabajan en mi provincia? <i aria-hidden="true"></i></summary><div class="ans">Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos.</div></details>
+    </div>
+  </div>
+</section>
+<!-- =============== NUESTRA HISTORIA =============== -->
+<section class="historia" id="historia" aria-labelledby="hist-t">
+  <div class="reveal-pin" id="revealPin">
+    <div class="circle" id="revealCircle"><img decoding="async" loading="lazy" src="img/hero-familia.webp" srcset="img/hero-familia-m.webp 900w, img/hero-familia.webp 1800w" sizes="100vw" alt="Una familia sonríe abrazada junto a su hija con síndrome de Down"></div>
+    <div class="ringo" id="revealRing" aria-hidden="true"></div>
+    <h2 id="hist-t">Una familia que lleva <em>familias.</em></h2>
+  </div>
+  <div class="wrap historia-body">
+    <div class="txt rv">
+      <span class="eyebrow">Nuestra historia</span>
+      <p><strong>Transporte Aparicio es una empresa familiar.</strong> Hace más de diez años empezamos a llevar chicos a sus escuelas y a sus terapias, y en cada viaje aprendimos algo nuevo.</p>
+      <p>Aprendimos que la puntualidad importa, que la paciencia importa todavía más, y que un trámite bien hecho le cambia la semana a una mamá o a un papá.</p>
+      <p>Hoy trabajamos con obras sociales y prepagas de todo el país. Pero seguimos haciendo las cosas como al principio: conociendo a cada familia y cuidando cada viaje.</p>
+    </div>
+    <ol class="timeline" id="timeline">
+      <span class="tl-fill" id="tlFill" aria-hidden="true"></span>
+      <li class="rv"><small>El comienzo</small><h3>Los primeros viajes</h3><p>Empezamos llevando a los chicos de nuestro barrio a sus escuelas y terapias.</p></li>
+      <li class="rv"><small>Crecimiento</small><h3>Llegan las obras sociales</h3><p>Aprendimos cómo trabaja cada obra social y armamos un sistema para que los papeles salgan bien.</p></li>
+      <li class="rv"><small>Experiencia</small><h3>Crecemos con las familias</h3><p>Cada familia nos recomendó a otra. Así sumamos más chicos, más destinos y más obras sociales.</p></li>
+      <li class="rv"><small>Hoy</small><h3>En todo el país</h3><p>Más de 10 años después, acompañamos familias en toda la Argentina con la misma dedicación.</p></li>
+    </ol>
+  </div>
+  <div class="wrap valores">
+    <div class="valores-grid">
+      <div class="valor tilt rv"><b>Paciencia</b><p>Cada chico tiene sus tiempos. Los respetamos, en cada subida y en cada llegada.</p></div>
+      <div class="valor tilt rv"><b>Puntualidad</b><p>Un viaje tarde es una terapia perdida. Por eso cumplimos los horarios.</p></div>
+      <div class="valor tilt rv"><b>Respeto</b><p>Tratamos a cada familia como nos gustaría que traten a la nuestra.</p></div>
+      <div class="valor tilt rv"><b>Claridad</b><p>Te explicamos cada paso y cada papel, sin vueltas y sin letra chica.</p></div>
+    </div>
+  </div>
+  <div class="mosaic">
+    <div class="wrap">
+      <div class="mosaic-grid">
+        <figure class="m1 parallax-y" data-y="-60"><img decoding="async" src="img/juego-nene.webp" srcset="img/juego-nene-m.webp 900w, img/juego-nene.webp 1800w" sizes="(max-width: 760px) 33vw, 380px" alt="Un nene sonríe mientras juega con un autito" loading="lazy"></figure>
+        <figure class="m2 parallax-y" data-y="-140"><img decoding="async" src="img/silla-nena-retrato.webp" srcset="img/silla-nena-retrato-m.webp 900w, img/silla-nena-retrato.webp 1800w" sizes="(max-width: 760px) 33vw, 380px" alt="Una nena sonríe sentada en su silla de ruedas" loading="lazy"></figure>
+        <figure class="m3 parallax-y" data-y="-30"><img decoding="async" src="img/terapia-nene.webp" srcset="img/terapia-nene-m.webp 900w, img/terapia-nene.webp 1800w" sizes="(max-width: 760px) 33vw, 380px" alt="Un nene dibuja concentrado" loading="lazy"></figure>
+      </div>
+      <div class="quote rv">
+        <blockquote>Cada chico que sube a un viaje es una familia que confía en nosotros. Esa confianza es lo que más cuidamos.</blockquote>
+        <cite>Dirección de Transporte Aparicio</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== CONTACTO =============== -->
+<section class="contacto" id="contacto" aria-labelledby="contacto-t">
+  <div class="wrap">
+    <div class="contacto-head">
+      <span class="eyebrow">Contacto</span>
+      <h2 id="contacto-t">Hablemos.</h2>
+      <p class="lead">Un solo número para todo: consultas, papeles y viajes. Te respondemos personalmente.</p>
+    </div>
+    <div class="onecard" id="onecard">
+      <div class="oc-left">
+        <img decoding="async" src="img/logo.webp" alt="" width="92" height="92" class="oc-logo">
+        <div class="oc-who">
+          <div class="oc-name" id="ocName">Transporte Aparicio</div>
+          <div class="oc-rol" id="ocRol">Atención a familias</div>
+          <div class="oc-status"><i></i>Te responde una persona, no un robot</div>
+        </div>
+      </div>
+      <div class="oc-right">
+        <div class="oc-tel" id="ocTel">Número a confirmar</div>
+        <div class="oc-acts">
+          <a class="btn btn-gold" id="ocWa" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>Escribinos por WhatsApp</a>
+          <button class="btn btn-ghost" id="ocCopy" type="button" hidden>Copiar número</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-wrap">
+      <form class="form" id="form" novalidate>
+        <h3>Armá tu mensaje</h3>
+        <div class="field"><label for="f-nombre">Tu nombre</label><input id="f-nombre" name="nombre" autocomplete="name" placeholder="Ej.: Laura"></div>
+        <div class="field"><label for="f-chico">¿Quién viaja?</label><input id="f-chico" name="chico" placeholder="Ej.: mi hijo Tomás, de 8 años"></div>
+        <div class="field"><label for="f-os">Obra social</label><select id="f-os" name="os"></select></div>
+        <div class="field"><label for="f-loc">Localidad</label><input id="f-loc" name="loc" placeholder="Ej.: Lanús, Buenos Aires"></div>
+        <div class="field"><label for="f-dest">¿A dónde tiene que ir?</label><input id="f-dest" name="dest" placeholder="Ej.: escuela y fonoaudiología"></div>
+        <button class="btn btn-gold" type="submit">Enviar por WhatsApp</button>
+        <p class="form-msg" id="formMsg" aria-live="polite"></p>
+      </form>
+      <div class="preview">
+        <small>Así le va a llegar tu mensaje:</small>
+        <div class="bubble" id="bubble"></div>
+        <button class="btn btn-ghost" type="button" id="copyBtn" style="justify-self:start">Copiar mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <a class="brand" href="#inicio" data-go="inicio"><img decoding="async" src="img/logo.webp" alt="" width="64" height="64"><span><small>TRANSPORTE</small><b>APARICIO</b></span></a>
+      <p>Transporte para chicos con CUD, cubierto por la obra social. Más de 10 años acompañando familias en todo el país.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Secciones del pie">
+      <b>Secciones</b>
+      <a href="#inicio" data-go="inicio">Inicio</a>
+      <a href="#como" data-go="como">Cómo trabajamos</a>
+      <a href="#historia" data-go="historia">Nuestra historia</a>
+      <a href="#contacto" data-go="contacto">Contacto</a>
+    </nav>
+    <div class="foot-social">
+      <b>Seguinos</b>
+      <div class="socials">
+        <a class="soc" data-red="instagram" aria-label="Instagram de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+        <a class="soc" data-red="facebook" aria-label="Facebook de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z"/></svg><span>Facebook</span></a>
+        <a class="soc" data-red="linkedin" aria-label="LinkedIn de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 8.8H3.8V20h3.1zM5.4 3.9a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM20.2 13.6c0-3-1.6-4.9-4.2-4.9-1.4 0-2.4.7-2.9 1.5V8.8h-3V20h3.1v-5.6c0-1.5.3-2.9 2.1-2.9s1.9 1.7 1.9 3V20h3.1z"/></svg><span>LinkedIn</span></a>
+        <a class="soc" data-red="whatsapp" aria-label="WhatsApp de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg><span>WhatsApp</span></a>
+      </div>
+      <p class="foot-tel">WhatsApp: <strong id="footTel"></strong></p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>© 2026 Transporte Aparicio · Todo el país</p>
+    <small>Las fotos de esta página son ilustrativas y provienen de bancos de imágenes. La cobertura depende de la autorización de cada obra social, según la Ley 24.901.</small>
+  </div>
+</footer>
+
+<a class="fab magnet" id="fab" href="#contacto" data-go="contacto" aria-label="Hablá con nosotros por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>
+  Hablemos
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+/* ============ DATOS EDITABLES ============ */
+// Cargá acá los números (formato internacional sin espacios, ej. 5491112345678).
+// Redes: pegá acá los links cuando los tengas (dejá "" si todavía no hay).
+const REDES = { instagram: "", facebook: "", linkedin: "" };
+// Un solo número para todo. Formato internacional sin espacios ni "+", ej. 5491112345678.
+const CONTACTO = { nombre: "Transporte Aparicio", rol: "Atención a familias", tel: "5491128533720" };
+const OBRAS_GRUPOS = [
+  ["OSECAC","OSPRERA","OSPECON","OSUTHGRA","OSPE","OSPEDYC","OSPIA","OSPIM","OSPIT","OSPIC","OSPLAD","OSPM","OSPOCE","OSPACA","OSPATCA","OSPAT","OSPACP","OSEPJANA","OSOETSYLRA (Tintoreros)","OS Pasteleros","OSCHOCA","OSMATA","OSUOM","OSFATLYF","OSJERA","OSDIPP","OSTEP","OSCEP","OSPIP","OSTEL","OSSEG","OSPERYH","OSDOP","OSFE","OSPSA (Sanidad)","Unión Personal","Accord Salud","Bancarios","Andar","Construir Salud","DASUTeN","DOSUBA"],
+  ["OSDE","Swiss Medical","Galeno","Medifé","Omint","Sancor Salud","Medicus","Jerárquicos Salud","Federada Salud","Luis Pasteur","Premedic","Cover Salud","Elevar","OSDEPYM","Avalian","Prevención Salud","Plan de Salud Hospital Italiano","Hospital Alemán","Hospital Británico","FEMEBA Salud"],
+  ["IOMA","IOSFA","ObSBA","APROSS","IAPOS","OSEP Mendoza","OSER Entre Ríos","ISSN Neuquén","IPROSS Río Negro","SEROS Chubut","CSS Santa Cruz","IOSCOR Corrientes","INSSSEP Chaco","DOSEP San Luis","IPS Salta","IPS Misiones","OSPJN"]
+];
+const OBRAS = [...new Set(OBRAS_GRUPOS.flat())];
+// Padrón completo (SSSalud/SISA) + prepagas: 362 entradas sin repetir.
+const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Aceros Paraná","g":0,"a":[]},{"s":"ADOS ESPERANZA","n":"Asociación de Obras Sociales de Esperanza","g":0,"a":[]},{"s":"ADOS MAR DEL PLATA","n":"Asociación de Obras Sociales de Mar del Plata","g":0,"a":[]},{"s":"ADOS ROSARIO","n":"Asociación de Obras Sociales de Rosario","g":0,"a":[]},{"s":"","n":"Agentes de Propaganda Médica de Córdoba","g":0,"a":[]},{"s":"","n":"Agentes de Propaganda Médica de Rosario","g":0,"a":[]},{"s":"AMP","n":"Obra social provincial de Formosa","g":2,"a":[]},{"s":"AMPAR","n":"Asociación Mutual del Personal de Philips Argentina","g":0,"a":[]},{"s":"APDIS","n":"Asociación del Personal de Dirección de la Industria Siderúrgica","g":0,"a":[]},{"s":"APDJIC","n":"Asociación del Personal de Dirección y Jerárquico de la Industria del Cigarrillo","g":0,"a":[]},{"s":"APOS","n":"Obra social provincial de La Rioja","g":2,"a":[]},{"s":"APROSS","n":"Obra social provincial de Córdoba","g":2,"a":[]},{"s":"APSOT","n":"Asociación del Personal Superior de la Organización Techint","g":0,"a":[]},{"s":"ASE","n":"Accion Social de Empresarios","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de Bella Vista","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de Comodoro Rivadavia","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de Gualeguay","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de Rufino","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de San Jorge","g":0,"a":[]},{"s":"","n":"Asociación de Obras Sociales de Trelew","g":0,"a":[]},{"s":"","n":"Asociación Gualeguaychu de Obras Sociales","g":0,"a":[]},{"s":"ASSPE","n":"Asociación de Servicios Sociales para Empresarios y Personal de Dirección de Empresas del Comercio, Servicios, Produccion, Industria y Civil","g":0,"a":[]},{"s":"","n":"Atanor S.a","g":0,"a":[]},{"s":"Avalian","n":"ex ACA Salud","g":1,"a":[]},{"s":"","n":"Cabot Argentina","g":0,"a":[]},{"s":"CAMPSIC","n":"Cooperativa Ltda. de Asistencia Médica ,farmaceutica,credito, y Consumo del Personal Superior de la Industria del Caucho y Otras Actividades Industriales","g":0,"a":[]},{"s":"","n":"Comisarios Navales","g":0,"a":[]},{"s":"","n":"Compania Minera Aguilar S.a","g":0,"a":[]},{"s":"COMPIR","n":"Cooperativa de Asistencia Mutua y Turismo del Personal de las Sociedades Pirelli Ltda","g":0,"a":[]},{"s":"","n":"Conductores Camioneros y Personal del Transporte Automotor de Cargas","g":0,"a":[]},{"s":"","n":"Conductores de Transporte Colectivo de Pasajeros","g":0,"a":[]},{"s":"","n":"Consorcio de Obras Sociales Unión Federal","g":0,"a":[]},{"s":"Cover Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"CSS","n":"Obra social provincial de Santa Cruz","g":2,"a":[]},{"s":"DASUTeN","n":"Universidad Tecnológica Nacional","g":2,"a":[]},{"s":"","n":"Dirección de la Actividad Aerocomercial Privada","g":0,"a":[]},{"s":"","n":"Dirección General de Asistencia M#dica Social Universitaria - San Juan","g":0,"a":[]},{"s":"","n":"Dirección Osdo","g":0,"a":[]},{"s":"","n":"Dirección Witcel","g":0,"a":[]},{"s":"DITEM","n":"Para Directivos, Técnicos y Empleados de John Deere Argentina","g":0,"a":[]},{"s":"DOS","n":"Obra social provincial de San Juan","g":2,"a":[]},{"s":"DOSEP","n":"Obra social provincial de San Luis","g":2,"a":[]},{"s":"DOSUBA","n":"Universidad de Buenos Aires","g":2,"a":[]},{"s":"Elevar","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Empleados y Personal Jerárquico de la Actividad del Neumático Argentino de Neumaticos Good Year SRL","g":0,"a":[]},{"s":"","n":"Empresas de Limpieza, Servicios y Maestranza de Mendoza","g":0,"a":[]},{"s":"FAA","n":"Futbolistas","g":0,"a":[]},{"s":"FEDECAMARAS","n":"Federacion de Cámaras y Centros Comerciales Zonales de la República Argentina","g":0,"a":[]},{"s":"","n":"Federacion Gremial de la Industria de la Carne y sus Derivados","g":0,"a":[]},{"s":"Federada Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"FEMEBA Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Ford Agentina S.c.a","g":0,"a":[]},{"s":"FRUTOS","n":"Personal de Dirección de las Empresas Que Actuan en Frutos del País","g":0,"a":[]},{"s":"Galeno","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Guincheros y Maquinistas de Gruas Moviles","g":0,"a":[]},{"s":"Hospital Alemán","n":"Plan médico","g":1,"a":[]},{"s":"Hospital Británico","n":"Plan de salud","g":1,"a":[]},{"s":"Hospital Italiano","n":"Plan de Salud","g":1,"a":[]},{"s":"IAPOS","n":"Obra social provincial de Santa Fe","g":2,"a":[]},{"s":"IMPF","n":"Obra social provincial de Formosa","g":2,"a":[]},{"s":"INSSSEP","n":"Obra social provincial de Chaco","g":2,"a":[]},{"s":"","n":"Instituto Nacional de Servicios Sociales para Jubilados y Pensionados","g":0,"a":[]},{"s":"IOMA","n":"Obra social provincial de Buenos Aires","g":2,"a":[]},{"s":"IOSCOR","n":"Obra social provincial de Corrientes","g":2,"a":[]},{"s":"IOSEP","n":"Obra social provincial de Santiago del Estero","g":2,"a":[]},{"s":"IOSFA","n":"Fuerzas Armadas y de Seguridad","g":2,"a":[]},{"s":"IOSPER","n":"Obra social provincial de Entre Ríos","g":2,"a":[]},{"s":"IPAUSS","n":"Obra social provincial de Tierra del Fuego","g":2,"a":[]},{"s":"IPROSS","n":"Obra social provincial de Río Negro","g":2,"a":[]},{"s":"IPS MISIONES","n":"Obra social provincial de Misiones","g":2,"a":[]},{"s":"IPS SALTA","n":"Obra social provincial de Salta","g":2,"a":[]},{"s":"IPSST","n":"Obra social provincial de Tucumán","g":2,"a":[]},{"s":"ISJ","n":"Obra social provincial de Jujuy","g":2,"a":[]},{"s":"ISSN","n":"Obra social provincial de Neuquén","g":2,"a":[]},{"s":"Jerárquicos Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"JOHNSON","n":"Ceras Johnson","g":0,"a":[]},{"s":"","n":"Maquinistas de Teatro y Televisión","g":0,"a":[]},{"s":"Medicus","n":"Medicina prepaga","g":1,"a":[]},{"s":"Medifé","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Mutual de los Médicos Municipales de la Ciudad de Buenos Aires","g":0,"a":[]},{"s":"","n":"Mutual del Personal del Agua y la Energía de Mendoza","g":0,"a":[]},{"s":"","n":"Mutualidad Empleados Firestone","g":0,"a":[]},{"s":"","n":"Obreros Empacadores de Fruta de Río Negro y Neuquén","g":0,"a":[]},{"s":"OBSBA","n":"Obra social provincial de Ciudad Aut. de Buenos Aires","g":2,"a":[]},{"s":"Omint","n":"Medicina prepaga","g":1,"a":[]},{"s":"OPDEA","n":"Personal de Dirección de las Empresas de la Alimentación y Demas Actividades Empresarias","g":0,"a":[]},{"s":"OPZC","n":"Personal de Industrias Químicas y Petroquímicas de Zarate Campana","g":0,"a":[]},{"s":"OSA","n":"Aeronavegantes","g":0,"a":[]},{"s":"OSA","n":"Actores","g":0,"a":[]},{"s":"OSADEF","n":"Asociaciones de Empleados de Farmacia","g":0,"a":[]},{"s":"OSADRA","n":"Arbitros Deportivos de la República Argentina","g":0,"a":[]},{"s":"OSALARA","n":"Agentes de Loterias y Afines de la República Argentina","g":0,"a":[]},{"s":"OSAM","n":"Actividad Minera","g":0,"a":[]},{"s":"OSAMMVC","n":"Asociación Mutual Metalúrgica Villa Constitucion","g":0,"a":[]},{"s":"OSAMOC","n":"Asociación Mutual de los Obreros Catolicos \"padre Federico Grote\"","g":0,"a":[]},{"s":"OSAPM","n":"Agentes de Propaganda Médica de la República Argentina","g":0,"a":[]},{"s":"OSAPMER","n":"Agentes de Propaganda Médica de Entre Ríos","g":0,"a":[]},{"s":"OSARPYH","n":"Alfajoreros, Reposteros, Pizzeros y Heladeros","g":0,"a":[]},{"s":"OSBA","n":"Bancaria Argentina","g":0,"a":["Bancarios"]},{"s":"OSBARA","n":"Boxeadores Agremiados de la República Argentina","g":0,"a":[]},{"s":"OSCAMGLYP","n":"Colocadores de Azulejos, Mosaicos, Graniteros, Lustradores y Porcelaneros","g":0,"a":[]},{"s":"OSCAPBAQFLU","n":"Capitanes Baqueanos Fluviales de la Marina Mercante","g":0,"a":[]},{"s":"OSCE","n":"Ceramistas","g":0,"a":[]},{"s":"OSCEP","n":"Capataces Estibadores Portuarios","g":0,"a":[]},{"s":"OSCHOCA","n":"Choferes de Camiones","g":0,"a":["Camioneros"]},{"s":"OSCICA","n":"Cámara de la Industria Curtidora Argentina","g":0,"a":[]},{"s":"OSCOEMA","n":"Confederacion de Obreros y Empleados Municipales Argentina","g":0,"a":[]},{"s":"OSCOMM","n":"Capitanes de Ultramar y Oficiales de la Marina Mercante","g":0,"a":[]},{"s":"OSCONARA","n":"Conductores Navales","g":0,"a":[]},{"s":"OSCRAIA","n":"Conductores de Remises y Autos al Instante y Afines","g":0,"a":[]},{"s":"OSDE","n":"Ejecutivos y del Personal de Dirección de Empresas","g":0,"a":[]},{"s":"OSDE","n":"Medicina prepaga","g":1,"a":[]},{"s":"OSDEL","n":"Locutores","g":0,"a":[]},{"s":"OSDEM","n":"Músicos","g":0,"a":[]},{"s":"OSDEPYM","n":"Empresarios, Profesionales y Monotributistas","g":0,"a":["monotributistas"]},{"s":"OSDIC","n":"Personal Directivo de la Industria de la Construcción","g":0,"a":[]},{"s":"OSDIPP","n":"Personal de Dirección de la Industria Privada del Petróleo","g":0,"a":[]},{"s":"OSDOP","n":"Docentes Particulares","g":0,"a":[]},{"s":"OSEADI","n":"Empleados de Agencias de Informes","g":0,"a":[]},{"s":"OSEAM","n":"Encargados Apuntadores Marítimos","g":0,"a":[]},{"s":"OSEARBA","n":"Cámara de Empresarios de Agencias de Remises de la Provincia de Buenos Aires","g":0,"a":[]},{"s":"OSECAC","n":"Empleados de Comercio y Actividades Civiles","g":0,"a":["Comercio"]},{"s":"OSEDA","n":"Empleados de Despachantes de Aduana","g":0,"a":[]},{"s":"OSEDEIV","n":"Dirección de la Industria Vitivinicola y Afines","g":0,"a":[]},{"s":"OSEIV","n":"Empleados de la Industria del Vidrio","g":0,"a":[]},{"s":"OSEMM","n":"Empleados de la Marina Mercante","g":0,"a":[]},{"s":"OSEN","n":"Electricistas Navales","g":0,"a":[]},{"s":"OSEP","n":"Obra social provincial de Mendoza","g":2,"a":[]},{"s":"OSEP","n":"Obra social provincial de Catamarca","g":2,"a":[]},{"s":"OSEPC","n":"Empleados de Prensa de Córdoba","g":0,"a":[]},{"s":"OSETRA","n":"Empleados del Tabaco de la República Argentina","g":0,"a":[]},{"s":"OSETYA","n":"Empleados Textiles y Afines","g":0,"a":[]},{"s":"OSFATLYF","n":"Federacion Argentina de Trabajadores de Luz y Fuerza","g":0,"a":["Luz y Fuerza"]},{"s":"OSFATUN","n":"Federacion Argentina del Trabajador de las Universidades Nacionales","g":0,"a":[]},{"s":"OSFE","n":"Ferroviaria","g":0,"a":[]},{"s":"OSFFENTOS","n":"Federal de la Federacion Nacional de Trabajadores de Obras Sanitarias","g":0,"a":[]},{"s":"OSFOT","n":"Fotografos","g":0,"a":[]},{"s":"OSFYB","n":"Farmacéuticos y Bioquímicos","g":0,"a":[]},{"s":"OSFYHC","n":"Personal de Manipuleo, Empaque y Expedicion de Fruta Fresca y Hortalizas de Cuyo","g":0,"a":[]},{"s":"OSIAD","n":"La Industria Aceitera, Desmotadora y Afines","g":0,"a":[]},{"s":"OSIM","n":"Personal de Dirección de la Industria Metalúrgica y Demas Actividades Empresarias","g":0,"a":[]},{"s":"OSIPA","n":"Industria de Pastas Alimenticias","g":0,"a":[]},{"s":"OSITAC","n":"Industria del Transporte Automotor de Córdoba","g":0,"a":[]},{"s":"OSJERA","n":"Personal Jerárquico de la República Argentina para el Personal Jerárquico de la Industria Gráfica y el Personal Jerárquico del Agua y la Energía","g":0,"a":[]},{"s":"OSJOMN","n":"Jefes y Oficiales Maquinistas Navales","g":0,"a":[]},{"s":"OSJONR","n":"Jefes y Oficiales Navales de Radiocomunicaciones","g":0,"a":[]},{"s":"OSJPVYF","n":"Jardineros, Parquistas, Viveristas y Floricultores de la República Argentina","g":0,"a":[]},{"s":"OSLERA","n":"Legisladores de la República Argentina","g":0,"a":[]},{"s":"OSLPASTEUR","n":"Personal de Dirección de la Sanidad Luis Pasteur","g":0,"a":["Luis Pasteur"]},{"s":"OSLYF","n":"Personal de Luz y Fuerza de Córdoba","g":0,"a":[]},{"s":"OSLYF PATAGONIA","n":"Luz y Fuerza de la Patagonia","g":0,"a":[]},{"s":"OSMA","n":"Modelos Argentinos","g":0,"a":[]},{"s":"OSMAD","n":"Dirección de la Industria Maderera","g":0,"a":[]},{"s":"OSMATA","n":"Sindicato de Mecánicos y Afines del Transporte Automotor","g":0,"a":["SMATA","mecánicos"]},{"s":"OSME","n":"Personal del Ministerio de Economía y de Obras y Servicios Públicos","g":0,"a":[]},{"s":"OSMEDICA","n":"Médicos de la Ciudad de Buenos Aires","g":0,"a":[]},{"s":"OSMISS","n":"Ministros, Secretarios y Subsecretarios","g":0,"a":[]},{"s":"OSMITA","n":"Mutualidad Industrial Textil Argentina","g":0,"a":[]},{"s":"OSMMEDT","n":"Mandos Medios de Telecomunicaciones en la República Argentina y Mercosur","g":0,"a":[]},{"s":"OSOC","n":"Operadores Cinematograficos","g":0,"a":[]},{"s":"OSOETSYLARA","n":"Obreros y Empleados Tintoreros Sombrereros y Lavaderos de la República Argentina","g":0,"a":["OSOETSYLRA","Tintoreros"]},{"s":"OSOFPP DE ROSARIO","n":"Oficiales Peluqueros y Peinadores de Rosario","g":0,"a":[]},{"s":"OSOSS","n":"Obras y Servicios Sanitarios","g":0,"a":[]},{"s":"OSPA","n":"Portuarios Argentinos","g":0,"a":[]},{"s":"OSPA","n":"Personal del Azúcar del Ingenio San Martin","g":0,"a":[]},{"s":"OSPA","n":"Personal del Azúcar del Ingenio la Esperanza","g":0,"a":[]},{"s":"OSPA","n":"Personal Aeronáutico","g":0,"a":[]},{"s":"OSPA","n":"Portuarios Argentinos de Mar del Plata","g":0,"a":[]},{"s":"OSPACA","n":"Personal de la Actividad Cervecera y Afines","g":0,"a":[]},{"s":"OSPACA","n":"Personal del Automóvil Club Argentino","g":0,"a":[]},{"s":"OSPACP","n":"Personal Auxiliar de Casas Particulares","g":0,"a":[]},{"s":"OSPAD","n":"Personal Aduanero de la República Argentina","g":0,"a":[]},{"s":"OSPADEP","n":"Personal de Aeronavegacion de Entes Privados","g":0,"a":[]},{"s":"OSPAF","n":"Personal de la Actividad Fruticola","g":0,"a":[]},{"s":"OSPAGA","n":"Personal de Aguas Gaseosas y Afines","g":0,"a":[]},{"s":"OSPAIL","n":"Personal del Azúcar del Ingenio Ledesma","g":0,"a":[]},{"s":"OSPAÑA","n":"Inmigrantes Españoles y sus Descendientes Residentes en la República Argentina","g":0,"a":[]},{"s":"OSPAP","n":"Personal de la Actividad Perfumista","g":0,"a":[]},{"s":"OSPAT","n":"Personal de la Actividad del Turf","g":0,"a":[]},{"s":"OSPATCA","n":"Personal Administrativo y Técnico de la Construcción y Afines","g":0,"a":[]},{"s":"OSPAV","n":"Personal de la Actividad Vitivinicola","g":0,"a":[]},{"s":"OSPA-VIAL","n":"Personal de la Actividad Vial","g":0,"a":[]},{"s":"OSPCN","n":"Unión Personal de la Unión del Personal Civil de la Nación","g":0,"a":["Unión Personal","UPCN","Accord Salud"]},{"s":"OSPCRA","n":"Personal de Cementerios de la República Argentina","g":0,"a":[]},{"s":"OSPCSPMYA","n":"Personal de la Cerámica, Sanitarios, Porcelana de Mesa y Afines","g":0,"a":[]},{"s":"OSPCYD","n":"Personal de Carga y Descarga","g":0,"a":[]},{"s":"OSPDESBA","n":"Personal de Dirección de la Empresa Subterraneos de Buenos Aires","g":0,"a":[]},{"s":"OSPE","n":"Petroleros","g":0,"a":[]},{"s":"OSPE","n":"Personal de Escribanos","g":0,"a":[]},{"s":"OSPEA","n":"Personal Superior y Profesional de Empresas Aerocomerciales","g":0,"a":[]},{"s":"OSPEC","n":"Personal de la Empresa Nacional de Correos y Telégrafos S.A. y de las Comunicaciones de la Repulica Argentina","g":0,"a":[]},{"s":"OSPECA","n":"Personal del Caucho","g":0,"a":[]},{"s":"OSPECON","n":"Personal de la Construcción","g":0,"a":["UOCRA","Construir Salud"]},{"s":"O.S.PE.COR","n":"Petroleros de Córdoba","g":0,"a":[]},{"s":"OSPEDICI","n":"Personal de Distribuidoras Cinematograficas","g":0,"a":[]},{"s":"OSPEDYB","n":"Personal de Dragado y Balizamiento","g":0,"a":[]},{"s":"OSPEDYC","n":"Personal de Entidades Deportivas y Civiles","g":0,"a":[]},{"s":"OSPEF Y EPCA","n":"Personal de Empresas Fiat y Empresas Peugeot Citroen Argentina","g":2,"a":[]},{"s":"OSPEGAP","n":"Petróleo y Gas Privado","g":0,"a":[]},{"s":"OSPEJ","n":"Personal de Jaboneros","g":0,"a":[]},{"s":"OSPEMER","n":"Personal de Consignatarios del Mercado Nacional de Hacienda de Liniers","g":0,"a":[]},{"s":"OSPEMOM","n":"Personal de Micros y Omnibus de Mendoza","g":0,"a":[]},{"s":"OSPENA","n":"Personal Naval","g":0,"a":[]},{"s":"OSPEP","n":"Personal de Panaderías","g":0,"a":[]},{"s":"OSPEP","n":"Personal del Espectáculo Público","g":0,"a":[]},{"s":"OSPEP","n":"Personal de la Enseñanza Privada","g":0,"a":[]},{"s":"OSPEPBA","n":"Personal de Escribanias de la Provincia de Buenos Aires","g":0,"a":[]},{"s":"OS.PE.PRI","n":"Petroleros Privados","g":0,"a":[]},{"s":"OSPERCIN","n":"Personal Cinematografico de Mar del Plata","g":0,"a":[]},{"s":"O.S.PERS.A.A.M.S.","n":"Personal Asociado a Asociación Mutual Sancor","g":0,"a":[]},{"s":"OSPERYH","n":"Personal de Edificios de Renta y Horizontal de la Ciudad Autonoma de Buenos Aires y Gran Buenos Aires","g":0,"a":[]},{"s":"OSPERYHRA","n":"Personal de Edificios de Renta y Horizontal de la República Argentina","g":0,"a":[]},{"s":"OSPES","n":"Estaciones de Servicio, Garages, Playas de Estacionamiento, Lavaderos Automaticos y Gomerias de la República Argentina","g":0,"a":[]},{"s":"OSPESA","n":"Personal de Sociedades de Autores y Afines","g":0,"a":[]},{"s":"OSPESCA","n":"Capitanes, Pilotos y Patrones de Pesca","g":0,"a":[]},{"s":"OSPESCHA","n":"Personal Estaciones de Servicio,garages,playas y Lavaderos de la Provincia del Chaco","g":0,"a":[]},{"s":"OSPESGA","n":"Personal de Estaciones de Servicio, Garages, Playas y Lavaderos Automaticos de la Provincia de Santa Fe","g":0,"a":[]},{"s":"OSPESGYPE","n":"Personal de Estaciones de Servicio, Garages, Playas de Estacionamiento y Lavaderos Automaticos","g":0,"a":[]},{"s":"OSPETAX","n":"Peones de Taxis de la Capital Federal","g":0,"a":[]},{"s":"O.S.PE.TAX.R","n":"Peones de Taxis de Rosario","g":0,"a":[]},{"s":"OSPETELCO","n":"Personal de Telecomunicaciones Sindicato Buenos Aires","g":0,"a":[]},{"s":"OSPEVIC","n":"Personal de Vigilancia y Seguridad Comercial, Industrial e Investigaciones Privadas de Córdoba","g":0,"a":[]},{"s":"OSPF","n":"Personal de Farmacia","g":0,"a":[]},{"s":"OSPG","n":"Personal Grafico","g":0,"a":[]},{"s":"OSPHGBAYSI","n":"Personal de los Hipodromos de Buenos Aires y San Isidro","g":0,"a":[]},{"s":"OSPIA","n":"Personal de la Industria Azucarera","g":0,"a":[]},{"s":"OSPIA","n":"Personal de la Industria de la Alimentación","g":0,"a":[]},{"s":"OSPIB","n":"Personal de la Industria Botonera","g":0,"a":[]},{"s":"OSPIC","n":"Personal de la Industria Cinematográfica","g":0,"a":[]},{"s":"OSPIC","n":"Personal de la Industria del Caucho","g":0,"a":[]},{"s":"OSPICA","n":"Personal de la Industria del Cuero y Afines","g":0,"a":[]},{"s":"OSPICAL","n":"Personal de la Industria del Calzado","g":0,"a":[]},{"s":"OSPICHA","n":"Personal de la Industria del Chacinado y Afines","g":0,"a":[]},{"s":"OSPIC SANTA FE","n":"Personal de la Industria del Caucho de Santa Fe","g":0,"a":[]},{"s":"OSPIDA","n":"Personal de Imprenta, Diarios y Afines","g":0,"a":[]},{"s":"OSPIF","n":"Personal de la Industria del Fósforo, Encendido y Afines","g":0,"a":[]},{"s":"OSPIF","n":"Personal de la Industria Fideera","g":0,"a":[]},{"s":"OSPIF","n":"Personal de la Industria del Fibrocemento","g":0,"a":[]},{"s":"OSPIFSE","n":"Personal de la Industria Forestal de Santiago del Estero","g":0,"a":[]},{"s":"OSPIHMP","n":"Personal de la Industria del Hielo y Mercados Particulares","g":0,"a":[]},{"s":"OSPIL","n":"Personal de la Industria Lechera","g":0,"a":[]},{"s":"OSPILM","n":"Personal de la Industria Ladrillera a Maquina","g":0,"a":[]},{"s":"OSPIM","n":"Personal de la Industria Molinera","g":0,"a":[]},{"s":"OSPIM","n":"Personal de la Industria Maderera","g":0,"a":[]},{"s":"OSPIN","n":"Personal de la Industria Naval","g":0,"a":[]},{"s":"OSPIN","n":"Personal de la Industria del Neumático","g":0,"a":[]},{"s":"OSPIP","n":"Personal de la Industria del Plástico","g":0,"a":[]},{"s":"OSPIP","n":"Personal de la Industria Petroquímica","g":0,"a":[]},{"s":"OSPIP","n":"Personal de la Industria del Pescado de Mar del Plata","g":0,"a":[]},{"s":"OSPIQYP","n":"Personal de Industrias Químicas y Petroquímicas","g":0,"a":[]},{"s":"OSPIS","n":"Personal de Instalaciones Sanitarias","g":0,"a":[]},{"s":"OSPIT","n":"Personal de la Industria del Tractor","g":0,"a":[]},{"s":"OSPIT","n":"Personal de la Industria Textil","g":0,"a":[]},{"s":"OSPIT","n":"Personal de la Industria del Tabaco","g":0,"a":[]},{"s":"OSPIV","n":"Personal de la Industria del Vidrio","g":0,"a":[]},{"s":"OSPIV","n":"Personal de la Industria del Vestido","g":0,"a":[]},{"s":"OSPJN","n":"Poder Judicial de la Nación","g":2,"a":[]},{"s":"OSPL","n":"Personal Ladrillero","g":0,"a":[]},{"s":"OSPLA","n":"Para Pilotos de Lineas Aereas Comerciales y Regulares","g":0,"a":[]},{"s":"OSPLAD","n":"Actividad Docente","g":0,"a":["docentes"]},{"s":"OSPM","n":"Personal Mosaista","g":0,"a":[]},{"s":"OSPM","n":"Personal Marítimo","g":0,"a":[]},{"s":"OSPM","n":"Personal de Maestranza","g":0,"a":[]},{"s":"OSPOCE","n":"Personal del Organismo de Control Externo","g":0,"a":[]},{"s":"OSPP","n":"Personal de la Publicidad","g":0,"a":[]},{"s":"OSPPCHA","n":"Personal de Prensa de la Provincia de Chaco","g":0,"a":[]},{"s":"OSPPCYQ","n":"Personal del Papel, Carton y Químicos","g":0,"a":[]},{"s":"OSPPEA","n":"Personal de Peluquerias, Esteticas y Afines","g":0,"a":[]},{"s":"OSPPRA","n":"Personal de Prensa de la República Argentina","g":0,"a":[]},{"s":"OSPREME","n":"Personal de Dirección de la Industria Automotriz Argentina","g":0,"a":[]},{"s":"OSPREN","n":"Personal de Prensa de Mar del Plata","g":0,"a":[]},{"s":"OSPRENTUC","n":"Personal de Prensa de Tucumán","g":0,"a":[]},{"s":"OSPRERA","n":"Personal Rural y Estibadores de la República Argentina","g":0,"a":["Rurales"]},{"s":"OSPRO","n":"Personal de Prensa de Rosario","g":0,"a":[]},{"s":"OSPROTURA","n":"Profesionales del Turf de la República Argentina","g":0,"a":[]},{"s":"OSPSA","n":"Personal de la Sanidad Argentina","g":0,"a":["Sanidad"]},{"s":"OSPSESBA","n":"Personal de Supervision de la Empresa Subterraneos de Buenos Aires","g":0,"a":[]},{"s":"OSPSIP","n":"Personal de Seguridad Comercial, Industrial e Investigaciones Privadas","g":0,"a":[]},{"s":"OSPS MERCEDES","n":"Personal Superior Mercedes Benz Argentina","g":0,"a":[]},{"s":"OSPTA","n":"Personal Técnico Aeronáutico","g":0,"a":[]},{"s":"OSPTV","n":"Personal de Televisión","g":0,"a":[]},{"s":"OSPUAYE","n":"Profesionales Universitarios del Agua y la Energía Eléctrica","g":0,"a":[]},{"s":"OSRGA","n":"Recibidores de Granos y Anexos","g":0,"a":[]},{"s":"OSRJA","n":"Relojeros y Joyeros","g":0,"a":[]},{"s":"OSRM","n":"Refinerias de Maiz S.a.i.c.f","g":0,"a":[]},{"s":"OSSACRA","n":"Asociación Civil Prosindicato de Amas de Casa de la República Argentina","g":0,"a":[]},{"s":"OSSEG","n":"Actividad de Seguros, Reaseguros, Capitalizacion y Ahorro y Prestamo para la Vivienda","g":2,"a":[]},{"s":"OSSIMRA","n":"Supervisores de la Industria Metalmecanica de la República Argentina","g":0,"a":[]},{"s":"OSSOELSAC","n":"Sindicato Obreros y Empleados de Empresas de Limpieza,servicios y Afines de Córdoba","g":0,"a":[]},{"s":"OSSPYFER","n":"Panaderos, Pasteleros y Factureros de Entre Ríos","g":0,"a":[]},{"s":"OSSURRBAC","n":"Sindicato Unico de Recolectores de Residuos y Barrido de Córdoba","g":0,"a":[]},{"s":"O.S.T.A.C.C,","n":"Trabajadores Argentinos de Centros de Contactos","g":0,"a":[]},{"s":"OSTAD","n":"Talleristas a Domicilio","g":0,"a":[]},{"s":"OSTAMMA","n":"Trabajadores Asociados a la Asociación Mutual Mercantil Argentina","g":0,"a":[]},{"s":"O.S.TAX.B.A","n":"Conductores Titulares de Taxis de la Ciudad Autonoma de Buenos Aires","g":0,"a":[]},{"s":"OSTC","n":"Conductores de Taxis de Córdoba","g":0,"a":[]},{"s":"OSTCARA","n":"Trabajadores de la Carne y Afines de la República Argentina","g":0,"a":[]},{"s":"OSTECF","n":"Técnicos de Futbol","g":0,"a":[]},{"s":"OSTEE","n":"Trabajadores de las Empresas de Electricidad","g":0,"a":[]},{"s":"OSTEL","n":"Personal de Las Telecomunicaciones de la República Argentina","g":0,"a":[]},{"s":"OSTEP","n":"Trabajadores de la Educación Privada","g":0,"a":[]},{"s":"OSTES","n":"Trabajadores de Estaciones de Servicio","g":0,"a":[]},{"s":"OSTIG","n":"Trabajadores de la Industria del Gas","g":0,"a":[]},{"s":"OSTP","n":"Trabajadores de Perkins Argentina S.a.i.c","g":0,"a":[]},{"s":"OSTPBA","n":"Trabajadores de Prensa de Buenos Aires","g":0,"a":[]},{"s":"OSTPCHPYARA","n":"Trabajadores Pasteleros, Confiteros, Pizzeros, Heladeros y Alfajoreros de la República Argentina","g":0,"a":["OS Pasteleros","Pasteleros"]},{"s":"OSTRAC","n":"Trabajadores de las Comunicaciones","g":0,"a":[]},{"s":"OSTVENDRA","n":"Trabajadores Vendedores de Diarios Revistas y Afines","g":0,"a":[]},{"s":"OSTVLA","n":"Técnicos de Vuelo de Lineas Aereas","g":0,"a":[]},{"s":"OSUCI","n":"Cortadores de la Indumentaria","g":0,"a":[]},{"s":"OSUOMRA","n":"Unión Obrera Metalúrgica de la República Argentina","g":0,"a":["OSUOM","UOM","metalúrgicos"]},{"s":"OSUTHGRA","n":"Personal del Turismo, Hotelero y Gastronómico de la Unión de Trabajadores del Turismo Hoteleros y Gastronómicos de la República Argentina","g":0,"a":["Gastronómicos"]},{"s":"OSUTI","n":"Unión de Trabajadores del Instituto Nacional de Servicios Sociales para Jubilados y Pensionados de la República Argentina","g":0,"a":[]},{"s":"OSVARA","n":"Vendedores Ambulantes de la República Argentina","g":0,"a":[]},{"s":"OSVVRA","n":"Viajantes Vendedores de la República Argentina. (andar)","g":0,"a":["Andar"]},{"s":"OSYC","n":"Yacimientos Carboniferos","g":0,"a":[]},{"s":"OSYPF","n":"YPF","g":0,"a":[]},{"s":"","n":"Papel Misionero S.A.I.F. y C","g":0,"a":[]},{"s":"","n":"Patrones de Cabotaje de Ríos y Puertos","g":0,"a":[]},{"s":"","n":"Personal de Barracas de Lanas, Cueros y Anexos","g":0,"a":[]},{"s":"","n":"Personal de Dirección Alfredo Fortabat","g":0,"a":[]},{"s":"","n":"Personal de la Actividad Azucarera Tucumana","g":0,"a":[]},{"s":"","n":"Personal de la Federacion de Sindicatos de la Industria Químicas y Petroquímicas de la República Argentina","g":0,"a":[]},{"s":"","n":"Personal de la Industria Gráfica de la Provincia de Córdoba","g":0,"a":[]},{"s":"","n":"Personal de la Universidad Nacional de la Patagonia San Juan Bosco","g":0,"a":[]},{"s":"","n":"Personal de la Universidad Nacional del Centro de de la Provincia de Buenos Aires","g":0,"a":[]},{"s":"","n":"Personal del Jockey Club de Rosario","g":0,"a":[]},{"s":"","n":"Personal de Pbbpolisur SA de Bahia Blanca","g":0,"a":[]},{"s":"","n":"Personal de Prensa de Bahia Blanca","g":0,"a":[]},{"s":"","n":"Personal de Prensa de Mendoza","g":0,"a":[]},{"s":"","n":"Personal de Recoleccion y Barrido de Rosario","g":0,"a":[]},{"s":"","n":"Personal de Refinerias de Maiz","g":0,"a":[]},{"s":"","n":"Personal Jerárquico del Transporte Automotor de Pasajeros de Córdoba y Afines","g":0,"a":[]},{"s":"","n":"Personal Mensualizado del Jockey Club de Buenos Aires y los Hipodromos de Palermo y San Isidro","g":0,"a":[]},{"s":"","n":"Personal Municipal de Avellaneda","g":0,"a":[]},{"s":"","n":"Personal Municipal de la Matanza","g":0,"a":[]},{"s":"","n":"Personal Municipal de Tres de Febrero","g":0,"a":[]},{"s":"","n":"Personal Shell-capsa","g":0,"a":[]},{"s":"PFIS","n":"Programa Federal Incluir Salud","g":2,"a":["Incluir Salud"]},{"s":"","n":"Portuarios de Puerto San Martin y Bella Vista","g":0,"a":[]},{"s":"Premedic","n":"Medicina prepaga","g":1,"a":[]},{"s":"Prevención Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Programas Médicos Sociedad Argentina de Consultoria Mutual","g":0,"a":[]},{"s":"Sancor Salud","n":"Medicina prepaga","g":1,"a":[]},{"s":"SEMPRE","n":"Obra social provincial de La Pampa","g":2,"a":[]},{"s":"","n":"Serenos de Buques","g":0,"a":[]},{"s":"SEROS","n":"Obra social provincial de Chubut","g":2,"a":[]},{"s":"SERVESALUD","n":"Personal de Dirección de la Industria Cervecera y Maltera","g":0,"a":[]},{"s":"","n":"Sindicato Unido de Trabajadores de la Industria de Aguas Gaseosas de la Provincia de Santa Fe","g":0,"a":[]},{"s":"","n":"Superco","g":0,"a":[]},{"s":"Swiss Medical","n":"Medicina prepaga","g":1,"a":[]},{"s":"","n":"Trabajadores del Petróleo y Gas Privado del Chubut","g":0,"a":[]},{"s":"","n":"Trabajadores Socios de la Asociación Mutual del Personal Jerárquico de Bancos Oficiales Nacionales-jerarquicos Salud-","g":0,"a":[]},{"s":"","n":"Trabajadores Viales y Afines de la República Argentina","g":0,"a":[]},{"s":"","n":"Universidad Nacional del Litoral","g":0,"a":[]},{"s":"UPFPARA","n":"Personal de Fábricas de Pintura","g":0,"a":[]},{"s":"","n":"Vareadores","g":0,"a":[]},{"s":"","n":"Volkswagen Argentina S.a","g":0,"a":[]},{"s":"WHOPE","n":"Personal de Dirección de Perfumeria E.w. Hope","g":0,"a":[]},{"s":"","n":"Witcel","g":0,"a":[]},{"s":"","n":"Yacimientos Carboniferos","g":0,"a":[]}];
+
+(function(){
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hasG = !!(window.gsap && window.ScrollTrigger);
+  const desktop = () => window.matchMedia("(min-width: 861px)").matches;
+
+  /* ---- contenido dinámico ---- */
+  const fmt = t => t ? "+" + t.replace(/^(\d{2})(\d)(\d{2})(\d{4})(\d{4})$/, "$1 $2 $3 $4-$5") : "";
+  $("#ocName").textContent = CONTACTO.nombre; $("#ocRol").textContent = CONTACTO.rol;
+  const ocTel = $("#ocTel"), ocWa = $("#ocWa"), ocCopy = $("#ocCopy");
+  if (CONTACTO.tel){
+    ocTel.textContent = fmt(CONTACTO.tel);
+    ocWa.href = "https://wa.me/" + CONTACTO.tel + "?text=" + encodeURIComponent("¡Hola! Quiero consultar por el transporte.");
+    ocWa.target = "_blank"; ocWa.rel = "noopener"; ocWa.removeAttribute("aria-disabled");
+    ocCopy.hidden = false;
+    ocCopy.addEventListener("click", () => {
+      (navigator.clipboard ? navigator.clipboard.writeText(fmt(CONTACTO.tel)) : Promise.reject())
+        .then(() => { ocCopy.textContent = "Número copiado"; setTimeout(() => ocCopy.textContent = "Copiar número", 1600); })
+        .catch(() => { const r = document.createRange(); r.selectNodeContents(ocTel); const sl = getSelection(); sl.removeAllRanges(); sl.addRange(r); });
+    });
+  } else { ocTel.classList.add("pending"); }
+
+  /* ---- redes del pie ---- */
+  $("#footTel").textContent = CONTACTO.tel ? fmt(CONTACTO.tel) : "a confirmar";
+  $$(".soc").forEach(a => {
+    const red = a.dataset.red;
+    const url = red === "whatsapp" ? (CONTACTO.tel ? "https://wa.me/" + CONTACTO.tel : "") : REDES[red];
+    const lab = a.querySelector("span"), base = lab.textContent;
+    if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+    else {
+      a.classList.add("soon"); a.setAttribute("role", "button"); a.tabIndex = 0;
+      lab.textContent = base + " · muy pronto";
+      a.addEventListener("click", e => e.preventDefault());
+    }
+  });
+
+  // obras sociales: ticker, filtros, directorio completo y buscador
+  const GN = ["Nacional", "Prepaga", "Provincial"];
+  const esc = t => t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const chip = n => `<button type="button" class="os" data-n="${esc(n)}"><i></i>${esc(n)}</button>`;
+  ["#mq1", "#mq2", "#mq3"].forEach((id, k) => {
+    $$(id + " .mrow").forEach((row, r) => { row.innerHTML = OBRAS_GRUPOS[k].map(chip).join(""); if (r) $$("button", row).forEach(b => b.tabIndex = -1); });
+  });
+
+  // el video de portada solo corre cuando se ve
+  const hv = document.getElementById("heroVideo");
+  if ("IntersectionObserver" in window && hv) new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const pr = hv.play(); pr && pr.catch(() => {}); } else hv.pause(); }), { threshold: .05 }).observe(hv);
+  let mqVisible = true;
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(e => mqVisible = e.isIntersecting), { rootMargin: "200px 0px" }).observe(document.querySelector(".obras"));
+
+  // ticker por código: fila 1 a la izquierda, fila 2 a la derecha, fila 3 a la izquierda
+  const MQ = $$("#osMarq .marquee").map(m => ({ rows: $$(".mrow", m), dir: m.dataset.dir === "1" ? 1 : -1, x: 0, w: 0 }));
+  function measureMq(){ MQ.forEach(o => { const w = o.rows[0].getBoundingClientRect().width; if (w && w !== o.w) { o.w = w; o.x = o.dir > 0 ? -w : 0; } }); }
+  let mqLast = performance.now();
+  function mqLoop(t){
+    const dt = Math.min(.05, (t - mqLast) / 1000); mqLast = t;
+    window.__mqBoost = 1 + ((window.__mqBoost || 1) - 1) * .94;
+    if (mqVisible && !osMarq.hidden && !document.hidden){
+      if (!MQ[0].w) measureMq();
+      const v = (innerWidth < 700 ? 64 : 78) * window.__mqBoost;
+      MQ.forEach(o => {
+        if (!o.w) return;
+        o.x += o.dir * v * dt;
+        if (o.x <= -o.w) o.x += o.w;
+        if (o.x > 0) o.x -= o.w;
+        const tr = `translate3d(${o.x.toFixed(2)}px,0,0)`;
+        o.rows.forEach(r => r.style.transform = tr);
+      });
+    }
+    requestAnimationFrame(mqLoop);
+  }
+  addEventListener("resize", () => { MQ.forEach(o => o.w = 0); measureMq(); });
+  addEventListener("load", measureMq);
+  document.fonts && document.fonts.ready.then(() => { MQ.forEach(o => o.w = 0); measureMq(); });
+
+  const label = e => e.s ? (e.n ? `${e.s} (${e.n})` : e.s) : e.n;
+  $("#cAll").textContent = DIRECTORIO.length; [0, 1, 2].forEach(g => $("#c" + g).textContent = DIRECTORIO.filter(e => e.g === g).length);
+
+  const sel = $("#f-os");
+  sel.innerHTML = `<option value="">Elegí tu obra social</option>` + DIRECTORIO.map(e => `<option value="${esc(e.s || e.n)}">${esc(label(e))}</option>`).join("") + `<option value="Otra">Otra</option>`;
+
+  const norm = t => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  DIRECTORIO.forEach(e => e.k = norm([e.s, e.n, ...(e.a || [])].join(" ")));
+  const osq = $("#osq"), osRes = $("#osRes"), osGrid = $("#osGrid"), osMarq = $("#osMarq"), osToggle = $("#osToggle"), dirBody = $("#dirBody"), az = $("#az");
+  let osG = "all", osList = false;
+  const letterOf = e => { const c = norm(e.s || e.n)[0] || "#"; return /[a-z]/.test(c) ? c.toUpperCase() : "#"; };
+  function renderDir(){
+    const q = norm(osq.value);
+    const list = DIRECTORIO.filter(e => (osG === "all" || e.g === +osG) && (!q || e.k.includes(q)));
+    const byL = {};
+    list.forEach(e => (byL[letterOf(e)] = byL[letterOf(e)] || []).push(e));
+    const letters = Object.keys(byL).sort();
+    dirBody.innerHTML = letters.length ? letters.map(L => `<section class="dl" id="dl-${L}"><h4>${L}</h4><ul>${byL[L].map(e =>
+      `<li><button type="button" class="de" data-v="${esc(e.s || e.n)}"><i class="tg g${e.g}" title="${GN[e.g]}"></i><span class="de-t">${e.s ? `<b>${esc(e.s)}</b>` : ""}<span>${esc(e.n)}</span></span></button></li>`).join("")}</ul></section>`).join("")
+      : `<p class="og-empty">No encontramos «${esc(osq.value)}». Igual escribinos: seguramente también lo podemos gestionar.</p>`;
+    const all = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    az.innerHTML = all.map(L => `<button type="button" data-l="${L}" ${byL[L] ? "" : "disabled"}>${L}</button>`).join("");
+    $("#dirFoot").textContent = `Mostrando ${list.length} de ${DIRECTORIO.length}`;
+    dirBody.scrollTop = 0;
+  }
+  az.addEventListener("click", e => { const b = e.target.closest("button[data-l]"); if (!b) return; const sec = $("#dl-" + b.dataset.l); if (sec) dirBody.scrollTo({ top: sec.offsetTop - dirBody.offsetTop, behavior: "smooth" }); });
+  dirBody.addEventListener("scroll", () => {
+    let cur = null; $$(".dl", dirBody).forEach(sec => { if (sec.offsetTop - dirBody.offsetTop - 8 <= dirBody.scrollTop) cur = sec.id.slice(3); });
+    $$("button", az).forEach(b => b.classList.toggle("on", b.dataset.l === cur));
+  }, { passive: true });
+  function osUpdate(){
+    const q = norm(osq.value);
+    const showDir = osList || osG !== "all" || !!q;
+    osGrid.hidden = !showDir; osMarq.hidden = showDir;
+    if (showDir) renderDir(); else { MQ.forEach(o => o.w = 0); requestAnimationFrame(measureMq); }
+    osToggle.innerHTML = showDir ? "Volver a la vista animada" : `Ver la lista completa <em>${DIRECTORIO.length}</em>`;
+    if (!q) { osRes.className = "os-res"; osRes.innerHTML = ""; return; }
+    const found = DIRECTORIO.filter(e => e.k.includes(q));
+    if (found.length === 1) pickOS(found[0].s || found[0].n);
+    else if (!found.length) { osRes.className = "os-res show miss"; osRes.innerHTML = `<span class="no">?</span><div><b>No la encontramos</b><span>Igual escribinos: seguramente también lo podemos gestionar.</span></div><a class="btn btn-gold" href="#contacto" data-go="contacto">Consultar</a>`; bindGo(osRes); }
+    else { osRes.className = "os-res"; osRes.innerHTML = ""; }
+  }
+  function pickOS(v){
+    const e = DIRECTORIO.find(x => (x.s || x.n) === v) || DIRECTORIO.find(x => norm(x.s) === norm(v) || (x.a || []).some(a => norm(a) === norm(v)));
+    const val = e ? (e.s || e.n) : v;
+    if (![...sel.options].some(o => o.value === val)) sel.add(new Option(val, val));
+    sel.value = val; refresh();
+    $$(".os, .de").forEach(o => o.classList.toggle("picked", (o.dataset.n || o.dataset.v) === v || (o.dataset.v || o.dataset.n) === val));
+    osRes.className = "os-res show";
+    osRes.innerHTML = `<span class="ok">✓</span><div><b>${esc(e ? label(e) : v)}</b><span>Está en nuestra lista. Ya la dejamos elegida en tu mensaje.</span></div><a class="btn btn-gold" href="#contacto" data-go="contacto">Consultar</a>`;
+    bindGo(osRes);
+  }
+  function bindGo(root){ $$("[data-go]", root).forEach(a => a.addEventListener("click", ev => { ev.preventDefault(); go(a.dataset.go); })); }
+  $(".obras").addEventListener("click", ev => { const b = ev.target.closest(".os, .de"); if (b) pickOS(b.dataset.n || b.dataset.v); });
+  osq.addEventListener("input", () => {
+    if (osq.value.trim() && osG !== "all") { osG = "all"; $$("#osFilter button").forEach(x => x.setAttribute("aria-selected", x.dataset.g === "all")); }
+    osUpdate();
+  });
+  $$("#osFilter button").forEach(b => b.addEventListener("click", () => {
+    osG = b.dataset.g; $$("#osFilter button").forEach(x => x.setAttribute("aria-selected", x === b));
+    if (osG === "all") osList = true;
+    osUpdate();
+  }));
+  osToggle.addEventListener("click", () => {
+    if (!osGrid.hidden) { osList = false; osG = "all"; osq.value = ""; $$("#osFilter button").forEach(x => x.setAttribute("aria-selected", x.dataset.g === "all")); }
+    else osList = true;
+    osUpdate();
+    if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+  });
+  osUpdate(); requestAnimationFrame(mqLoop);
+
+  /* ---- formulario → mensaje de WhatsApp ---- */
+  const bubble = $("#bubble");
+  function buildMsg(){
+    const v = id => $(id).value.trim();
+    const lines = ["¡Hola! Quiero consultar por el transporte."];
+    if (v("#f-nombre")) lines.push(`Soy ${v("#f-nombre")}.`);
+    if (v("#f-chico")) lines.push(`Viaja: ${v("#f-chico")}.`);
+    if (v("#f-os")) lines.push(`Obra social: ${v("#f-os")}.`);
+    if (v("#f-loc")) lines.push(`Localidad: ${v("#f-loc")}.`);
+    if (v("#f-dest")) lines.push(`Destino: ${v("#f-dest")}.`);
+    return lines.join("\n");
+  }
+  const refresh = () => { bubble.textContent = buildMsg(); };
+  $$("#form input, #form select").forEach(i => i.addEventListener("input", refresh));
+  refresh();
+  $("#form").addEventListener("submit", e => {
+    e.preventDefault();
+    const tel = CONTACTO.tel;
+    const msg = $("#formMsg");
+    if (!tel) { msg.textContent = "Todavía no cargamos el número. Mientras tanto, podés copiar el mensaje."; return; }
+    const a = document.createElement("a");
+    a.href = `https://wa.me/${tel}?text=${encodeURIComponent(buildMsg())}`; a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+    msg.textContent = "Se abrió WhatsApp en una pestaña nueva con tu mensaje listo para enviar.";
+  });
+  $("#copyBtn").addEventListener("click", e => {
+    const b = e.currentTarget, t = buildMsg();
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => { b.textContent = "Mensaje copiado"; setTimeout(() => b.textContent = "Copiar mensaje", 1600); })
+      .catch(() => { const r = document.createRange(); r.selectNodeContents(bubble); const s = getSelection(); s.removeAllRanges(); s.addRange(r); });
+  });
+
+  /* ---- menú móvil ---- */
+  const menuBtn = $("#menuBtn"), links = $("#navLinks");
+  menuBtn.addEventListener("click", () => { links.style.top = document.getElementById("nav").offsetHeight + "px"; const o = links.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", o); menuBtn.textContent = o ? "Cerrar" : "Menú"; });
+
+  /* ---- dos formas (switch) ---- */
+  const sw = $("#switch");
+  $$("#switch [role=tab]").forEach(t => t.addEventListener("click", () => {
+    const b = t.id === "tab-b";
+    sw.dataset.mode = b ? "b" : "a";
+    $("#tab-a").setAttribute("aria-selected", !b); $("#tab-b").setAttribute("aria-selected", b);
+    $("#panel-a").hidden = b; $("#panel-b").hidden = !b;
+    $("#img-a").hidden = b; $("#img-b").hidden = !b;
+    if (hasG && !reduce) gsap.from((b ? "#panel-b" : "#panel-a") + " li", { y: 18, opacity: 0, stagger: .08, duration: .6, ease: "power3.out" });
+  }));
+
+  /* ---- checklist ---- */
+  const checks = $$(".check"), ring = $("#ringFg"), C = 263.9;
+  const msgs = ["Empezá marcando lo que ya tenés.", "¡Buen comienzo!", "Vas muy bien.", "Ya tenés la mitad.", "Te falta poco.", "Casi listo.", "¡Tenés todo! Escribinos y arrancamos."];
+  checks.forEach(c => c.addEventListener("click", () => {
+    c.setAttribute("aria-pressed", c.getAttribute("aria-pressed") !== "true");
+    const n = checks.filter(x => x.getAttribute("aria-pressed") === "true").length;
+    ring.style.strokeDashoffset = C - C * n / checks.length;
+    $("#ringTxt").textContent = `${n} de ${checks.length}`;
+    $("#ringMsg").textContent = msgs[n];
+  }));
+
+  /* ---- mitos (flip) ---- */
+  $$(".flip").forEach(f => f.addEventListener("click", () => f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") !== "true")));
+
+  /* ---- navegación suave ---- */
+  let lenis = null;
+  function go(id){
+    const t = document.getElementById(id); if (!t) return;
+    links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", false); menuBtn.textContent = "Menú";
+    if (lenis) lenis.scrollTo(t, { offset: id === "inicio" ? 0 : -60, duration: 1.6 });
+    else t.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  }
+  $$("[data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); go(a.dataset.go); }));
+
+  /* ---- nav al hacer scroll + progreso + fab ---- */
+  const nav = $("#nav"), bar = $("#progressBar"), fab = $("#fab");
+  function onScroll(){
+    const y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    nav.classList.toggle("scrolled", y > 40);
+    bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+    const ct = document.getElementById("contacto").getBoundingClientRect().top;
+    fab.classList.toggle("show", y > innerHeight * .8 && ct > innerHeight * .6);
+    moveVan(y, h);
+    const secs = ["inicio","como","historia","contacto"];
+    let cur = "inicio";
+    secs.forEach(s => { const el = document.getElementById(s); if (el && el.getBoundingClientRect().top < innerHeight * .4) cur = s; });
+    $$(".nav-links a").forEach(a => a.classList.toggle("active", a.dataset.go === cur));
+  }
+
+  /* ---- ruta lateral con la combi ---- */
+  const route = $("#route"), van = $("#van"), stopsBox = $("#stops"), dash = $("#roadDash"), done = $("#roadDone");
+  const STOPS = [["inicio","Inicio"],["como","Cómo trabajamos"],["destinos","A dónde vamos"],["historia","Nuestra historia"],["contacto","Contacto"]];
+  let stopEls = [];
+  function buildStops(){
+    stopsBox.innerHTML = ""; stopEls = [];
+    const h = document.documentElement.scrollHeight - innerHeight;
+    STOPS.forEach(([id, label]) => {
+      const el = document.getElementById(id); if (!el) return;
+      const p = Math.min(1, Math.max(0, (el.getBoundingClientRect().top + scrollY - 60) / h));
+      const b = document.createElement("button");
+      b.className = "stop"; b.style.top = (p * 100) + "%"; b.setAttribute("aria-label", "Ir a " + label);
+      b.innerHTML = `<span>${label}</span>`; b.addEventListener("click", () => go(id));
+      b.dataset.p = p; stopsBox.appendChild(b); stopEls.push(b);
+    });
+    // paradas de la ruta del celular
+    const ms = document.getElementById("mstops"); ms.innerHTML = ""; mStopEls = [];
+    stopEls.forEach((sb, i) => {
+      const m = document.createElement("button");
+      m.className = "mstop"; m.style.left = (parseFloat(sb.dataset.p) * 100) + "%"; m.dataset.p = sb.dataset.p;
+      m.setAttribute("aria-label", "Ir a " + STOPS[i][1]); m.addEventListener("click", () => go(STOPS[i][0]));
+      ms.appendChild(m); mStopEls.push(m);
+    });
+  }
+  let mStopEls = [], mStopT = 0;
+  let lastY = 0, vanFlip = 1;
+  const mvan = document.getElementById("mroadVan"), mdone = document.getElementById("mroadDone"), mdash = document.getElementById("mroadDash");
+  function moveVan(y, h){
+    const p = h > 0 ? Math.min(1, Math.max(0, y / h)) : 0;
+    if (Math.abs(y - lastY) > 2) vanFlip = y > lastY ? 1 : -1;
+    if (mvan && mvan.offsetParent){
+      mvan.style.left = `calc(${p} * (100% - 40px))`;
+      mdone.style.width = (p * 100) + "%";
+      mdash.style.transform = `translateX(${(-y * .35) % 18}px)`;
+      mvan.classList.toggle("back", vanFlip < 0);
+      if (Math.abs(y - lastY) > 1){ mvan.classList.add("moving"); clearTimeout(mStopT); mStopT = setTimeout(() => mvan.classList.remove("moving"), 180); }
+      mStopEls.forEach(s => s.classList.toggle("done", p >= parseFloat(s.dataset.p) - .002));
+    }
+    if (!route || getComputedStyle(route).display === "none") { lastY = y; return; }
+    const H = route.clientHeight;
+    lastY = y;
+    van.style.transform = `translateY(${p * H - 20}px) rotate(${90 * vanFlip}deg)`;
+    dash.style.backgroundPosition = `0 ${(y * .6) % 28}px`;
+    done.style.height = (p * 100) + "%";
+    stopEls.forEach(s => s.classList.toggle("done", p >= parseFloat(s.dataset.p) - .002));
+  }
+  addEventListener("resize", () => { buildStops(); onScroll(); });
+  addEventListener("load", () => { buildStops(); onScroll(); if (hasG) ScrollTrigger.refresh(); });
+  buildStops();
+
+  /* ---- contadores ---- */
+  function countUp(el){
+    const to = +el.dataset.to, pre = el.dataset.prefix || "", suf = el.dataset.suffix || "";
+    if (reduce || !hasG) return;
+    const o = { v: 0 };
+    gsap.to(o, { v: to, duration: 1.8, ease: "power3.out", onUpdate: () => el.textContent = pre + Math.round(o.v) + suf });
+  }
+
+  /* ---- manifiesto en palabras ---- */
+  const man = $("#manifesto");
+  const words = man.textContent.trim().split(/\s+/);
+  const goldWords = ["viaje", "terapia,", "avance.", "nuestro."];
+  man.innerHTML = words.map(w => `<span class="w${goldWords.includes(w) ? " hl" : ""}">${w}</span>`).join(" ");
+
+
+  /* ---- pestañas de dudas ---- */
+  const tabBtns = $$("#tabs [role=tab]"), ind = $("#tabsInd");
+  function moveInd(b){ if (!b) return; ind.style.width = b.offsetWidth + "px"; ind.style.height = b.offsetHeight + "px"; ind.style.transform = `translate(${b.offsetLeft}px, ${b.offsetTop}px)`; }
+  tabBtns.forEach(b => b.addEventListener("click", () => {
+    tabBtns.forEach(x => { const on = x === b; x.setAttribute("aria-selected", on); $("#" + x.getAttribute("aria-controls")).hidden = !on; });
+    moveInd(b);
+    b.scrollIntoView({ block: "nearest", inline: "center" });
+    if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+  }));
+  requestAnimationFrame(() => moveInd(tabBtns[0]));
+  addEventListener("resize", () => moveInd(tabBtns.find(b => b.getAttribute("aria-selected") === "true")));
+  document.fonts && document.fonts.ready.then(() => moveInd(tabBtns.find(b => b.getAttribute("aria-selected") === "true")));
+
+  /* ---- test: ¿me corresponde? ---- */
+  const qcards = $$("#quiz .qcard"), qres = $("#qresult"), qbar = $("#quizBar"), ans = [];
+  function showQ(i){ qcards.forEach((c, k) => c.hidden = k !== i); qres.hidden = true; qbar.style.width = (i / 3 * 100) + "%"; }
+  function result(){
+    qcards.forEach(c => c.hidden = true); qres.hidden = false; qbar.style.width = "100%";
+    const [cud, tr, os] = ans; let ok = false, t, x;
+    if (cud === "no") { t = "Primero hay que tramitar el CUD"; x = "El transporte se pide con el Certificado Único de Discapacidad. Escribinos y te contamos dónde y cómo se tramita en tu localidad."; }
+    else if (os === "no") { t = "Hay que ver qué cobertura corresponde"; x = "Si no tiene obra social ni prepaga, la cobertura depende del programa público que le corresponda. Escribinos y lo vemos juntos."; }
+    else if (tr === "no") { t = "Falta un paso: agregar «Transporte» al CUD"; x = "Para que la obra social cubra los viajes, el CUD tiene que indicar transporte en la orientación prestacional. Te explicamos cómo pedirlo."; }
+    else if (cud === "si" && tr === "si" && os === "si") { ok = true; t = "¡Le corresponde el transporte!"; x = "Con el CUD que indica transporte y la obra social, los viajes están cubiertos al 100%. Escribinos y empezamos con los papeles."; }
+    else { t = "Probablemente le corresponda"; x = "Hay algún dato para confirmar. Mandanos una foto del CUD y te decimos en el día qué falta."; }
+    $("#qtitle").textContent = t; $("#qtext").textContent = x;
+    const ic = $("#qicon"); ic.textContent = ok ? "✓" : "!"; ic.classList.toggle("warn", !ok);
+    if (ok && window.gsap && !reduce) gsap.from(ic, { scale: 0, rotate: -180, duration: .8, ease: "back.out(2)" });
+  }
+  qcards.forEach((c, i) => $$("button", c).forEach(b => b.addEventListener("click", () => { ans[i] = b.dataset.a; i < 2 ? showQ(i + 1) : result(); })));
+  $("#qreset").addEventListener("click", () => { ans.length = 0; showQ(0); });
+  showQ(0);
+  $$("#qresult [data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); go(a.dataset.go); }));
+
+  /* ---- entradas al aparecer ---- */
+  if (!reduce && "IntersectionObserver" in window){
+    const groups = [["#onecard"], [".dcard"], [".road-stops .rstop"], [".sitem"]];
+    const els = [];
+    groups.forEach(([sel]) => $$(sel).forEach((el, i) => { el.classList.add("pre"); el.style.transitionDelay = (i * 70) + "ms"; els.push(el); }));
+    const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io2.unobserve(e.target); setTimeout(() => e.target.style.transitionDelay = "", 1400); } }), { threshold: .12 });
+    els.forEach(el => io2.observe(el));
+  }
+
+  /* ---- tarjetas deslizables (celular) ---- */
+  const gg = $(".glass-grid"), ggD = $$("#ggDots i");
+  gg.addEventListener("scroll", () => { const i = Math.round(gg.scrollLeft / (gg.scrollWidth - gg.clientWidth || 1) * (ggD.length - 1)); ggD.forEach((d, k) => d.classList.toggle("on", k === i)); }, { passive: true });
+
+  /* ---- luz que sigue al mouse en tarjetas ---- */
+  $$(".glass-card").forEach(el => el.addEventListener("mousemove", e => {
+    const r = el.getBoundingClientRect(); el.style.setProperty("--mx", (e.clientX - r.left) + "px"); el.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }));
+
+  /* ---- efectos de puntero (tilt, magnet, glow) ---- */
+  const fine = window.matchMedia("(pointer: fine)").matches;
+  if (fine && !reduce){
+    $$(".tilt").forEach(el => {
+      el.addEventListener("mousemove", e => {
+        const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(0)`;
+      });
+      el.addEventListener("mouseleave", () => { el.style.transition = "transform .6s var(--ease)"; el.style.transform = ""; setTimeout(() => el.style.transition = "", 600); });
+    });
+    $$(".magnet").forEach(el => {
+      el.addEventListener("mousemove", e => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .22}px, ${(e.clientY - r.top - r.height / 2) * .3}px)`; });
+      el.addEventListener("mouseleave", () => { el.style.transform = ""; });
+    });
+    const hero = $("#inicio"), glow = $("#heroGlow");
+    hero.addEventListener("mousemove", e => { const r = hero.getBoundingClientRect(); glow.style.left = (e.clientX - r.left) + "px"; glow.style.top = (e.clientY - r.top) + "px"; });
+  }
+
+  /* ---- recorrido paso a paso ---- */
+  const PASOS = [{t:"Nos escribís",w:"Lo hacés vos",d:"Nos contás quién viaja, a dónde tiene que ir y qué obra social tiene. Te respondemos personalmente y sin compromiso."},{t:"Revisamos los papeles",w:"Lo hacemos juntos",d:"Chequeamos con vos el CUD, la orden médica y lo que pide tu obra social, para que no te rechacen nada por un detalle."},{t:"Armamos el presupuesto",w:"Lo hacemos nosotros",d:"Calculamos el recorrido real y preparamos el presupuesto y el diagrama de traslados, con el formato que exige cada obra social."},{t:"Lo presentamos",w:"Lo hacemos nosotros",d:"Acompañamos la presentación ante la obra social y hacemos el seguimiento hasta que el transporte queda autorizado."},{t:"Empiezan los viajes",w:"Lo hacemos nosotros",d:"De la puerta de tu casa a la puerta de la escuela o de la terapia, con horarios fijos que se adaptan a la semana de tu hijo."},{t:"Nos ocupamos todos los meses",w:"Lo hacemos nosotros",d:"Planillas de asistencia, facturación y seguimiento con la obra social. Ese trámite mensual lo hacemos nosotros, no vos."}];
+  const rstops = $$(".rstop"), sitems = $$(".sitem"), simgs = $$("#stage img"), van2 = $("#roadVan"), card = $("#stageCard");
+  const DUR = 6000; let cur = 0, playing = true, t0 = 0, raf = 0, inView = false;
+  function stopPos(i){ const b = rstops[i].querySelector("b"), r = $("#road").getBoundingClientRect(), br = b.getBoundingClientRect(); return br.left + br.width / 2 - r.left; }
+  function placeVan(){
+    const roadW = $("#road").clientWidth, x = stopPos(cur);
+    van2.style.left = x + "px";
+    const l0 = stopPos(0); $("#roadFill").style.width = Math.max(0, x - l0 + 20) / ($(".road-line").clientWidth) * 100 + "%";
+  }
+  function setStep(i, user){
+    i = (i + PASOS.length) % PASOS.length;
+    const changed = i !== cur; cur = i;
+    rstops.forEach((s, k) => { s.classList.toggle("on", k === i); s.classList.toggle("done", k < i); });
+    sitems.forEach((s, k) => { s.classList.toggle("on", k === i); s.classList.toggle("done", k < i); s.querySelector(".sbar span").style.width = k < i ? "100%" : "0"; });
+    simgs.forEach((im, k) => im.classList.toggle("on", k === i));
+    $("#scNum").textContent = String(i + 1).padStart(2, "0"); $("#scWho").textContent = PASOS[i].w;
+    $("#scT").textContent = PASOS[i].t; $("#scD").textContent = PASOS[i].d; $("#jCount").textContent = (i + 1) + " / " + PASOS.length;
+    if (changed){ card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap"); van2.classList.remove("go"); void van2.offsetWidth; van2.classList.add("go"); }
+    placeVan(); t0 = performance.now();
+    if (user) { playing = false; $("#jPlay").classList.add("paused"); $("#jPlay").setAttribute("aria-label", "Reproducir"); }
+  }
+  function tick(now){
+    raf = requestAnimationFrame(tick);
+    if (!playing || !inView || document.hidden) { t0 = now - (sitems[cur]._p || 0) * DUR; return; }
+    const p = Math.min(1, (now - t0) / DUR); sitems[cur]._p = p;
+    sitems[cur].querySelector(".sbar span").style.width = (p * 100) + "%";
+    if (p >= 1) { sitems[cur]._p = 0; setStep(cur + 1); }
+  }
+  rstops.forEach(b => b.addEventListener("click", () => setStep(+b.dataset.i, true)));
+  sitems.forEach(b => b.addEventListener("click", () => setStep(+b.dataset.i, true)));
+  $("#jPrev").addEventListener("click", () => setStep(cur - 1, true));
+  $("#jNext").addEventListener("click", () => setStep(cur + 1, true));
+  $("#jPlay").addEventListener("click", e => { playing = !playing; e.currentTarget.classList.toggle("paused", !playing); e.currentTarget.setAttribute("aria-label", playing ? "Pausar" : "Reproducir"); t0 = performance.now() - (sitems[cur]._p || 0) * DUR; });
+  ("IntersectionObserver" in window) ? new IntersectionObserver(es => es.forEach(e => inView = e.isIntersecting), { threshold: .35 }).observe($("#journey")) : (inView = true);
+  let sx = 0; $("#stage").addEventListener("touchstart", e => sx = e.touches[0].clientX, { passive: true });
+  $("#stage").addEventListener("touchend", e => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 45) setStep(cur + (dx < 0 ? 1 : -1), true); });
+  addEventListener("resize", placeVan); addEventListener("load", placeVan);
+  setStep(0); raf = requestAnimationFrame(tick);
+
+  /* ---- destinos: carrusel ---- */
+  const track = $("#track"), dcards = $$(".dcard", track), dots = $("#dDots");
+  dcards.forEach((c, i) => { const d = document.createElement("button"); d.setAttribute("aria-label", "Ir a la tarjeta " + (i + 1)); d.addEventListener("click", () => { goCard(i); holdAuto(); }); dots.appendChild(d); });
+  const cardStep = () => dcards[1].offsetLeft - dcards[0].offsetLeft;
+  const curCard = () => Math.round(track.scrollLeft / cardStep());
+  function goCard(i){ const max = track.scrollWidth - track.clientWidth; track.scrollTo({ left: Math.min(max, Math.max(0, i * cardStep())), behavior: reduce ? "auto" : "smooth" }); }
+  function updDots(){ const max = track.scrollWidth - track.clientWidth; const i = track.scrollLeft >= max - 4 ? dcards.length - 1 : curCard(); $$("button", dots).forEach((d, k) => d.classList.toggle("on", k === i)); }
+  track.addEventListener("scroll", () => requestAnimationFrame(updDots), { passive: true }); updDots();
+  function nextCard(){ const max = track.scrollWidth - track.clientWidth; if (track.scrollLeft >= max - 4) goCard(0); else goCard(curCard() + 1); }
+  $("#dNext").addEventListener("click", () => { nextCard(); holdAuto(); });
+  $("#dPrev").addEventListener("click", () => { const i = curCard(); i <= 0 ? goCard(dcards.length - 1) : goCard(i - 1); holdAuto(); });
+  track.addEventListener("keydown", e => { if (e.key === "ArrowRight") { nextCard(); holdAuto(); } if (e.key === "ArrowLeft") { goCard(curCard() - 1); holdAuto(); } });
+  let dHold = 0, dHover = false, dInView = false;
+  function holdAuto(){ dHold = performance.now() + 9000; }
+  track.addEventListener("mouseenter", () => dHover = true); track.addEventListener("mouseleave", () => dHover = false);
+  track.addEventListener("touchstart", holdAuto, { passive: true });
+  ("IntersectionObserver" in window) && new IntersectionObserver(es => es.forEach(e => dInView = e.isIntersecting), { threshold: .4 }).observe(track);
+  setInterval(() => { if (dInView && !dHover && !document.hidden && performance.now() > dHold) nextCard(); }, 4200);
+  // arrastrar con el mouse
+  let dragging = false, dx0 = 0, sl0 = 0, moved = false;
+  track.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") return; dragging = true; moved = false; dx0 = e.clientX; sl0 = track.scrollLeft; track.classList.add("drag"); track.setPointerCapture(e.pointerId); });
+  track.addEventListener("pointermove", e => { if (!dragging) return; const d = e.clientX - dx0; if (Math.abs(d) > 4) moved = true; track.scrollLeft = sl0 - d; });
+  const endDrag = () => { if (!dragging) return; dragging = false; track.classList.remove("drag"); goCard(curCard()); holdAuto(); };
+  track.addEventListener("pointerup", endDrag); track.addEventListener("pointercancel", endDrag);
+  track.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+  /* ================== GSAP ================== */
+  if (!hasG){ addEventListener("scroll", onScroll, { passive: true }); onScroll(); return; }
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (!reduce && window.Lenis){
+    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    lenis.on("scroll", () => { ScrollTrigger.update(); onScroll(); });
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    addEventListener("scroll", onScroll, { passive: true });
+  }
+  onScroll();
+
+  if (reduce){ $$(".count").forEach(() => {}); return; }
+
+  // intro del hero
+  const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+  tl.from("#heroTitle .line > span", { yPercent: 110, duration: 1.2, stagger: .12 })
+    .from("#heroInner .eyebrow, #heroInner .lead", { y: 24, opacity: 0, duration: .9, stagger: .1 }, "-=.8")
+    .from("#heroInner .hero-ctas > *, #heroInner .chip", { y: 20, opacity: 0, duration: .7, stagger: .07 }, "-=.6")
+    .from("#nav", { y: -30, opacity: 0, duration: .8 }, "-=1");
+
+  // hero: el video se achica y se redondea al bajar
+  gsap.to("#heroMedia", { scale: .9, borderRadius: 40, yPercent: 8, ease: "none", scrollTrigger: { trigger: "#inicio", start: "top top", end: "bottom top", scrub: true } });
+  gsap.to("#heroInner", { yPercent: -28, opacity: .15, ease: "none", scrollTrigger: { trigger: "#inicio", start: "top top", end: "bottom top", scrub: true } });
+
+  // contadores
+  $$(".count").forEach(el => ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: () => countUp(el) }));
+
+  // apariciones genéricas
+  $$(".rv").forEach(el => gsap.from(el, { y: 40, opacity: 0, duration: .9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } }));
+
+  // manifiesto: palabras que se encienden
+  gsap.to("#manifesto .w", { opacity: 1, stagger: .1, ease: "none", scrollTrigger: { trigger: ".manifesto", start: "top 70%", end: "bottom 60%", scrub: true } });
+  gsap.fromTo(".manifesto .ring", { rotate: -40, scale: .7 }, { rotate: 40, scale: 1.1, ease: "none", scrollTrigger: { trigger: ".manifesto", start: "top bottom", end: "bottom top", scrub: true } });
+
+  // parallax de fondos
+  $$(".parallax").forEach(el => gsap.fromTo(el, { yPercent: -parseFloat(el.dataset.speed) * 50 }, { yPercent: parseFloat(el.dataset.speed) * 50, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } }));
+  if (desktop()) $$(".parallax-y").forEach(el => gsap.to(el, { y: parseFloat(el.dataset.y), ease: "none", scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: true } }));
+
+  // tarjetas de cristal en abanico
+  if (desktop()) gsap.from(".glass-card", { y: 90, rotate: (i) => [-5, 0, 5][i], opacity: 0, duration: 1, stagger: .12, ease: "power3.out", scrollTrigger: { trigger: ".glass-grid", start: "top 88%", once: true } });
+
+  // obras sociales: la marquesina se acelera con la velocidad del scroll
+  // el ticker se acelera un poco con el scroll y vuelve solo a su velocidad normal
+  ScrollTrigger.create({ trigger: ".obras", start: "top bottom", end: "bottom top", onUpdate: self => {
+    window.__mqBoost = Math.max(window.__mqBoost || 1, Math.min(2.4, 1 + Math.abs(self.getVelocity()) / 1300));
+  } });
+
+
+  // historia: el círculo del logo se abre hasta ocupar toda la pantalla
+  const rtl = gsap.timeline({ scrollTrigger: { trigger: "#revealPin", start: "top top", end: "+=80%", pin: true, scrub: 1, onRefresh: buildStops } });
+  rtl.fromTo("#revealCircle", { clipPath: "circle(22% at 50% 50%)" }, { clipPath: "circle(80% at 50% 50%)", ease: "none" }, 0)
+     .fromTo("#revealRing", { scale: 1, opacity: 1 }, { scale: 4.2, opacity: 0, ease: "none" }, 0)
+     .fromTo("#hist-t", { scale: .85, y: 40 }, { scale: 1, y: 0, ease: "none" }, 0);
+
+  // línea de tiempo
+  gsap.to("#tlFill", { scaleY: 1, ease: "none", scrollTrigger: { trigger: "#timeline", start: "top 70%", end: "bottom 60%", scrub: true } });
+
+  // contacto: tarjetas en cascada
+
+
+  // ruedas de la combi
+  gsap.to("#van .wheel", { rotate: 360, transformOrigin: "50% 50%", repeat: -1, ease: "none", duration: 1 });
+
+  ScrollTrigger.addEventListener("refresh", buildStops);
+  ScrollTrigger.refresh();
+})();
+</script>
+</body>
+</html>
