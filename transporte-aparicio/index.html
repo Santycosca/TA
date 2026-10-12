@@ -368,7 +368,7 @@ p{margin:0}
 .cta-band h2{font-size:var(--step-3);font-weight:900;font-style:italic}
 
 /* ---------- contacto ---------- */
-.contacto{background:radial-gradient(120% 90% at 100% 0%,var(--v700) 0%,var(--v900) 45%,var(--v950) 100%);color:var(--white);padding-block:clamp(80px,9vw,130px) clamp(70px,8vw,100px);position:relative;overflow:hidden}
+.contacto{background:radial-gradient(120% 90% at 100% 0%,var(--v700) 0%,var(--v900) 45%,var(--v950) 100%);color:var(--white);padding-block:clamp(80px,9vw,130px) clamp(70px,8vw,100px);position:relative;overflow:clip}
 .contacto .lead{color:rgba(255,255,255,.82)}
 .contacto h2{font-size:var(--step-4);font-weight:900;font-style:italic;letter-spacing:-.04em}
 .contacto-head{display:grid;gap:18px;margin-bottom:48px}
@@ -410,10 +410,11 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
 .soc:hover,.soc:focus-visible{transform:translateY(-4px);border-color:transparent;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
 .soc:hover::before,.soc:focus-visible::before{opacity:1;transform:none}
 .soc:hover svg{transform:scale(1.12)}
-.soc span{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,6px);white-space:nowrap;font-size:.75rem;font-weight:700;padding:.35em .7em;border-radius:8px;background:var(--white);color:var(--v900);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+.soc span{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.soc-tip{margin:10px 0 0;min-height:1.5em;font-size:.86rem;font-weight:600;color:var(--gold-hi);opacity:0;transform:translateY(-3px);transition:opacity .25s,transform .25s}
+.soc-tip.show{opacity:1;transform:none}
 .soc{overflow:visible}
 .soc::before{border-radius:inherit}
-.soc:hover span,.soc:focus-visible span{opacity:1;transform:translate(-50%,0)}
 .soc.soon{opacity:.85}
 .foot-tel{margin-top:16px;color:rgba(255,255,255,.65)}
 .foot-tel strong{color:var(--white);font-variant-numeric:tabular-nums;user-select:all}
@@ -619,10 +620,8 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
   .manifesto p{font-size:1.65rem;line-height:1.22}
   .derecho{padding-block:64px}
   .derecho h2,.como h2,.formas h2,.destinos h2,.obras h2,.dudas h2{font-size:var(--step-3)}
-  .glass-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter);padding-bottom:6px;scrollbar-width:none}
-  .glass-grid::-webkit-scrollbar{display:none}
-  .glass-card{flex:none;width:82%;scroll-snap-align:start;padding:20px}
-  .gg-dots{display:flex}
+  .glass-grid{gap:12px}
+  .glass-card{padding:20px 18px}
   .como,.formas,.dudas,.obras{padding-block:64px}
   .como-head,.dudas-head{margin-bottom:20px}
   .journey{gap:18px}
@@ -655,14 +654,10 @@ footer small{display:block;max-width:70ch;color:rgba(255,255,255,.45);font-size:
   .oc-acts{display:grid;width:100%}
   .oc-acts .btn{justify-content:center}
   .form-wrap{padding:20px;gap:22px}
-  .preview{order:-1}
   .bubble{min-height:0}
   .fab{padding:0;width:58px;height:58px;justify-content:center;font-size:0;gap:0;right:16px}
   .fab svg{width:28px;height:28px}
 }
-.gg-dots{display:none;justify-content:center;gap:8px;margin-top:14px}
-.gg-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.3);transition:width .35s var(--ease),background .35s}
-.gg-dots i.on{width:26px;background:var(--gold)}
 
 /* ---------- directorio completo ---------- */
 .dir{margin-top:8px;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--v100);box-shadow:0 40px 90px -50px rgba(54,24,88,.55);overflow:hidden;animation:tpIn .5s var(--ease)}
@@ -932,6 +927,27 @@ html[data-fs] .menu-btn{display:inline-flex}
 .a11y-still .reveal-pin .circle{clip-path:none}
 .a11y-still .reveal-pin .ringo{display:none}
 .a11y-still .timeline .tl-fill{transform:none}
+
+/* ---------- más intuitiva: vista previa fija, paradas y tarjetas en celular ---------- */
+.pv-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pv-head small{color:rgba(255,255,255,.72);line-height:1.35}
+.pv-copy{flex:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:var(--white);font:inherit;font-size:.82rem;font-weight:700;padding:.55em .95em;border-radius:999px;cursor:pointer;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.pv-copy:hover{background:rgba(255,255,255,.16);border-color:var(--gold);transform:translateY(-1px)}
+.bubble.tick{animation:bubbleTick .6s var(--ease)}
+@keyframes bubbleTick{0%{background:#E7FFDB}35%{background:#FFF7D6;box-shadow:0 0 0 5px rgba(245,181,42,.5)}100%{background:#E7FFDB;box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}}
+.a11y-still .bubble.tick{animation:none}
+@media (max-width:860px){
+  .form-wrap{--fwp:clamp(24px,4vw,44px);position:relative;overflow:visible;display:flex;flex-direction:column}  /* en columna (no grilla): así la vista previa puede quedar pegada abajo */
+  .preview{order:1;position:sticky;bottom:0;z-index:4;gap:8px;margin:-8px calc(-1 * var(--fwp)) calc(-1 * var(--fwp));padding:12px var(--fwp) calc(var(--fwp) + env(safe-area-inset-bottom,0px));background:#22123A;border-top:1px solid rgba(255,255,255,.16);border-radius:0 0 var(--r-lg) var(--r-lg);box-shadow:0 -14px 30px -20px rgba(0,0,0,.7)}
+  .pv-head small{font-size:.8rem}
+  .bubble{font-size:.92rem;padding:12px 14px;max-height:34vh;overflow:auto;scrollbar-width:thin}
+  html.kb-open .bubble{max-height:4.8em}
+  html{scroll-padding-bottom:calc(var(--pvh,0px) + 12px)}
+  .glass-card{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(37,16,63,.8)}
+  .rv{will-change:auto}
+  .mstop{width:22px;margin-left:-11px}
+}
+@media (max-width:640px){.form-wrap{--fwp:20px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.transportesaparicio.com.ar/#empresa","name":"Transporte Aparicio","url":"https://www.transportesaparicio.com.ar/","logo":"https://www.transportesaparicio.com.ar/icon-512.png","image":"https://www.transportesaparicio.com.ar/og-image.jpg","description":"Llevamos a chicos con CUD a la escuela, sus terapias y su centro de día. Cubierto al 100% por la obra social, y nos ocupamos de los trámites. En todo el país.","telephone":"+5491128533720","areaServed":{"@type":"Country","name":"Argentina"},"address":{"@type":"PostalAddress","addressLocality":"Pilar","addressRegion":"Buenos Aires","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"20:00"}],"contactPoint":{"@type":"ContactPoint","telephone":"+5491128533720","contactType":"customer service","availableLanguage":"es","areaServed":"AR"}},{"@type":"WebSite","@id":"https://www.transportesaparicio.com.ar/#sitio","url":"https://www.transportesaparicio.com.ar/","name":"Transporte Aparicio","inLanguage":"es-AR","publisher":{"@id":"https://www.transportesaparicio.com.ar/#empresa"}},{"@type":"Service","name":"Transporte para chicos con CUD","serviceType":"Transporte especial para personas con discapacidad","description":"Traslados a la escuela, terapias, centros de día y rehabilitación, cubiertos al 100% por la obra social o prepaga según la Ley 24.901.","provider":{"@id":"https://www.transportesaparicio.com.ar/#empresa"},"areaServed":{"@type":"Country","name":"Argentina"},"audience":{"@type":"PeopleAudience","audienceType":"Familias de chicos con Certificado Único de Discapacidad"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tengo que pagar algo?","acceptedAnswer":{"@type":"Answer","text":"No. Si el CUD indica transporte y la obra social lo autoriza, el viaje está cubierto al 100%. Nosotros facturamos directamente a la obra social."}},{"@type":"Question","name":"¿Cuánto tarda la autorización?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social. Suele llevar algunas semanas desde que se presentan todos los papeles. Te mantenemos al tanto de cada novedad. Si te lo rechazan, mirá qué hacer."}},{"@type":"Question","name":"¿Qué pasa si el CUD no dice «Transporte»?","acceptedAnswer":{"@type":"Answer","text":"Se puede pedir que lo agreguen en la orientación prestacional. Te explicamos qué presentar y dónde en esta guía."}},{"@type":"Question","name":"¿Puede viajar un acompañante?","acceptedAnswer":{"@type":"Answer","text":"Sí. El acompañante lo elige la familia, así tu hijo viaja con alguien de confianza. Si necesita asistencia durante el viaje, se puede pedir el traslado con dependencia."}},{"@type":"Question","name":"¿Y si usa silla de ruedas?","acceptedAnswer":{"@type":"Answer","text":"La silla viaja en el baúl y tu hijo va sentado en el asiento de atrás, junto a su acompañante."}},{"@type":"Question","name":"¿Trabajan en mi provincia?","acceptedAnswer":{"@type":"Answer","text":"Sí, trabajamos en todo el país. Escribinos con tu localidad y te contamos cómo lo organizamos."}},{"@type":"Question","name":"¿Lo puedo llevar yo y que me paguen el viaje?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si tu hijo viaja más tranquilo con vos o con alguien de la familia, ustedes hacen el viaje y nosotros les pagamos cada traslado. El trámite con la obra social lo hacemos nosotros igual."}},{"@type":"Question","name":"¿Qué pasa si un día no viaja?","acceptedAnswer":{"@type":"Answer","text":"Avisanos y reorganizamos ese viaje. Cada mes se completa la planilla de asistencia con los días que viajó, y eso es lo que se presenta a la obra social."}},{"@type":"Question","name":"¿Por cuánto tiempo autorizan el transporte?","acceptedAnswer":{"@type":"Answer","text":"Depende de cada obra social: algunas lo autorizan por un año y otras por algunos meses. Escribinos y te contamos cómo es en la tuya."}},{"@type":"Question","name":"Soy terapeuta o trabajo en una escuela. ¿Cómo derivo a una familia?","acceptedAnswer":{"@type":"Answer","text":"Escribinos o pasale nuestro número a la familia. En la sección para profesionales te contamos qué papeles te vamos a pedir."}}]}]}</script>
 </head>
@@ -1045,7 +1061,7 @@ html[data-fs] .menu-btn{display:inline-flex}
   </div>
 </section>
 
-<section class="derecho" aria-labelledby="derecho-t">
+<section class="derecho" id="derecho" aria-labelledby="derecho-t">
   <div class="bg parallax" data-speed="0.18"><img decoding="async" src="img/auto-familia.webp" srcset="img/auto-familia-m.webp 900w, img/auto-familia.webp 1800w" sizes="100vw" alt="" loading="lazy"></div>
   <div class="wrap">
     <div class="derecho-head">
@@ -1069,7 +1085,6 @@ html[data-fs] .menu-btn{display:inline-flex}
         <p>El Certificado Único de Discapacidad tiene que decir «Transporte» en la orientación prestacional. Si no lo dice, te explicamos cómo pedir que lo agreguen.</p>
       </article>
     </div>
-    <div class="gg-dots" id="ggDots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
     <div class="note rv">
       <span aria-hidden="true">💛</span>
       <p><b>¿Necesita ayuda durante el viaje?</b> Si tu hijo necesita asistencia de otra persona, con una evaluación de independencia funcional (escala FIM) la obra social reconoce el traslado con dependencia.</p>
@@ -1113,7 +1128,7 @@ html[data-fs] .menu-btn{display:inline-flex}
   </div>
 </section>
 
-<section class="formas" aria-labelledby="formas-t">
+<section class="formas" id="formas" aria-labelledby="formas-t">
   <div class="wrap">
     <span class="eyebrow">Dos formas de viajar</span>
     <h2 id="formas-t">Cada familia tiene su manera. Nos adaptamos a la tuya.</h2>
@@ -1170,7 +1185,7 @@ html[data-fs] .menu-btn{display:inline-flex}
   </div>
 </section>
 
-<section class="obras" aria-labelledby="obras-t">
+<section class="obras" id="obras" aria-labelledby="obras-t">
   <div class="wrap obras-head">
     <span class="eyebrow">Obras sociales</span>
     <h2 id="obras-t">Trabajamos con obras sociales y prepagas de todo el país.</h2>
@@ -1461,10 +1476,9 @@ html[data-fs] .menu-btn{display:inline-flex}
         <button class="btn btn-gold" type="submit">Enviar por WhatsApp</button>
         <p class="form-msg" id="formMsg" aria-live="polite"></p>
       </form>
-      <div class="preview">
-        <small>Así le va a llegar tu mensaje:</small>
-        <div class="bubble" id="bubble"></div>
-        <button class="btn btn-ghost" type="button" id="copyBtn" style="justify-self:start">Copiar mensaje</button>
+      <div class="preview" id="preview">
+        <div class="pv-head"><small id="pvLabel">Así le va a llegar tu mensaje. Se arma solo mientras escribís.</small><button class="pv-copy" type="button" id="copyBtn">Copiar</button></div>
+        <div class="bubble" id="bubble" aria-live="polite" aria-labelledby="pvLabel"></div>
       </div>
     </div>
   </div>
@@ -1495,6 +1509,7 @@ html[data-fs] .menu-btn{display:inline-flex}
         <a class="soc" data-red="twitter" aria-label="X (Twitter) de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg><span>X</span></a>
         <a class="soc" data-red="whatsapp" aria-label="WhatsApp de Transporte Aparicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg><span>WhatsApp</span></a>
       </div>
+      <p class="soc-tip" id="socTip" aria-live="polite"></p>
       <p class="foot-tel">WhatsApp: <strong id="footTel"></strong></p>
       <p class="foot-hours"><b>Lunes a viernes</b> de 6 a 22 h · <b>Sábados y domingos</b> de 8 a 20 h<br>Oficinas en Pilar, Buenos Aires, Argentina</p>
     </div>
@@ -1582,6 +1597,9 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 
   /* ---- redes del pie ---- */
   $("#footTel").textContent = CONTACTO.tel ? fmt(CONTACTO.tel) : "a confirmar";
+  const socTip = $("#socTip"); let socT = 0;
+  const showTip = (t, ms) => { socTip.textContent = t; socTip.classList.add("show"); clearTimeout(socT); if (ms) socT = setTimeout(() => socTip.classList.remove("show"), ms); };
+  const hideTip = () => { clearTimeout(socT); socT = setTimeout(() => socTip.classList.remove("show"), 160); };
   $$(".soc").forEach(a => {
     const red = a.dataset.red;
     const url = red === "whatsapp" ? (CONTACTO.tel ? "https://wa.me/" + CONTACTO.tel : "") : REDES[red];
@@ -1590,8 +1608,10 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     else {
       a.classList.add("soon"); a.setAttribute("role", "button"); a.tabIndex = 0;
       lab.textContent = base + " · muy pronto";
-      a.addEventListener("click", e => e.preventDefault());
+      a.addEventListener("click", e => { e.preventDefault(); showTip(lab.textContent, 2400); });
     }
+    a.addEventListener("mouseenter", () => showTip(lab.textContent)); a.addEventListener("mouseleave", hideTip);
+    a.addEventListener("focus", () => showTip(lab.textContent)); a.addEventListener("blur", hideTip);
   });
 
   // obras sociales: ticker, filtros, directorio completo y buscador
@@ -1728,7 +1748,22 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     if (v("#f-dest")) lines.push(`Destino: ${v("#f-dest")}.`);
     return lines.join("\n");
   }
-  const refresh = () => { bubble.textContent = buildMsg(); };
+  const preview = $("#preview");
+  let lastMsg = "";
+  const refresh = () => {
+    const t = buildMsg(); if (t === lastMsg) return;
+    const grew = t.split("\n").length !== lastMsg.split("\n").length; lastMsg = t;
+    bubble.textContent = t;
+    if (grew) { bubble.classList.remove("tick"); void bubble.offsetWidth; bubble.classList.add("tick"); }  // destello: apareció un dato nuevo
+    if (bubble.scrollHeight > bubble.clientHeight + 2) bubble.scrollTop = bubble.scrollHeight;  // si no entra, muestra lo último
+    pvh();
+  };
+  // en celular la vista previa queda fija abajo: se reserva su alto para que ningún campo quede tapado
+  function pvh(){ document.documentElement.style.setProperty("--pvh", matchMedia("(max-width:860px)").matches ? preview.offsetHeight + "px" : "0px"); }
+  if (window.visualViewport) visualViewport.addEventListener("resize", () => {  // con el teclado abierto, la vista previa se achica
+    document.documentElement.classList.toggle("kb-open", visualViewport.height < 520 || visualViewport.height < innerHeight * .8); pvh();
+  });
+  addEventListener("resize", pvh);
   $$("#form input, #form select").forEach(i => i.addEventListener("input", refresh));
   refresh();
   $("#form").addEventListener("submit", e => {
@@ -1743,7 +1778,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   });
   $("#copyBtn").addEventListener("click", e => {
     const b = e.currentTarget, t = buildMsg();
-    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => { b.textContent = "Mensaje copiado"; setTimeout(() => b.textContent = "Copiar mensaje", 1600); })
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => { b.textContent = "¡Copiado!"; setTimeout(() => b.textContent = "Copiar", 1600); })
       .catch(() => { const r = document.createRange(); r.selectNodeContents(bubble); const s = getSelection(); s.removeAllRanges(); s.addRange(r); });
   });
 
@@ -1809,6 +1844,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     else t.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
   }
   $$("[data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); go(a.dataset.go); }));
+  $$('a[href^="/notas"]').forEach(a => a.addEventListener("click", () => { try { sessionStorage.setItem("ta-home-y", String(Math.round(scrollY))); } catch (e) {} }));
 
   /* ---- nav al hacer scroll + progreso + fab ---- */
   const nav = $("#nav"), bar = $("#progressBar"), fab = $("#fab");
@@ -1827,14 +1863,16 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
 
   /* ---- ruta lateral con la combi ---- */
   const route = $("#route"), van = $("#van"), stopsBox = $("#stops"), dash = $("#roadDash"), done = $("#roadDone");
-  const STOPS = [["inicio","Inicio"],["como","Cómo trabajamos"],["destinos","A dónde vamos"],["profesionales","Profesionales"],["historia","Nuestra historia"],["contacto","Contacto"]];
-  let stopEls = [];
+  const STOPS = [["inicio","Inicio"],["derecho","Tu derecho"],["como","Cómo trabajamos"],["formas","Dos formas de viajar"],["destinos","A dónde vamos"],["obras","Obras sociales"],["dudas","Resolvé tus dudas"],["guias","Guías para familias"],["profesionales","Para profesionales"],["historia","Nuestra historia"],["respaldo","Por qué confiar"],["contacto","Contacto"]];
+  let stopEls = [], stopTops = [];
   function buildStops(){
-    stopsBox.innerHTML = ""; stopEls = [];
-    const h = document.documentElement.scrollHeight - innerHeight;
-    STOPS.forEach(([id, label]) => {
-      const el = document.getElementById(id); if (!el) return;
-      const p = Math.min(1, Math.max(0, (el.getBoundingClientRect().top + scrollY - 60) / h));
+    stopsBox.innerHTML = ""; stopEls = []; stopTops = [];
+    const h = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    const items = STOPS.filter(([id]) => document.getElementById(id));
+    items.forEach(([id, label], i) => {
+      const el = document.getElementById(id);
+      stopTops.push(i ? Math.min(h, Math.max(0, el.getBoundingClientRect().top + scrollY - 70)) : 0);
+      const p = items.length > 1 ? i / (items.length - 1) : 0;  // paradas parejas, una por sección
       const b = document.createElement("button");
       b.className = "stop"; b.style.top = (p * 100) + "%"; b.setAttribute("aria-label", "Ir a " + label);
       b.innerHTML = `<span>${label}</span>`; b.addEventListener("click", () => go(id));
@@ -1845,15 +1883,27 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
     stopEls.forEach((sb, i) => {
       const m = document.createElement("button");
       m.className = "mstop"; m.style.left = (parseFloat(sb.dataset.p) * 100) + "%"; m.dataset.p = sb.dataset.p;
-      m.setAttribute("aria-label", "Ir a " + STOPS[i][1]); m.addEventListener("click", () => go(STOPS[i][0]));
+      m.setAttribute("aria-label", "Ir a " + items[i][1]); m.addEventListener("click", () => go(items[i][0]));
       ms.appendChild(m); mStopEls.push(m);
     });
+  }
+  // posición de la combi: avanza parejo de una parada a la siguiente, sin importar lo larga que sea cada sección
+  function prog(y, h){
+    const n = stopTops.length;
+    if (n < 2) return h > 0 ? Math.min(1, Math.max(0, y / h)) : 0;
+    if (y <= 0) return 0;
+    for (let i = n - 1; i >= 0; i--) if (y >= stopTops[i]) {
+      if (i === n - 1) return 1;
+      const a = stopTops[i], b = stopTops[i + 1], f = b > a ? Math.min(1, (y - a) / (b - a)) : 1;
+      return Math.min(1, (i + f) / (n - 1));
+    }
+    return 0;
   }
   let mStopEls = [], mStopT = 0;
   let lastY = 0, vanFlip = 1;
   const mvan = document.getElementById("mroadVan"), mdone = document.getElementById("mroadDone"), mdash = document.getElementById("mroadDash");
   function moveVan(y, h){
-    const p = h > 0 ? Math.min(1, Math.max(0, y / h)) : 0;
+    const p = prog(y, h);
     if (Math.abs(y - lastY) > 2) vanFlip = y > lastY ? 1 : -1;
     if (mvan && mvan.offsetParent){
       mvan.style.left = `calc(${p} * (100% - 40px))`;
@@ -1926,15 +1976,12 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   /* ---- entradas al aparecer ---- */
   if (!reduce && "IntersectionObserver" in window){
     const groups = [["#onecard"], [".dcard"], [".road-stops .rstop"], [".sitem"], [".gh-card"], [".info-card"]];
+    if (!desktop()) groups.push([".rv"]);
     const els = [];
     groups.forEach(([sel]) => $$(sel).forEach((el, i) => { el.classList.add("pre"); el.style.transitionDelay = (i * 70) + "ms"; els.push(el); }));
     const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io2.unobserve(e.target); setTimeout(() => e.target.style.transitionDelay = "", 1400); } }), { threshold: .12 });
     els.forEach(el => io2.observe(el));
   }
-
-  /* ---- tarjetas deslizables (celular) ---- */
-  const gg = $(".glass-grid"), ggD = $$("#ggDots i");
-  gg.addEventListener("scroll", () => { const i = Math.round(gg.scrollLeft / (gg.scrollWidth - gg.clientWidth || 1) * (ggD.length - 1)); ggD.forEach((d, k) => d.classList.toggle("on", k === i)); }, { passive: true });
 
   /* ---- luz que sigue al mouse en tarjetas ---- */
   $$(".glass-card").forEach(el => el.addEventListener("mousemove", e => {
@@ -2085,9 +2132,11 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
       if (b.dataset.k === "si") { pref.still = true; reloadKeep(); } else t.remove();
     });
   }, 2500);
+  addEventListener("pageshow", e => { if (e.persisted) { try { sessionStorage.removeItem("ta-y"); } catch (err) {} } });
   addEventListener("load", () => {
-    let y = null; try { y = sessionStorage.getItem("ta-y"); sessionStorage.removeItem("ta-y"); } catch (e) {}
+    let y = null; try { y = sessionStorage.getItem("ta-y"); sessionStorage.removeItem("ta-y"); sessionStorage.removeItem("ta-home-y"); } catch (e) {}
     if (y !== null) setTimeout(() => { if (lenis) lenis.scrollTo(+y, { immediate: true, force: true }); else scrollTo(0, +y); }, 80);
+    else if (location.hash.length > 1 && document.getElementById(location.hash.slice(1))) setTimeout(() => go(location.hash.slice(1)), 150);
   });
 
   /* ================== GSAP ================== */
@@ -2121,7 +2170,7 @@ const DIRECTORIO = [{"s":"Accord Salud","n":"Medicina prepaga","g":1,"a":[]},{"s
   $$(".count").forEach(el => ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: () => countUp(el) }));
 
   // apariciones genéricas
-  $$(".rv").forEach(el => gsap.from(el, { y: 40, opacity: 0, duration: .9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } }));
+  if (desktop()) $$(".rv").forEach(el => gsap.from(el, { y: 40, opacity: 0, duration: .9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 92%", once: true } }));
 
   // manifiesto: palabras que se encienden
   gsap.to("#manifesto .w", { opacity: 1, stagger: .1, ease: "none", scrollTrigger: { trigger: ".manifesto", start: "top 70%", end: "bottom 60%", scrub: true } });
