@@ -5,7 +5,7 @@
   const root = document.documentElement;
 
   /* ---- barra de lectura + botón flotante ---- */
-  const bar = $("#readbar"), fab = $("#fab"), body = $(".art-body");
+  const bar = $("#readbar"), fab = $("#fab"), backFab = $("#backFab"), body = $(".art-body");
   function onScroll(){
     if (bar) {
       const el = body || document.body, r = el.getBoundingClientRect();
@@ -13,8 +13,15 @@
       bar.style.transform = `scaleX(${done})`;
     }
     if (fab) fab.classList.toggle("show", scrollY > innerHeight * .6);
+    if (backFab) backFab.classList.toggle("show", scrollY > 260);
   }
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  /* ---- volver a la página principal: si vino desde ahí, la deja en el mismo lugar ---- */
+  $$("[data-back]").forEach(a => a.addEventListener("click", () => {
+    let y = null; try { y = sessionStorage.getItem("ta-home-y"); } catch (e) {}
+    if (y !== null) { try { sessionStorage.setItem("ta-y", y); } catch (e) {} }  // la página principal lo lee al cargar
+  }));
 
   /* ---- índice: abierto en compu, cerrado en celular; marca la sección actual ---- */
   const toc = $(".toc details");
