@@ -19,8 +19,9 @@
 
   /* ---- volver a la página principal: si vino desde ahí, la deja en el mismo lugar ---- */
   $$("[data-back]").forEach(a => a.addEventListener("click", () => {
-    let y = null; try { y = sessionStorage.getItem("ta-home-y"); } catch (e) {}
-    if (y !== null) { try { sessionStorage.setItem("ta-y", y); } catch (e) {} }  // la página principal lo lee al cargar
+    let y = null, ui = null; try { y = sessionStorage.getItem("ta-home-y"); ui = sessionStorage.getItem("ta-home-ui"); } catch (e) {}
+    // la página principal lo lee al cargar: el lugar y lo que estaba viendo (pestaña, test, profesionales)
+    if (y !== null) { try { sessionStorage.setItem("ta-y", y); if (ui) sessionStorage.setItem("ta-ui", ui); } catch (e) {} }
   }));
 
   /* ---- índice: abierto en compu, cerrado en celular; marca la sección actual ---- */
